@@ -1,4 +1,4 @@
-# 100L30D
+# 100L30D ![19%](https://progress-bar.dev/19?title=progress&width=100)
 
 #### Description:
 - Solving 100 Leetcode problems of varying difficulty in 30 days.<br>
