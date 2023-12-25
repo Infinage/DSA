@@ -1,0 +1,1551 @@
+<div id="9591ad26-417a-4dcc-9c52-8a9c5c99e332" class="cell markdown">
+<h1 id="100l30d">100L30D</h1>
+<p><img src="https://progress-bar.dev/28?title=progress&amp;width=100"
+alt="28%" /></p>
+<h4 id="description">Description:</h4>
+<ul>
+<li>Solving 100 Leetcode problems of varying difficulty in 30
+days.<br></li>
+<li>Languange of choice: <code>Python</code>, <code>SQL</code><br></li>
+</ul>
+<h4 id="timelines">Timelines:</h4>
+<ul>
+<li>Start Date: 20th Dec 2023</li>
+<li>Challenge End Date: 19th Jan 2023</li>
+</ul>
+</div>
+<div id="7e8f7725-fb43-4f4e-954a-299f2eacdc10" class="cell code"
+data-execution_count="5">
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> typing <span class="im">import</span> List</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sqlite3</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> io</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> collections</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> itertools</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> functools</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> random</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> string</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tqdm</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>conn <span class="op">=</span> sqlite3.<span class="ex">connect</span>(<span class="st">&quot;:memory:&quot;</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> regexp(expr, item):</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    reg <span class="op">=</span> re.<span class="bu">compile</span>(expr)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> reg.search(item) <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> read_lc_df(s: <span class="bu">str</span>) <span class="op">-&gt;</span> pd.DataFrame:</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    temp <span class="op">=</span> pd.read_csv(io.StringIO(s), sep<span class="op">=</span><span class="st">&quot;|&quot;</span>, skiprows<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    temp <span class="op">=</span> temp.iloc[<span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>:<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    temp.columns <span class="op">=</span> temp.columns.<span class="bu">map</span>(<span class="bu">str</span>.strip)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    temp <span class="op">=</span> temp.<span class="bu">map</span>(<span class="kw">lambda</span> x: x <span class="cf">if</span> <span class="bu">type</span>(x) <span class="op">!=</span> <span class="bu">str</span> <span class="cf">else</span> <span class="va">None</span> <span class="cf">if</span> x.strip() <span class="op">==</span> <span class="st">&#39;null&#39;</span> <span class="cf">else</span> x.strip())</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> temp</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>conn.create_function(<span class="st">&quot;REGEXP&quot;</span>, <span class="dv">2</span>, regexp)</span></code></pre></div>
+</div>
+<div id="248b4168-7822-4f9a-8a84-20cf00abd876" class="cell markdown">
+<h1 id="1">1.</h1>
+<p>Date: 20th Dec 2023<br> Easy Leetcode: Unique Morse Words<br>
+Solution: <a
+href="https://leetcode.com/problems/unique-morse-code-words/submissions/1124312422/"
+class="uri">https://leetcode.com/problems/unique-morse-code-words/submissions/1124312422/</a></p>
+</div>
+<div id="49ce7cff-38d1-473f-a574-6a061801eb73" class="cell code"
+data-execution_count="6">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    morse <span class="op">=</span> [<span class="st">&quot;.-&quot;</span>,<span class="st">&quot;-...&quot;</span>,<span class="st">&quot;-.-.&quot;</span>,<span class="st">&quot;-..&quot;</span>,<span class="st">&quot;.&quot;</span>,<span class="st">&quot;..-.&quot;</span>,<span class="st">&quot;--.&quot;</span>,<span class="st">&quot;....&quot;</span>,<span class="st">&quot;..&quot;</span>,<span class="st">&quot;.---&quot;</span>,<span class="st">&quot;-.-&quot;</span>,<span class="st">&quot;.-..&quot;</span>,<span class="st">&quot;--&quot;</span>,<span class="st">&quot;-.&quot;</span>,<span class="st">&quot;---&quot;</span>,<span class="st">&quot;.--.&quot;</span>,<span class="st">&quot;--.-&quot;</span>,<span class="st">&quot;.-.&quot;</span>,<span class="st">&quot;...&quot;</span>,<span class="st">&quot;-&quot;</span>,<span class="st">&quot;..-&quot;</span>,<span class="st">&quot;...-&quot;</span>,<span class="st">&quot;.--&quot;</span>,<span class="st">&quot;-..-&quot;</span>,<span class="st">&quot;-.--&quot;</span>,<span class="st">&quot;--..&quot;</span>]</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    alphabets <span class="op">=</span> [<span class="bu">chr</span>(i <span class="op">+</span> <span class="bu">ord</span>(<span class="st">&#39;a&#39;</span>)) <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">26</span>)]</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    mapping <span class="op">=</span> <span class="bu">dict</span>(<span class="bu">zip</span>(alphabets, morse))</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">@staticmethod</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> map_to_morse(word):</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> word <span class="kw">in</span> Solution.mapping:</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> Solution.mapping[word]</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> Solution.mapping[word[<span class="dv">0</span>]] <span class="op">+</span> Solution.map_to_morse(word[<span class="dv">1</span>:])</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>        Solution.mapping[word] <span class="op">=</span> result</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> uniqueMorseRepresentations(<span class="va">self</span>, words: List[<span class="bu">str</span>]) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">len</span>(<span class="bu">set</span>(<span class="bu">map</span>(Solution.map_to_morse, words)))</span></code></pre></div>
+</div>
+<div id="9e9777fa-3395-4d7a-aedb-d4cc5c32c946" class="cell code"
+data-execution_count="7">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Solution().uniqueMorseRepresentations([<span class="st">&quot;gin&quot;</span>,<span class="st">&quot;zen&quot;</span>,<span class="st">&quot;gig&quot;</span>,<span class="st">&quot;msg&quot;</span>])</span></code></pre></div>
+<div class="output execute_result" data-execution_count="7">
+<pre><code>2</code></pre>
+</div>
+</div>
+<div id="c59229e2-b95d-4bcf-a94c-1eab5fcf6604" class="cell markdown">
+<h1 id="2">2.</h1>
+<p>Date: 20th Dec 2023<br> Easy Leetcode: Pascals Triangle II<br>
+Solution: <a href="https://leetcode.com/submissions/detail/1123808820/"
+class="uri">https://leetcode.com/submissions/detail/1123808820/</a></p>
+</div>
+<div id="cbfad5bf-ac04-43b7-a300-f3c464fa6885" class="cell code"
+data-execution_count="8">
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&#39;&#39;&#39;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">    [1]</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">    [1, 1]</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">    [1, 2, 1]</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">    [1, 3, 3, 1]</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">    [1, 4, 6, 4, 1]</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co">    [1, 5, 10, 10, 5, 1]</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">    [1, 6, 15, 20, 15, 6, 1]</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">    [1, 7, 21, 35, 35, 21, 7, 1]</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co">    n_rows = index + 1</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co">    &#39;&#39;&#39;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> slideSum(lst: List[<span class="bu">int</span>]) <span class="op">-&gt;</span> List[<span class="bu">int</span>]:</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Slide a window of size 2 over the list and return the list of sums</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">assert</span> <span class="bu">len</span>(lst) <span class="op">&gt;</span> <span class="dv">1</span>, <span class="ss">f&quot;Minimum slide length is 2, got </span><span class="sc">{</span><span class="bu">len</span>(lst)<span class="sc">}</span><span class="ss">&quot;</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> []</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(lst) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>            result.append(lst[i] <span class="op">+</span> lst[i <span class="op">+</span> <span class="dv">1</span>])</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> [<span class="dv">1</span>] <span class="op">+</span> result <span class="op">+</span> [<span class="dv">1</span>]</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> getRow(<span class="va">self</span>, rowIndex: <span class="bu">int</span>) <span class="op">-&gt;</span> List[<span class="bu">int</span>]:</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">assert</span> rowIndex <span class="op">&gt;=</span> <span class="dv">0</span>, <span class="ss">f&quot;Index cannot be negative, got </span><span class="sc">{</span>rowIndex<span class="sc">}</span><span class="ss">&quot;</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> rowIndex <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> [<span class="dv">1</span>]</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> rowIndex <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> [<span class="dv">1</span>, <span class="dv">1</span>]</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>            prevRow <span class="op">=</span> <span class="va">self</span>.getRow(rowIndex <span class="op">-</span> <span class="dv">1</span>)</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> Solution.slideSum(prevRow)</span></code></pre></div>
+</div>
+<div id="d3dfc31e-818d-4ae4-a986-0f6eff700890" class="cell code"
+data-execution_count="9">
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Solution().getRow(<span class="dv">10</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="9">
+<pre><code>[1, 10, 45, 120, 210, 252, 210, 120, 45, 10, 1]</code></pre>
+</div>
+</div>
+<div id="f46fc724-9eac-496b-acb5-fd46b142a225" class="cell markdown">
+<h1 id="3">3.</h1>
+<p>Date: 21th Dec 2023<br> Easy leetcode:
+find-total-time-spent-by-each-employee<br> Solution: <a
+href="https://leetcode.com/problems/find-total-time-spent-by-each-employee/submissions/1124667523/"
+class="uri">https://leetcode.com/problems/find-total-time-spent-by-each-employee/submissions/1124667523/</a></p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a># <span class="kw">Write</span> your MySQL <span class="kw">query</span> statement below</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">with</span> temp <span class="kw">as</span> (</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">select</span> </span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>        e.<span class="op">*</span>, (e.out_time <span class="op">-</span> e.in_time) total_time </span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">from</span> employees e</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="kw">select</span> </span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    t.event_day <span class="kw">as</span> <span class="dt">day</span>, t.emp_id, <span class="fu">sum</span>(t.total_time) total_time </span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="kw">from</span> temp t</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="kw">group</span> <span class="kw">by</span> t.emp_id, t.event_day;</span></code></pre></div>
+</div>
+<div id="3b455303-7738-4e23-bafb-8b4a022c1890" class="cell markdown">
+<h1 id="4">4.</h1>
+<p>Date: 21th Dec 2023<br> Easy Leetcode:
+sum-of-all-odd-length-subarrays<br> Solution: <a
+href="https://leetcode.com/problems/sum-of-all-odd-length-subarrays/submissions/1124679524/"
+class="uri">https://leetcode.com/problems/sum-of-all-odd-length-subarrays/submissions/1124679524/</a></p>
+</div>
+<div id="5ab2fb01-1837-48aa-a8e8-3db631253c49" class="cell code"
+data-execution_count="10">
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> slide(arr: <span class="bu">list</span>[<span class="bu">int</span>], window: <span class="bu">int</span>):</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">assert</span> window <span class="op">&lt;=</span> <span class="bu">len</span>(arr), <span class="st">&quot;Window size must be less than the len of arr&quot;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> curr_sum <span class="op">=</span> <span class="bu">sum</span>(arr[:window])</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(arr) <span class="op">-</span> window):</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>            start_idx_curr_window, end_idx_next_window <span class="op">=</span> i, i <span class="op">+</span> window</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>            curr_sum <span class="op">=</span> curr_sum <span class="op">-</span> arr[start_idx_curr_window] <span class="op">+</span> arr[end_idx_next_window]</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>            result <span class="op">+=</span> curr_sum</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> sumOddLengthSubarrays(<span class="va">self</span>, arr: <span class="bu">list</span>[<span class="bu">int</span>]) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(arr) <span class="op">+</span> <span class="dv">1</span>, <span class="dv">2</span>):</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>            result <span class="op">+=</span> Solution.slide(arr, window<span class="op">=</span>i)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span></code></pre></div>
+</div>
+<div id="7559ac15-cb65-4a48-9a75-ea5ca2551588" class="cell code"
+data-execution_count="11">
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>Solution().sumOddLengthSubarrays([<span class="dv">1</span>,<span class="dv">4</span>,<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">3</span>])</span></code></pre></div>
+<div class="output execute_result" data-execution_count="11">
+<pre><code>58</code></pre>
+</div>
+</div>
+<div id="a2ca17a7-f7f9-4838-b8af-7caf4b786274" class="cell code"
+data-execution_count="12">
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># https://leetcode.com/problems/sum-of-all-odd-length-subarrays/solutions/854184/java-c-python-o-n-time-o-1-space/</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> sumOddLengthSubarrays(<span class="va">self</span>, arr: List[<span class="bu">int</span>]) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>        n <span class="op">=</span> <span class="bu">len</span>(arr)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, n):</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>            k <span class="op">=</span> (i <span class="op">+</span> <span class="dv">1</span>) <span class="op">*</span> (n <span class="op">-</span> i)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>            result <span class="op">+=</span> arr[i] <span class="op">*</span> math.ceil(k <span class="op">/</span> <span class="dv">2</span>)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span></code></pre></div>
+</div>
+<div id="364fa384-1c52-4588-b960-ad96272778bb" class="cell markdown">
+<h1 id="5">5.</h1>
+<p>Date: 22th Dec 2023<br> Easy Leetcode:
+maximum-score-after-splitting-a-string<br> Solution: <a
+href="https://leetcode.com/problems/maximum-score-after-splitting-a-string/submissions/1125483525/"
+class="uri">https://leetcode.com/problems/maximum-score-after-splitting-a-string/submissions/1125483525/</a></p>
+</div>
+<div id="2b1e8f16-2fc2-48e7-b873-060cdcdcf167" class="cell code"
+data-execution_count="13">
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">Min possible score: 0 [10]</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">Max possible score: len(s) [01]</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> maxScore(<span class="va">self</span>, s: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>        left_score, right_score  <span class="op">=</span> <span class="dv">0</span>, s.count(<span class="st">&quot;1&quot;</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        res <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ch <span class="kw">in</span> s[:<span class="op">-</span><span class="dv">1</span>]:</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> ch <span class="op">==</span> <span class="st">&quot;0&quot;</span>:</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>                left_score <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>                right_score <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>            curr <span class="op">=</span> left_score <span class="op">+</span> right_score</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> curr <span class="op">&gt;</span> res:</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>                res <span class="op">=</span> curr</span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> res</span></code></pre></div>
+</div>
+<div id="c64f41a3-ab1b-4d50-b39a-40091512460a" class="cell markdown">
+<h1 id="6">6.</h1>
+<p>Date: 22th Dec 2023<br> Easy Leetcode:
+kids-with-the-greatest-number-of-candies<br> Solution: <a
+href="https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/submissions/1125486579/"
+class="uri">https://leetcode.com/problems/kids-with-the-greatest-number-of-candies/submissions/1125486579/</a></p>
+</div>
+<div id="ec4bae1a-ab79-477b-acfe-4e7b5521b0c5" class="cell code"
+data-execution_count="14">
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> kidsWithCandies(<span class="va">self</span>, candies: List[<span class="bu">int</span>], extraCandies: <span class="bu">int</span>) <span class="op">-&gt;</span> List[<span class="bu">bool</span>]:</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>        maxCandies <span class="op">=</span> <span class="bu">max</span>(candies) </span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>        res <span class="op">=</span> []</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> candies_with_kid_i <span class="kw">in</span> candies:</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> candies_with_kid_i <span class="op">+</span> extraCandies <span class="op">&gt;=</span> maxCandies:</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>               res.append(<span class="va">True</span>)</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>                res.append(<span class="va">False</span>)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> res</span></code></pre></div>
+</div>
+<div id="1fa49eec-d980-4405-a88e-30e1ce68fa94" class="cell markdown">
+<h1 id="7">7.</h1>
+<p>Date: 22th Dec 2023<br> Easy Leetcode:
+can-make-arithmetic-progression-from-sequence<br> Solution (can be
+improved): <a
+href="https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/submissions/1125491514/"
+class="uri">https://leetcode.com/problems/can-make-arithmetic-progression-from-sequence/submissions/1125491514/</a></p>
+</div>
+<div id="42d718fd-dd4e-4db1-8e00-6fe31bf46be4" class="cell code"
+data-execution_count="15">
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> canMakeArithmeticProgression(<span class="va">self</span>, arr: List[<span class="bu">int</span>]) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Sort the array</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>        arr.sort()       </span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>        diff <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(arr) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>            curr <span class="op">=</span> arr[i <span class="op">+</span> <span class="dv">1</span>] <span class="op">-</span> arr[i]</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> diff <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>                diff <span class="op">=</span> curr</span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">elif</span> diff <span class="op">!=</span> curr:</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span></code></pre></div>
+</div>
+<div id="4593be4e-eacb-4577-bfa7-35dd0eaa304e" class="cell markdown">
+<h1 id="8">8.</h1>
+<p>Date: 22nd Dec 2023<br> Easy Leetcode:
+find-users-with-valid-e-mails<br> Solution: <a
+href="https://leetcode.com/problems/find-users-with-valid-e-mails/submissions/1125507166/"
+class="uri">https://leetcode.com/problems/find-users-with-valid-e-mails/submissions/1125507166/</a></p>
+</div>
+<div id="f273a626-27ec-4761-9ac1-92412cbd08d7" class="cell code"
+data-execution_count="16">
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> read_lc_df(<span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="st">+---------+-----------+-------------------------+</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="st">| user_id | name      | mail                    |</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="st">| ------- | --------- | ----------------------- |</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="st">| 1       | Winston   | winston@leetcode.com    |</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="st">| 2       | Jonathan  | jonathanisgreat         |</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="st">| 3       | Annabelle | bella-@leetcode.com     |</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="st">| 4       | Sally     | sally.come@leetcode.com |</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="st">| 5       | Marwan    | quarz#2020@leetcode.com |</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="st">| 6       | David     | david69@gmail.com       |</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="st">| 7       | Shapiro   | .shapo@leetcode.com     |</span></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a><span class="st">+---------+-----------+-------------------------+</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(temp[temp[<span class="st">&#39;mail&#39;</span>].<span class="bu">str</span>.fullmatch(<span class="st">&#39;[A-Za-z][A-Za-z0-9\.\-\_]*\@leetcode\.com&#39;</span>)])</span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Write to DB &amp; solve using SQL</span></span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a>temp.to_sql(name<span class="op">=</span><span class="st">&#39;temp&#39;</span>, con<span class="op">=</span>conn, index<span class="op">=</span><span class="va">False</span>, if_exists<span class="op">=</span><span class="st">&#39;replace&#39;</span>)</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(pd.read_sql(<span class="st">&quot;select * from temp u where u.mail REGEXP &#39;^[a-zA-Z]+[a-zA-Z0-9-._]*</span><span class="ch">\\</span><span class="st">@leetcode</span><span class="ch">\\</span><span class="st">.com$&#39;&quot;</span>, con<span class="op">=</span>conn))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>  user_id       name                     mail
+1       1    Winston     winston@leetcode.com
+3       3  Annabelle      bella-@leetcode.com
+4       4      Sally  sally.come@leetcode.com
+  user_id       name                     mail
+0       1    Winston     winston@leetcode.com
+1       3  Annabelle      bella-@leetcode.com
+2       4      Sally  sally.come@leetcode.com
+</code></pre>
+</div>
+</div>
+<div id="ec93c48c-6c48-4f37-a20d-24bd829c53c9" class="cell markdown">
+<h1 id="9">9.</h1>
+<p>Date: 22nd Dec 2023<br> Medium Leetcode: consecutive-numbers <br>
+Solution: <a
+href="https://leetcode.com/problems/consecutive-numbers/submissions/1125892860/"
+class="uri">https://leetcode.com/problems/consecutive-numbers/submissions/1125892860/</a></p>
+</div>
+<div id="340e590f-b16e-4c05-b1a6-28687eff7493" class="cell code"
+data-execution_count="17">
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> read_lc_df(<span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="st">+----+-----+</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="st">| id | num |</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="st">+----+-----+</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="st">| 1  | 1   |</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="st">| 2  | 1   |</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="st">| 3  | 1   |</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a><span class="st">| 4  | 2   |</span></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a><span class="st">| 5  | 1   |</span></span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="st">| 6  | 2   |</span></span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="st">| 7  | 2   |</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="st">+----+-----+</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Python iterative solution</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> consecutive_numbers_py(logs: pd.DataFrame) <span class="op">-&gt;</span> pd.DataFrame:</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> []</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>    resultSet <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>    prev <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> num <span class="kw">in</span> logs[<span class="st">&#39;num&#39;</span>].values:</span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> prev <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>            prev <span class="op">=</span> [num, <span class="dv">1</span>]</span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> prev[<span class="dv">0</span>] <span class="op">==</span> num:</span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a>            prev[<span class="dv">1</span>] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> prev[<span class="dv">1</span>] <span class="op">&gt;=</span> <span class="dv">3</span> <span class="kw">and</span> prev[<span class="dv">0</span>] <span class="kw">not</span> <span class="kw">in</span> resultSet:</span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>                result.append(prev[<span class="dv">0</span>])</span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>                resultSet.add(prev[<span class="dv">0</span>])</span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a>            prev <span class="op">=</span> [num, <span class="dv">1</span>]</span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> prev <span class="kw">is</span> <span class="kw">not</span> <span class="va">None</span> <span class="kw">and</span> prev[<span class="dv">1</span>] <span class="op">&gt;=</span> <span class="dv">3</span> <span class="kw">and</span> prev[<span class="dv">0</span>] <span class="kw">not</span> <span class="kw">in</span> resultSet:</span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>        result.append(prev[<span class="dv">0</span>])</span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a>        resultSet.add(prev[<span class="dv">0</span>])</span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pd.DataFrame({<span class="st">&quot;ConsecutiveNums&quot;</span>: result})</span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Pandas solution</span></span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> consecutive_numbers_df(logs: pd.DataFrame) <span class="op">-&gt;</span> pd.DataFrame:</span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Code starts here</span></span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> logs.copy()</span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">&#39;diff_1&#39;</span>] <span class="op">=</span> df.groupby(<span class="st">&quot;num&quot;</span>)[<span class="st">&quot;id&quot;</span>].diff()</span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a>    df[<span class="st">&#39;diff_2&#39;</span>] <span class="op">=</span> df.groupby(<span class="st">&quot;num&quot;</span>)[<span class="st">&quot;id&quot;</span>].diff(periods<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> df[(df[<span class="st">&#39;diff_1&#39;</span>] <span class="op">==</span> <span class="dv">1</span>) <span class="op">&amp;</span> (df[<span class="st">&#39;diff_2&#39;</span>] <span class="op">==</span> <span class="dv">2</span>)][<span class="st">&#39;num&#39;</span>].rename(<span class="st">&quot;ConsecutiveNums&quot;</span>).to_frame().drop_duplicates().reset_index(drop<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span>
+<span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-47"><a href="#cb18-47" aria-hidden="true" tabindex="-1"></a>display(consecutive_numbers_py(temp))</span>
+<span id="cb18-48"><a href="#cb18-48" aria-hidden="true" tabindex="-1"></a>display(consecutive_numbers_df(temp))</span>
+<span id="cb18-49"><a href="#cb18-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-50"><a href="#cb18-50" aria-hidden="true" tabindex="-1"></a><span class="co"># SQL Solution</span></span>
+<span id="cb18-51"><a href="#cb18-51" aria-hidden="true" tabindex="-1"></a>temp.to_sql(<span class="st">&quot;temp&quot;</span>, con<span class="op">=</span>conn, index<span class="op">=</span><span class="va">False</span>, if_exists<span class="op">=</span><span class="st">&#39;replace&#39;</span>)</span>
+<span id="cb18-52"><a href="#cb18-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-53"><a href="#cb18-53" aria-hidden="true" tabindex="-1"></a>pd.read_sql(<span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb18-54"><a href="#cb18-54" aria-hidden="true" tabindex="-1"></a><span class="st">with temp_1 as (</span></span>
+<span id="cb18-55"><a href="#cb18-55" aria-hidden="true" tabindex="-1"></a><span class="st">    select </span></span>
+<span id="cb18-56"><a href="#cb18-56" aria-hidden="true" tabindex="-1"></a><span class="st">        t.id, </span></span>
+<span id="cb18-57"><a href="#cb18-57" aria-hidden="true" tabindex="-1"></a><span class="st">        t.num, </span></span>
+<span id="cb18-58"><a href="#cb18-58" aria-hidden="true" tabindex="-1"></a><span class="st">        t.id - lag(t.id, 1) over(partition by t.num order by t.id) as diff_1,</span></span>
+<span id="cb18-59"><a href="#cb18-59" aria-hidden="true" tabindex="-1"></a><span class="st">        t.id - lag(t.id, 2) over(partition by t.num order by t.id) as diff_2 </span></span>
+<span id="cb18-60"><a href="#cb18-60" aria-hidden="true" tabindex="-1"></a><span class="st">    from temp t</span></span>
+<span id="cb18-61"><a href="#cb18-61" aria-hidden="true" tabindex="-1"></a><span class="st">)</span></span>
+<span id="cb18-62"><a href="#cb18-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-63"><a href="#cb18-63" aria-hidden="true" tabindex="-1"></a><span class="st">select distinct num ConsecutiveNums from temp_1 where diff_1 = 1 and diff_2 = 2</span></span>
+<span id="cb18-64"><a href="#cb18-64" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>, con<span class="op">=</span>conn)</span></code></pre></div>
+<div class="output display_data">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ConsecutiveNums</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="output display_data">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ConsecutiveNums</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="output execute_result" data-execution_count="17">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ConsecutiveNums</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="603a2c87-bc46-41e9-a312-d3e0304c7dfc" class="cell markdown">
+<h1 id="10">10.</h1>
+<p>Date: 22nd Dec 2023<br> Medium Leetcode:
+customers-who-never-order<br> Solution: <a
+href="https://leetcode.com/problems/customers-who-never-order/submissions/1125909085/"
+class="uri">https://leetcode.com/problems/customers-who-never-order/submissions/1125909085/</a></p>
+<h4 id="sql-solution">SQL Solution:</h4>
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">select</span> c.name Customers</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="kw">from</span> Customers c </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="kw">left</span> <span class="kw">join</span> Orders o <span class="kw">on</span> c.<span class="kw">id</span> <span class="op">=</span> o.customerId </span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="kw">where</span> o.<span class="kw">id</span> <span class="kw">is</span> <span class="kw">Null</span></span></code></pre></div>
+<h4 id="pandas-solution">Pandas Solution:</h4>
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> find_customers(customers: pd.DataFrame, orders: pd.DataFrame) <span class="op">-&gt;</span> pd.DataFrame:</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> customers.loc[<span class="op">~</span>customers[<span class="st">&#39;id&#39;</span>].isin(orders[<span class="st">&#39;customerId&#39;</span>]), <span class="st">&#39;name&#39;</span>].to_frame()</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> result.rename({<span class="st">&quot;name&quot;</span>: <span class="st">&quot;Customers&quot;</span>}, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre></div>
+</div>
+<div id="cd3e1f11-0af5-4b55-ad19-abbd1805afea" class="cell markdown">
+<h1 id="11">11.</h1>
+<p>Date: 22nd Dec 2023<br> Easy Leetcode: biggest-single-number<br>
+Solution: <a
+href="https://leetcode.com/problems/biggest-single-number/submissions/1125925499/"
+class="uri">https://leetcode.com/problems/biggest-single-number/submissions/1125925499/</a></p>
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode sql"><code class="sourceCode sql"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">with</span> temp <span class="kw">as</span> (</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">select</span> num </span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">from</span> MyNumbers</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">group</span> <span class="kw">by</span> num </span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">having</span> <span class="fu">count</span>(num) <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="kw">select</span> <span class="fu">max</span>(num) num <span class="kw">from</span> temp</span></code></pre></div>
+</div>
+<div id="1edd8fc1-1235-4ebe-9fdf-789e2ff3620d" class="cell code"
+data-execution_count="18">
+<div class="sourceCode" id="cb22"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> biggest_single_number(my_numbers: pd.DataFrame) <span class="op">-&gt;</span> pd.DataFrame:</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> my_numbers.value_counts().sort_index()</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> df[df <span class="op">==</span> <span class="dv">1</span>].iloc[<span class="op">-</span><span class="dv">1</span>:].index</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df.to_frame() <span class="cf">if</span> <span class="bu">len</span>(df) <span class="cf">else</span> pd.DataFrame({<span class="st">&quot;num&quot;</span>: [<span class="va">None</span>]}) </span></code></pre></div>
+</div>
+<div id="4b691b6a-b3a5-40fb-94c3-543dfefdb102" class="cell markdown">
+<h1 id="12">12.</h1>
+<p>Date; 22nd Dec 2023<br> Easy Leetcode: summary-ranges<br> Solution:
+<a
+href="https://leetcode.com/problems/summary-ranges/submissions/1125948046/"
+class="uri">https://leetcode.com/problems/summary-ranges/submissions/1125948046/</a></p>
+</div>
+<div id="30514c87-c164-4aa5-8b03-9e8ddf2b3cfe" class="cell code"
+data-execution_count="19">
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> summaryRanges(<span class="va">self</span>, nums: List[<span class="bu">int</span>]) <span class="op">-&gt;</span> List[<span class="bu">str</span>]:</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> []</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>        curr <span class="op">=</span> []</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> num <span class="kw">in</span> nums:</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> <span class="kw">not</span> curr <span class="kw">or</span> curr[<span class="op">-</span><span class="dv">1</span>] <span class="op">==</span> num <span class="op">-</span> <span class="dv">1</span>:</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>                    curr.append(num)</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>                <span class="cf">else</span>:</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> <span class="bu">len</span>(curr) <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>                        result.append(<span class="bu">str</span>(curr[<span class="dv">0</span>]))</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span>:</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>                        result.append(<span class="ss">f&quot;</span><span class="sc">{</span>curr[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">-&gt;</span><span class="sc">{</span>curr[<span class="op">-</span><span class="dv">1</span>]<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>                    curr <span class="op">=</span> [num]</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Residues remain</span></span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">len</span>(curr) <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="bu">len</span>(curr) <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>                result.append(<span class="bu">str</span>(curr[<span class="dv">0</span>]))</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>                result.append(<span class="ss">f&quot;</span><span class="sc">{</span>curr[<span class="dv">0</span>]<span class="sc">}</span><span class="ss">-&gt;</span><span class="sc">{</span>curr[<span class="op">-</span><span class="dv">1</span>]<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span></code></pre></div>
+</div>
+<div id="ff4e6724-333d-4282-bd9f-77d4462fdb24" class="cell markdown">
+<h1 id="13">13.</h1>
+<p>Date: 23rd Dec 2023<br> Easy Leetcode: number-of-good-pairs<br>
+Solution: <a
+href="https://leetcode.com/problems/number-of-good-pairs/submissions/1126247596/"
+class="uri">https://leetcode.com/problems/number-of-good-pairs/submissions/1126247596/</a></p>
+</div>
+<div id="26d57e44-6780-4cd4-b165-f03a9fabe0b6" class="cell code"
+data-execution_count="20">
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> numIdenticalPairs(<span class="va">self</span>, nums: List[<span class="bu">int</span>]) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>        indices <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i, num <span class="kw">in</span> <span class="bu">enumerate</span>(nums): </span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>            indices[num] <span class="op">=</span> indices.get(num, <span class="dv">0</span>) <span class="op">+</span> <span class="dv">1</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> curr <span class="kw">in</span> indices.values():</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>            result <span class="op">+=</span> math.comb(curr, <span class="dv">2</span>)</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>        <span class="co"># More concise solution from https://leetcode.com/problems/number-of-good-pairs/solutions/731561/java-c-python-count/</span></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">sum</span>(math.comb(n, <span class="dv">2</span>) <span class="cf">for</span> n <span class="kw">in</span> collections.Counter([<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>]).values())</span></code></pre></div>
+</div>
+<div id="5b332f23-242b-4bff-b3d4-58ba2a6051d4" class="cell code"
+data-execution_count="21">
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>Solution().numIdenticalPairs([<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>])</span></code></pre></div>
+<div class="output execute_result" data-execution_count="21">
+<pre><code>6</code></pre>
+</div>
+</div>
+<div id="a5d10ae4-c3df-49c1-afdf-2d569c24003f" class="cell markdown">
+<h1 id="14">14.</h1>
+<p>Date: 23rd Dec 2023<br> Easy Leetcode: defanging-an-ip-address<br>
+Solution: <a
+href="https://leetcode.com/problems/defanging-an-ip-address/submissions/1126251287/"
+class="uri">https://leetcode.com/problems/defanging-an-ip-address/submissions/1126251287/</a></p>
+</div>
+<div id="286dd298-9a6f-4f39-aee0-4d617fb23ef0" class="cell code"
+data-execution_count="22">
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> defangIPaddr(<span class="va">self</span>, address: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>        <span class="co"># return address.replace(&quot;.&quot;, &quot;[.]&quot;) </span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> []</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ch <span class="kw">in</span> address:</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> ch <span class="op">==</span> <span class="st">&quot;.&quot;</span>:</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>                ch <span class="op">=</span> <span class="st">&quot;[.]&quot;</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>            result.append(ch)</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>        result_str <span class="op">=</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ch <span class="kw">in</span> result:</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>            result_str <span class="op">+=</span> ch</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result_str</span></code></pre></div>
+</div>
+<div id="c446c937-ce54-42e2-b539-a770af47bf84" class="cell markdown">
+<h1 id="15">15.</h1>
+<p>Date: 23rd Dec 2023<br> Medium Leetcode:
+encode-and-decode-tinyurl<br> Solution: <a
+href="https://leetcode.com/problems/encode-and-decode-tinyurl/submissions/1126404991/"
+class="uri">https://leetcode.com/problems/encode-and-decode-tinyurl/submissions/1126404991/</a></p>
+</div>
+<div id="3f7be11e-be86-4691-a613-443bf051c496" class="cell code"
+data-execution_count="23">
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Codec:</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, code_length<span class="op">=</span><span class="dv">6</span>):</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.forward_mappings <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.backward_mappings <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.code_length <span class="op">=</span> code_length</span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> generate_code(<span class="va">self</span>):</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>        code <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> code <span class="kw">is</span> <span class="va">None</span> <span class="kw">or</span> code <span class="kw">in</span> <span class="va">self</span>.forward_mappings:</span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a>            code <span class="op">=</span> <span class="st">&#39;&#39;</span>.join(random.choices(<span class="st">&#39;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWZYZ&#39;</span>, k<span class="op">=</span><span class="va">self</span>.code_length))</span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> code</span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> encode(<span class="va">self</span>, longUrl: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;Encodes a URL to a shortened URL.</span></span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> longUrl <span class="kw">not</span> <span class="kw">in</span> <span class="va">self</span>.backward_mappings:</span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a>            code <span class="op">=</span> <span class="va">self</span>.generate_code()</span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.forward_mappings[code] <span class="op">=</span> longUrl</span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.backward_mappings[longUrl] <span class="op">=</span> code</span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a>            code <span class="op">=</span> <span class="va">self</span>.backward_mappings[longUrl]</span>
+<span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a>            </span>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f&quot;https://tinyurl.com/</span><span class="sc">{</span>code<span class="sc">}</span><span class="ss">&quot;</span></span>
+<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> decode(<span class="va">self</span>, shortUrl: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a>        <span class="co">&quot;&quot;&quot;Decodes a shortened URL to its original URL.</span></span>
+<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a><span class="co">        &quot;&quot;&quot;</span></span>
+<span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a>        code <span class="op">=</span> shortUrl[<span class="op">-</span><span class="va">self</span>.code_length:]</span>
+<span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> code <span class="kw">in</span> <span class="va">self</span>.forward_mappings:</span>
+<span id="cb28-32"><a href="#cb28-32" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">self</span>.forward_mappings[code]</span>
+<span id="cb28-33"><a href="#cb28-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb28-34"><a href="#cb28-34" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">None</span></span>
+<span id="cb28-35"><a href="#cb28-35" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb28-36"><a href="#cb28-36" aria-hidden="true" tabindex="-1"></a>codec <span class="op">=</span> Codec()</span>
+<span id="cb28-37"><a href="#cb28-37" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">&quot;https://leetcode.com/problems/design-tinyurl&quot;</span></span>
+<span id="cb28-38"><a href="#cb28-38" aria-hidden="true" tabindex="-1"></a>code <span class="op">=</span> codec.encode(url)</span>
+<span id="cb28-39"><a href="#cb28-39" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span> (code)</span>
+<span id="cb28-40"><a href="#cb28-40" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> codec.decode(code) <span class="op">==</span> url, <span class="st">&quot;Don&#39;t seem to match&quot;</span></span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>https://tinyurl.com/AYonVq
+</code></pre>
+</div>
+</div>
+<div id="c68e47aa-8d6f-4907-80b1-4aa1fc0ce5fe" class="cell markdown">
+<h1 id="16">16.</h1>
+<p>Date: 23rd Dec 2023<br> Easy Leetcode:
+subtract-the-product-and-sum-of-digits-of-an-integer<br> Solution: <a
+href="https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/submissions/1126416675/"
+class="uri">https://leetcode.com/problems/subtract-the-product-and-sum-of-digits-of-an-integer/submissions/1126416675/</a></p>
+</div>
+<div id="b6dc8842-89d4-431e-9385-7fdacd8f3953" class="cell code"
+data-execution_count="24">
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> subtractProductAndSum(<span class="va">self</span>, n: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Alternate solution</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>        nums <span class="op">=</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="bu">int</span>, <span class="bu">list</span>(<span class="bu">str</span>(n))))</span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>        s <span class="op">=</span> functools.<span class="bu">reduce</span>(<span class="kw">lambda</span> x, y: x <span class="op">+</span> y, nums, <span class="dv">0</span>)</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>        p <span class="op">=</span> functools.<span class="bu">reduce</span>(<span class="kw">lambda</span> x, y: x <span class="op">*</span> y, nums, <span class="dv">1</span>)</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> p <span class="op">-</span> s</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>        <span class="co"># More efficient although has the same complexity</span></span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>        s, p <span class="op">=</span> <span class="dv">0</span>, <span class="dv">1</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ch <span class="kw">in</span> <span class="bu">str</span>(n):</span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>            s <span class="op">+=</span> <span class="bu">int</span>(ch)</span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a>            p <span class="op">*=</span> <span class="bu">int</span>(ch)</span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> p <span class="op">-</span> s</span></code></pre></div>
+</div>
+<div id="163f8a94-dbe1-4e99-89ca-543584ad4a25" class="cell markdown">
+<h1 id="17">17.</h1>
+<p>Date: 23rd Dec 2023<br> Medium Leetcode:
+remove-all-adjacent-duplicates-in-string-ii<br> Solution: <a
+href="https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/submissions/1126450574/"
+class="uri">https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/submissions/1126450574/</a></p>
+</div>
+<div id="9421e5a6-7300-4107-a601-e1f1b90fe761" class="cell code"
+data-execution_count="25">
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Example 1:</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;pbbcggttciiippooaais&quot;, k = 2</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;pcciis&quot;</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;ps&quot;</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Example 2:</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;deeedbbcccbdaa&quot;, k = 3</span></span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;ddbbbdaa&quot;</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;dddaa&quot;</span></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;aa&quot;</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Solution idea from: https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii/solutions/392933/java-c-python-two-pointers-and-stack-solution/</span></span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> removeDuplicates(<span class="va">self</span>, s: <span class="bu">str</span>, k: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> [[<span class="st">&#39;&#39;</span>, <span class="dv">1</span>]]</span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ch <span class="kw">in</span> s:</span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> result[<span class="op">-</span><span class="dv">1</span>][<span class="dv">0</span>] <span class="op">==</span> ch:</span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a>                result[<span class="op">-</span><span class="dv">1</span>][<span class="dv">1</span>] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a>                result.append([ch, <span class="dv">1</span>])</span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> result[<span class="op">-</span><span class="dv">1</span>][<span class="dv">1</span>] <span class="op">==</span> k:</span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a>                result.pop()</span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">&#39;&#39;</span>.join(<span class="bu">map</span>(<span class="kw">lambda</span> x: x[<span class="dv">0</span>] <span class="op">*</span> x[<span class="dv">1</span>], result))</span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Testing the solution</span></span>
+<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> Solution().removeDuplicates(<span class="st">&quot;abcd&quot;</span>, k<span class="op">=</span><span class="dv">2</span>) <span class="op">==</span> <span class="st">&#39;abcd&#39;</span></span>
+<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> Solution().removeDuplicates(<span class="st">&quot;deeedbbcccbdaa&quot;</span>, k<span class="op">=</span><span class="dv">3</span>) <span class="op">==</span> <span class="st">&#39;aa&#39;</span></span>
+<span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> Solution().removeDuplicates(<span class="st">&quot;pbbcggttciiippooaais&quot;</span>, k<span class="op">=</span><span class="dv">2</span>) <span class="op">==</span> <span class="st">&#39;ps&#39;</span></span>
+<span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> Solution().removeDuplicates(<span class="st">&quot;abccba&quot;</span>, k<span class="op">=</span><span class="dv">2</span>) <span class="op">==</span> <span class="st">&#39;&#39;</span></span></code></pre></div>
+</div>
+<div id="77153c5a-851f-445e-aef9-385272b727f3" class="cell markdown">
+<h1 id="18">18.</h1>
+<p>Date: 23rd Dec 2023<br> Medium Leetcode: capital-gainloss<br>
+Solution: <a
+href="https://leetcode.com/problems/capital-gainloss/submissions/1126487033/"
+class="uri">https://leetcode.com/problems/capital-gainloss/submissions/1126487033/</a></p>
+</div>
+<div id="72963fb2-fac0-402a-829e-f6b3ca13c202" class="cell code"
+data-execution_count="26">
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> read_lc_df(<span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="st">+---------------+-----------+---------------+--------+</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="st">| stock_name    | operation | operation_day | price  |</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="st">+---------------+-----------+---------------+--------+</span></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="st">| Leetcode      | Buy       | 1             | 1000   |</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="st">| Corona Masks  | Buy       | 2             | 10     |</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="st">| Leetcode      | Sell      | 5             | 9000   |</span></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a><span class="st">| Handbags      | Buy       | 17            | 30000  |</span></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="st">| Corona Masks  | Sell      | 3             | 1010   |</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a><span class="st">| Corona Masks  | Buy       | 4             | 1000   |</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="st">| Corona Masks  | Sell      | 5             | 500    |</span></span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="st">| Corona Masks  | Buy       | 6             | 1000   |</span></span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a><span class="st">| Handbags      | Sell      | 29            | 7000   |</span></span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a><span class="st">| Corona Masks  | Sell      | 10            | 10000  |</span></span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a><span class="st">+---------------+-----------+---------------+--------+</span></span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Actual code startes here</span></span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> temp.groupby([<span class="st">&#39;stock_name&#39;</span>, <span class="st">&#39;operation&#39;</span>], as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">&#39;price&#39;</span>].<span class="bu">sum</span>()</span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> _.groupby(<span class="st">&#39;stock_name&#39;</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: x.iloc[<span class="dv">1</span>, <span class="dv">2</span>] <span class="op">-</span> x.iloc[<span class="dv">0</span>, <span class="dv">2</span>]).reset_index()</span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> _.rename({<span class="dv">0</span>: <span class="st">&#39;capital_gain_loss&#39;</span>}, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a>display(_)</span>
+<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Using SQL</span></span>
+<span id="cb32-25"><a href="#cb32-25" aria-hidden="true" tabindex="-1"></a>temp.to_sql(<span class="st">&quot;temp&quot;</span>, if_exists<span class="op">=</span><span class="st">&#39;replace&#39;</span>, con<span class="op">=</span>conn, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb32-26"><a href="#cb32-26" aria-hidden="true" tabindex="-1"></a>pd.read_sql(<span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb32-27"><a href="#cb32-27" aria-hidden="true" tabindex="-1"></a><span class="st">with trade_sum as (</span></span>
+<span id="cb32-28"><a href="#cb32-28" aria-hidden="true" tabindex="-1"></a><span class="st">    select </span></span>
+<span id="cb32-29"><a href="#cb32-29" aria-hidden="true" tabindex="-1"></a><span class="st">        stock_name, </span></span>
+<span id="cb32-30"><a href="#cb32-30" aria-hidden="true" tabindex="-1"></a><span class="st">        operation, </span></span>
+<span id="cb32-31"><a href="#cb32-31" aria-hidden="true" tabindex="-1"></a><span class="st">        sum(price) price</span></span>
+<span id="cb32-32"><a href="#cb32-32" aria-hidden="true" tabindex="-1"></a><span class="st">    from temp </span></span>
+<span id="cb32-33"><a href="#cb32-33" aria-hidden="true" tabindex="-1"></a><span class="st">    group by stock_name, operation</span></span>
+<span id="cb32-34"><a href="#cb32-34" aria-hidden="true" tabindex="-1"></a><span class="st">),</span></span>
+<span id="cb32-35"><a href="#cb32-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-36"><a href="#cb32-36" aria-hidden="true" tabindex="-1"></a><span class="st">buy as (</span></span>
+<span id="cb32-37"><a href="#cb32-37" aria-hidden="true" tabindex="-1"></a><span class="st">    select * from trade_sum t </span></span>
+<span id="cb32-38"><a href="#cb32-38" aria-hidden="true" tabindex="-1"></a><span class="st">    where t.operation = &#39;Buy&#39;</span></span>
+<span id="cb32-39"><a href="#cb32-39" aria-hidden="true" tabindex="-1"></a><span class="st">),</span></span>
+<span id="cb32-40"><a href="#cb32-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-41"><a href="#cb32-41" aria-hidden="true" tabindex="-1"></a><span class="st">sell as (</span></span>
+<span id="cb32-42"><a href="#cb32-42" aria-hidden="true" tabindex="-1"></a><span class="st">    select * from trade_sum t </span></span>
+<span id="cb32-43"><a href="#cb32-43" aria-hidden="true" tabindex="-1"></a><span class="st">    where t.operation = &#39;Sell&#39;</span></span>
+<span id="cb32-44"><a href="#cb32-44" aria-hidden="true" tabindex="-1"></a><span class="st">)</span></span>
+<span id="cb32-45"><a href="#cb32-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-46"><a href="#cb32-46" aria-hidden="true" tabindex="-1"></a><span class="st">select </span></span>
+<span id="cb32-47"><a href="#cb32-47" aria-hidden="true" tabindex="-1"></a><span class="st">    s.stock_name, </span></span>
+<span id="cb32-48"><a href="#cb32-48" aria-hidden="true" tabindex="-1"></a><span class="st">    (s.price - b.price) capital_gain_loss </span></span>
+<span id="cb32-49"><a href="#cb32-49" aria-hidden="true" tabindex="-1"></a><span class="st">from buy b, sell s </span></span>
+<span id="cb32-50"><a href="#cb32-50" aria-hidden="true" tabindex="-1"></a><span class="st">where b.stock_name = s.stock_name</span></span>
+<span id="cb32-51"><a href="#cb32-51" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>, con<span class="op">=</span>conn)</span></code></pre></div>
+<div class="output display_data">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>stock_name</th>
+      <th>capital_gain_loss</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Corona Masks</td>
+      <td>9500.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Handbags</td>
+      <td>-23000.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Leetcode</td>
+      <td>8000.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="output execute_result" data-execution_count="26">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>stock_name</th>
+      <th>capital_gain_loss</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Corona Masks</td>
+      <td>9500.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Handbags</td>
+      <td>-23000.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Leetcode</td>
+      <td>8000.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="0c7765f9-274c-494f-86a2-dfb99e42b27a" class="cell markdown">
+<h1 id="19">19.</h1>
+<p>Date: 23rd Dec 2023<br> Medium Leetcode: monthly-transactions-i<br>
+Solution:</p>
+</div>
+<div id="641e2693-f755-4b7c-8d45-15ded8fcdc7e" class="cell code"
+data-execution_count="27">
+<div class="sourceCode" id="cb33"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> read_lc_df(<span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="st">+-----+---------+----------+--------+------------+</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="st">| id  | country | state    | amount | trans_date |</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="st">| --- | ------- | -------- | ------ | ---------- |</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a><span class="st">| 121 | US      | approved | 1000   | 2018-12-18 |</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="st">| 122 | US      | declined | 2000   | 2018-12-19 |</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="st">| 123 | US      | approved | 2000   | 2019-01-01 |</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a><span class="st">| 124 | null    | approved | 2000   | 2019-01-07 |</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a><span class="st">+-----+---------+----------+--------+------------+</span></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>temp[<span class="st">&#39;amount&#39;</span>] <span class="op">=</span> temp[<span class="st">&#39;amount&#39;</span>].astype(<span class="bu">float</span>)</span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>temp[<span class="st">&#39;trans_date&#39;</span>] <span class="op">=</span> pd.to_datetime(temp[<span class="st">&#39;trans_date&#39;</span>])</span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Start with the actual code</span></span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> temp.copy()</span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a>_[<span class="st">&#39;month&#39;</span>] <span class="op">=</span> _[<span class="st">&#39;trans_date&#39;</span>].dt.strftime(<span class="st">&quot;%Y-%m&quot;</span>)</span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> _.groupby([<span class="st">&#39;month&#39;</span>, <span class="st">&#39;country&#39;</span>, <span class="st">&#39;state&#39;</span>], as_index<span class="op">=</span><span class="va">False</span>, dropna<span class="op">=</span><span class="va">False</span>)[<span class="st">&#39;amount&#39;</span>].agg([<span class="st">&#39;sum&#39;</span>, <span class="st">&#39;count&#39;</span>])</span>
+<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> pd.merge(</span>
+<span id="cb33-21"><a href="#cb33-21" aria-hidden="true" tabindex="-1"></a>    _.groupby([<span class="st">&#39;month&#39;</span>, <span class="st">&#39;country&#39;</span>], as_index<span class="op">=</span><span class="va">False</span>, dropna<span class="op">=</span><span class="va">False</span>)[[<span class="st">&#39;sum&#39;</span>, <span class="st">&#39;count&#39;</span>]].agg(<span class="st">&#39;sum&#39;</span>),</span>
+<span id="cb33-22"><a href="#cb33-22" aria-hidden="true" tabindex="-1"></a>    _[_[<span class="st">&#39;state&#39;</span>] <span class="op">==</span> <span class="st">&#39;approved&#39;</span>].groupby([<span class="st">&#39;month&#39;</span>, <span class="st">&#39;country&#39;</span>], as_index<span class="op">=</span><span class="va">False</span>, dropna<span class="op">=</span><span class="va">False</span>)[[<span class="st">&#39;sum&#39;</span>, <span class="st">&#39;count&#39;</span>]].agg(<span class="st">&#39;sum&#39;</span>),</span>
+<span id="cb33-23"><a href="#cb33-23" aria-hidden="true" tabindex="-1"></a>    how<span class="op">=</span><span class="st">&#39;left&#39;</span>,</span>
+<span id="cb33-24"><a href="#cb33-24" aria-hidden="true" tabindex="-1"></a>    on<span class="op">=</span>[<span class="st">&#39;month&#39;</span>, <span class="st">&#39;country&#39;</span>]</span>
+<span id="cb33-25"><a href="#cb33-25" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb33-26"><a href="#cb33-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-27"><a href="#cb33-27" aria-hidden="true" tabindex="-1"></a>__ <span class="op">=</span> _.select_dtypes(<span class="st">&#39;number&#39;</span>).columns</span>
+<span id="cb33-28"><a href="#cb33-28" aria-hidden="true" tabindex="-1"></a>_[__] <span class="op">=</span> _[__].fillna(<span class="dv">0</span>)</span>
+<span id="cb33-29"><a href="#cb33-29" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> _.rename({<span class="st">&quot;count_x&quot;</span>: <span class="st">&quot;trans_count&quot;</span>, <span class="st">&quot;sum_x&quot;</span>: <span class="st">&quot;trans_total_amount&quot;</span>, <span class="st">&quot;sum_y&quot;</span>: <span class="st">&quot;approved_total_amount&quot;</span>, <span class="st">&quot;count_y&quot;</span>: <span class="st">&quot;approved_count&quot;</span>}, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb33-30"><a href="#cb33-30" aria-hidden="true" tabindex="-1"></a>display(_[[<span class="st">&#39;month&#39;</span>, <span class="st">&#39;country&#39;</span>, <span class="st">&#39;trans_count&#39;</span>, <span class="st">&#39;approved_count&#39;</span>, <span class="st">&#39;trans_total_amount&#39;</span>, <span class="st">&#39;approved_total_amount&#39;</span>]])</span>
+<span id="cb33-31"><a href="#cb33-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-32"><a href="#cb33-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Write to Database for SQL</span></span>
+<span id="cb33-33"><a href="#cb33-33" aria-hidden="true" tabindex="-1"></a>temp.to_sql(<span class="st">&quot;temp&quot;</span>, if_exists<span class="op">=</span><span class="st">&#39;replace&#39;</span>, index<span class="op">=</span><span class="va">False</span>, con<span class="op">=</span>conn)</span>
+<span id="cb33-34"><a href="#cb33-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-35"><a href="#cb33-35" aria-hidden="true" tabindex="-1"></a><span class="co"># Write SQL Query</span></span>
+<span id="cb33-36"><a href="#cb33-36" aria-hidden="true" tabindex="-1"></a>pd.read_sql(</span>
+<span id="cb33-37"><a href="#cb33-37" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb33-38"><a href="#cb33-38" aria-hidden="true" tabindex="-1"></a><span class="st">select </span></span>
+<span id="cb33-39"><a href="#cb33-39" aria-hidden="true" tabindex="-1"></a><span class="st">    SUBSTR(t.trans_date, 0, 8) month,</span></span>
+<span id="cb33-40"><a href="#cb33-40" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb33-41"><a href="#cb33-41" aria-hidden="true" tabindex="-1"></a><span class="st">    t.country,</span></span>
+<span id="cb33-42"><a href="#cb33-42" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb33-43"><a href="#cb33-43" aria-hidden="true" tabindex="-1"></a><span class="st">    count(t.amount) trans_count,</span></span>
+<span id="cb33-44"><a href="#cb33-44" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb33-45"><a href="#cb33-45" aria-hidden="true" tabindex="-1"></a><span class="st">    sum(</span></span>
+<span id="cb33-46"><a href="#cb33-46" aria-hidden="true" tabindex="-1"></a><span class="st">        CASE </span></span>
+<span id="cb33-47"><a href="#cb33-47" aria-hidden="true" tabindex="-1"></a><span class="st">            WHEN t.state = &#39;approved&#39; THEN 1</span></span>
+<span id="cb33-48"><a href="#cb33-48" aria-hidden="true" tabindex="-1"></a><span class="st">            ELSE 0</span></span>
+<span id="cb33-49"><a href="#cb33-49" aria-hidden="true" tabindex="-1"></a><span class="st">        END</span></span>
+<span id="cb33-50"><a href="#cb33-50" aria-hidden="true" tabindex="-1"></a><span class="st">    ) approved_count,</span></span>
+<span id="cb33-51"><a href="#cb33-51" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb33-52"><a href="#cb33-52" aria-hidden="true" tabindex="-1"></a><span class="st">    sum(t.amount) trans_total_amount,</span></span>
+<span id="cb33-53"><a href="#cb33-53" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb33-54"><a href="#cb33-54" aria-hidden="true" tabindex="-1"></a><span class="st">    sum(</span></span>
+<span id="cb33-55"><a href="#cb33-55" aria-hidden="true" tabindex="-1"></a><span class="st">        CASE </span></span>
+<span id="cb33-56"><a href="#cb33-56" aria-hidden="true" tabindex="-1"></a><span class="st">            WHEN t.state = &#39;approved&#39; THEN t.amount</span></span>
+<span id="cb33-57"><a href="#cb33-57" aria-hidden="true" tabindex="-1"></a><span class="st">            ELSE 0</span></span>
+<span id="cb33-58"><a href="#cb33-58" aria-hidden="true" tabindex="-1"></a><span class="st">        END</span></span>
+<span id="cb33-59"><a href="#cb33-59" aria-hidden="true" tabindex="-1"></a><span class="st">    ) approved_total_amount</span></span>
+<span id="cb33-60"><a href="#cb33-60" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb33-61"><a href="#cb33-61" aria-hidden="true" tabindex="-1"></a><span class="st">from temp t</span></span>
+<span id="cb33-62"><a href="#cb33-62" aria-hidden="true" tabindex="-1"></a><span class="st">group by 1, t.country</span></span>
+<span id="cb33-63"><a href="#cb33-63" aria-hidden="true" tabindex="-1"></a><span class="st">&#39;&#39;&#39;</span></span>
+<span id="cb33-64"><a href="#cb33-64" aria-hidden="true" tabindex="-1"></a>, con<span class="op">=</span>conn)</span></code></pre></div>
+<div class="output display_data">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>month</th>
+      <th>country</th>
+      <th>trans_count</th>
+      <th>approved_count</th>
+      <th>trans_total_amount</th>
+      <th>approved_total_amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2018-12</td>
+      <td>US</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3000.0</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2019-01</td>
+      <td>US</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2000.0</td>
+      <td>2000.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2019-01</td>
+      <td>NaN</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2000.0</td>
+      <td>2000.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="output execute_result" data-execution_count="27">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>month</th>
+      <th>country</th>
+      <th>trans_count</th>
+      <th>approved_count</th>
+      <th>trans_total_amount</th>
+      <th>approved_total_amount</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2018-12</td>
+      <td>US</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3000.0</td>
+      <td>1000.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2019-01</td>
+      <td>None</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2000.0</td>
+      <td>2000.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2019-01</td>
+      <td>US</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2000.0</td>
+      <td>2000.0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="b0bde1a6-9ca7-4b82-83bd-c9ac82b0c00b" class="cell markdown">
+<h1 id="20">20.</h1>
+<p>Date: 24th Dec 2023<br> Medium Leetcode:
+partitioning-into-minimum-number-of-deci-binary-numbers<br> Solution: <a
+href="https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/submissions/1127002126/"
+class="uri">https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/submissions/1127002126/</a></p>
+</div>
+<div id="c3fe25ad-56eb-4b75-9846-9ea61669327b" class="cell code"
+data-execution_count="28">
+<div class="sourceCode" id="cb34"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Example</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;692115&quot;</span>)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample solution</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(</span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>    functools.<span class="bu">reduce</span>(</span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a>        <span class="kw">lambda</span> x, y: <span class="bu">int</span>(x) <span class="op">+</span> <span class="bu">int</span>(y), </span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>        [<span class="st">&quot;111111&quot;</span>, <span class="st">&quot;111001&quot;</span>, <span class="st">&quot;110001&quot;</span>, <span class="st">&quot;110001&quot;</span>, <span class="st">&quot;110001&quot;</span>, <span class="st">&quot;110000&quot;</span>, <span class="st">&quot;10000&quot;</span>, <span class="st">&quot;10000&quot;</span>, <span class="st">&quot;10000&quot;</span>], <span class="co"># Len - 9</span></span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>        <span class="dv">0</span>)</span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="co"># We only need to return the max char from the list</span></span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> minPartitions(<span class="va">self</span>, n: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a>       <span class="cf">return</span> <span class="bu">max</span>(<span class="bu">map</span>(<span class="bu">int</span>, n)) </span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>Solution().minPartitions(<span class="st">&quot;692115&quot;</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>692115
+692115
+</code></pre>
+</div>
+<div class="output execute_result" data-execution_count="28">
+<pre><code>9</code></pre>
+</div>
+</div>
+<div id="634472f3-17ce-49d0-ba98-e7225b0db7db" class="cell markdown">
+<h1 id="21">21.</h1>
+<p>Date: 24th Dec 2023<br> Medium Leetcode:
+widest-vertical-area-between-two-points-containing-no-points<br>
+Solution:</p>
+</div>
+<div id="707c6740-4f90-4dd2-b243-f782255239fd" class="cell code"
+data-execution_count="29">
+<div class="sourceCode" id="cb37"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> maxWidthOfVerticalArea(<span class="va">self</span>, points: List[List[<span class="bu">int</span>]]) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>        sorted_coords <span class="op">=</span> <span class="bu">sorted</span>(points, key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="dv">0</span>])</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>        result <span class="op">=</span> <span class="op">-</span>math.inf</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(sorted_coords) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>            curr <span class="op">=</span> sorted_coords[i <span class="op">+</span> <span class="dv">1</span>][<span class="dv">0</span>] <span class="op">-</span> sorted_coords[i][<span class="dv">0</span>]</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> curr <span class="op">&gt;</span> result:</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>                result <span class="op">=</span> curr</span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> result</span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> Solution().maxWidthOfVerticalArea([[<span class="dv">3</span>,<span class="dv">1</span>],[<span class="dv">9</span>,<span class="dv">0</span>],[<span class="dv">1</span>,<span class="dv">0</span>],[<span class="dv">1</span>,<span class="dv">4</span>],[<span class="dv">5</span>,<span class="dv">3</span>],[<span class="dv">8</span>,<span class="dv">8</span>]]) <span class="op">==</span> <span class="dv">3</span></span>
+<span id="cb37-12"><a href="#cb37-12" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> Solution().maxWidthOfVerticalArea([[<span class="dv">8</span>,<span class="dv">7</span>],[<span class="dv">9</span>,<span class="dv">9</span>],[<span class="dv">7</span>,<span class="dv">4</span>],[<span class="dv">9</span>,<span class="dv">7</span>]]) <span class="op">==</span> <span class="dv">1</span></span></code></pre></div>
+</div>
+<div id="46204d31-f6f8-4d06-8f8c-a06b1f487694" class="cell markdown">
+<h1 id="22">22.</h1>
+<p>Date: 24th Dec 2023<br> Easy Leetcode:
+final-value-of-variable-after-performing-operations<br> Solution: <a
+href="https://leetcode.com/problems/final-value-of-variable-after-performing-operations/submissions/1127073907/"
+class="uri">https://leetcode.com/problems/final-value-of-variable-after-performing-operations/submissions/1127073907/</a></p>
+</div>
+<div id="0865eeaf-f3c8-45a9-93f9-1b5b0b31dd18" class="cell code"
+data-execution_count="30">
+<div class="sourceCode" id="cb38"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>mappings <span class="op">=</span> {<span class="st">&quot;--X&quot;</span>: <span class="op">-</span><span class="dv">1</span>, <span class="st">&quot;X--&quot;</span>: <span class="op">-</span><span class="dv">1</span>, <span class="st">&quot;++X&quot;</span>: <span class="dv">1</span>, <span class="st">&quot;X++&quot;</span>: <span class="dv">1</span>}</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> [<span class="st">&quot;--X&quot;</span>,<span class="st">&quot;X++&quot;</span>,<span class="st">&quot;X++&quot;</span>]</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: mappings[x], temp))</span></code></pre></div>
+<div class="output execute_result" data-execution_count="30">
+<pre><code>1</code></pre>
+</div>
+</div>
+<div id="b0480586-de48-4a55-b05d-a7a5a71413b6" class="cell markdown">
+<h1 id="23">23.</h1>
+<p>Date: 24th Dec 2023<br> Medium Leetcode:
+minimum-number-of-swaps-to-make-the-string-balanced<br> Solution: <a
+href="https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/submissions/1127130139/"
+class="uri">https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/submissions/1127130139/</a></p>
+</div>
+<div id="45ab5e5f-5821-47b0-9c7f-d0a14074d65e" class="cell code"
+data-execution_count="31">
+<div class="sourceCode" id="cb40"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="co">Balanced possibilities</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="co">n - 1:</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="co">[ ]</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="co">n - 2:</span></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="co">[ [ ] ]</span></span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a><span class="co">[ ] [ ]</span></span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a><span class="co">n - 3:</span></span>
+<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a><span class="co">[ ] [ ] [ ]</span></span>
+<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a><span class="co">[ [ ] [ ] ]</span></span>
+<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a><span class="co">[ [ [ ] ] ]</span></span>
+<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-16"><a href="#cb40-16" aria-hidden="true" tabindex="-1"></a><span class="co">Intuition:</span></span>
+<span id="cb40-17"><a href="#cb40-17" aria-hidden="true" tabindex="-1"></a><span class="co">1. Remove all the balanced brackets first, we would be left with something like this: &quot;][&quot;, &quot;]][[&quot;, &quot;]]][[[&quot;, &quot;]]]][[[[&quot;, etc</span></span>
+<span id="cb40-18"><a href="#cb40-18" aria-hidden="true" tabindex="-1"></a><span class="co">2. Swapping 1 pair reduces mismatched pairs by 2. Therefore for n (number of bracket `pair`), the number of swaps required would be ceil(n / 2).</span></span>
+<span id="cb40-19"><a href="#cb40-19" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb40-20"><a href="#cb40-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-21"><a href="#cb40-21" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb40-22"><a href="#cb40-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> remove_balanced_brackets(<span class="va">self</span>, s: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">str</span>:</span>
+<span id="cb40-23"><a href="#cb40-23" aria-hidden="true" tabindex="-1"></a>        stack <span class="op">=</span> []</span>
+<span id="cb40-24"><a href="#cb40-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> ch <span class="kw">in</span> s:</span>
+<span id="cb40-25"><a href="#cb40-25" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> ch <span class="op">==</span> <span class="st">&quot;]&quot;</span> <span class="kw">and</span> <span class="bu">len</span>(stack) <span class="op">&gt;</span> <span class="dv">0</span> <span class="kw">and</span> stack[<span class="op">-</span><span class="dv">1</span>] <span class="op">==</span> <span class="st">&quot;[&quot;</span>:</span>
+<span id="cb40-26"><a href="#cb40-26" aria-hidden="true" tabindex="-1"></a>                stack.pop()</span>
+<span id="cb40-27"><a href="#cb40-27" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb40-28"><a href="#cb40-28" aria-hidden="true" tabindex="-1"></a>                stack.append(ch)</span>
+<span id="cb40-29"><a href="#cb40-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> stack</span>
+<span id="cb40-30"><a href="#cb40-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-31"><a href="#cb40-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> minSwaps(<span class="va">self</span>, s: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb40-32"><a href="#cb40-32" aria-hidden="true" tabindex="-1"></a>        purely_unbalanced <span class="op">=</span> <span class="va">self</span>.remove_balanced_brackets(s)</span>
+<span id="cb40-33"><a href="#cb40-33" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> math.ceil(<span class="bu">len</span>(purely_unbalanced) <span class="op">/</span> <span class="dv">4</span>)</span>
+<span id="cb40-34"><a href="#cb40-34" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb40-35"><a href="#cb40-35" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> generate_unbalanced_str(n <span class="op">=</span> <span class="dv">2</span>):</span>
+<span id="cb40-36"><a href="#cb40-36" aria-hidden="true" tabindex="-1"></a>        <span class="kw">def</span> balanced(s: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
+<span id="cb40-37"><a href="#cb40-37" aria-hidden="true" tabindex="-1"></a>            stack <span class="op">=</span> []</span>
+<span id="cb40-38"><a href="#cb40-38" aria-hidden="true" tabindex="-1"></a>            <span class="cf">for</span> ch <span class="kw">in</span> s:</span>
+<span id="cb40-39"><a href="#cb40-39" aria-hidden="true" tabindex="-1"></a>                <span class="cf">if</span> ch <span class="op">==</span> <span class="st">&quot;[&quot;</span>:</span>
+<span id="cb40-40"><a href="#cb40-40" aria-hidden="true" tabindex="-1"></a>                    stack.append(ch)</span>
+<span id="cb40-41"><a href="#cb40-41" aria-hidden="true" tabindex="-1"></a>                <span class="cf">else</span>:</span>
+<span id="cb40-42"><a href="#cb40-42" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">if</span> <span class="bu">len</span>(stack) <span class="op">&gt;</span> <span class="dv">0</span> <span class="kw">and</span> stack[<span class="op">-</span><span class="dv">1</span>] <span class="op">==</span> <span class="st">&quot;[&quot;</span>:</span>
+<span id="cb40-43"><a href="#cb40-43" aria-hidden="true" tabindex="-1"></a>                        stack.pop()</span>
+<span id="cb40-44"><a href="#cb40-44" aria-hidden="true" tabindex="-1"></a>                    <span class="cf">else</span>:</span>
+<span id="cb40-45"><a href="#cb40-45" aria-hidden="true" tabindex="-1"></a>                        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb40-46"><a href="#cb40-46" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb40-47"><a href="#cb40-47" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb40-48"><a href="#cb40-48" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">set</span>(<span class="bu">filter</span>(<span class="kw">lambda</span> x: <span class="kw">not</span> balanced(x), <span class="bu">map</span>(<span class="kw">lambda</span> x: <span class="st">&quot;&quot;</span>.join(x), itertools.permutations(<span class="st">&quot;[]&quot;</span> <span class="op">*</span> n, r<span class="op">=</span><span class="dv">2</span><span class="op">*</span>n))))</span></code></pre></div>
+</div>
+<div id="4b07690d-579f-45bb-9d84-2b1f026d2e6b" class="cell markdown">
+<h1 id="24">24.</h1>
+<p>Date: 24th Dec 2023<br> Medium Leetcode:
+array-with-elements-not-equal-to-average-of-neighbors<br> Solution: <a
+href="https://leetcode.com/problems/array-with-elements-not-equal-to-average-of-neighbors/submissions/1127221598/"
+class="uri">https://leetcode.com/problems/array-with-elements-not-equal-to-average-of-neighbors/submissions/1127221598/</a></p>
+</div>
+<div id="940607bd-d4cd-4f6c-9453-64e0ef7de2e3" class="cell code"
+data-execution_count="38">
+<div class="sourceCode" id="cb41"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="co">[1,2,3]</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="co">[1,3,2]</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a><span class="co">[1,3,5,6,9]</span></span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a><span class="co">[1,5,3,6,9]</span></span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a><span class="co">[1,5,3,9,6]</span></span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a><span class="co">Intution:</span></span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a><span class="co">1. Keep sliding through the array until an index is reached where the condition fails (arr[i] = ((arr[i - 1] + arr[i + 1]) / 2)</span></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a><span class="co">2. For such instances swap the middle element with the right element.</span></span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a><span class="co">3. This consititues one pass. Keep repeating steps 1 and 2 until the arr stops changing. At that point we would have arrived at our solution.</span></span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a><span class="co">4. This is similar to how sorting algorithms like bubble sorting works.</span></span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> rearrange(nums: List[<span class="bu">int</span>]) <span class="op">-&gt;</span> List[<span class="bu">int</span>]:</span>
+<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a>    nums <span class="op">=</span> <span class="bu">list</span>(nums)</span>
+<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(nums) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb41-19"><a href="#cb41-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="dv">2</span> <span class="op">*</span> nums[i]) <span class="op">==</span> (nums[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> nums[i <span class="op">+</span> <span class="dv">1</span>]):</span>
+<span id="cb41-20"><a href="#cb41-20" aria-hidden="true" tabindex="-1"></a>            nums[i <span class="op">+</span> <span class="dv">1</span>], nums[i] <span class="op">=</span> nums[i], nums[i <span class="op">+</span> <span class="dv">1</span>]</span>
+<span id="cb41-21"><a href="#cb41-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> nums</span>
+<span id="cb41-22"><a href="#cb41-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-23"><a href="#cb41-23" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> validate(nums: List[<span class="bu">int</span>]) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
+<span id="cb41-24"><a href="#cb41-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="bu">len</span>(nums) <span class="op">-</span> <span class="dv">1</span>):</span>
+<span id="cb41-25"><a href="#cb41-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (<span class="dv">2</span> <span class="op">*</span> nums[i]) <span class="op">==</span> (nums[i <span class="op">-</span> <span class="dv">1</span>] <span class="op">+</span> nums[i <span class="op">+</span> <span class="dv">1</span>]):</span>
+<span id="cb41-26"><a href="#cb41-26" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">False</span>, i, nums</span>
+<span id="cb41-27"><a href="#cb41-27" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="va">True</span>, <span class="va">None</span>, <span class="va">None</span></span>
+<span id="cb41-28"><a href="#cb41-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-29"><a href="#cb41-29" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> validate(rearrange([<span class="dv">1</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">6</span>,<span class="dv">9</span>]))</span>
+<span id="cb41-30"><a href="#cb41-30" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> validate(rearrange([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>]))</span>
+<span id="cb41-31"><a href="#cb41-31" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> validate(rearrange([<span class="dv">6</span>,<span class="dv">2</span>,<span class="dv">0</span>,<span class="dv">9</span>,<span class="dv">7</span>]))</span>
+<span id="cb41-32"><a href="#cb41-32" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> validate(rearrange([<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>]))</span>
+<span id="cb41-33"><a href="#cb41-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-34"><a href="#cb41-34" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> arr <span class="kw">in</span> tqdm.tqdm(itertools.permutations(<span class="bu">range</span>(<span class="dv">9</span>), <span class="dv">9</span>), total<span class="op">=</span>math.perm(<span class="dv">9</span>, <span class="dv">9</span>), <span class="bu">ascii</span><span class="op">=</span><span class="va">True</span>):</span>
+<span id="cb41-35"><a href="#cb41-35" aria-hidden="true" tabindex="-1"></a>    prev <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb41-36"><a href="#cb41-36" aria-hidden="true" tabindex="-1"></a>    curr <span class="op">=</span> arr</span>
+<span id="cb41-37"><a href="#cb41-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> prev <span class="kw">is</span> <span class="va">None</span> <span class="kw">or</span> <span class="bu">any</span>(<span class="bu">map</span>(<span class="kw">lambda</span> x: x[<span class="dv">0</span>] <span class="op">!=</span> x[<span class="dv">1</span>], <span class="bu">zip</span>(prev, curr))):</span>
+<span id="cb41-38"><a href="#cb41-38" aria-hidden="true" tabindex="-1"></a>        prev, curr <span class="op">=</span> curr, rearrange(curr)</span>
+<span id="cb41-39"><a href="#cb41-39" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb41-40"><a href="#cb41-40" aria-hidden="true" tabindex="-1"></a>    result <span class="op">=</span> validate(curr)</span>
+<span id="cb41-41"><a href="#cb41-41" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> result[<span class="dv">0</span>], <span class="ss">f&quot;Input: </span><span class="sc">{</span>arr<span class="sc">}</span><span class="ss"> | Result: </span><span class="sc">{</span>result[<span class="dv">2</span>]<span class="sc">}</span><span class="ss"> fails condition at Index: </span><span class="sc">{</span>result[<span class="dv">1</span>]<span class="sc">}</span><span class="ss">&quot;</span></span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>100%|#######################################################################| 362880/362880 [00:01&lt;00:00, 263237.24it/s]
+</code></pre>
+</div>
+</div>
+<div id="dd8022ca-708d-4b24-a054-860c4b5ffac8" class="cell markdown">
+<h1 id="25">25.</h1>
+<p>Date: 24th Dec 2023<br> Easy Leetcode:
+remove-letter-to-equalize-frequency<br> Solution: <a
+href="https://leetcode.com/problems/remove-letter-to-equalize-frequency/submissions/1127427755/"
+class="uri">https://leetcode.com/problems/remove-letter-to-equalize-frequency/submissions/1127427755/</a></p>
+</div>
+<div id="c2d9d9bb-efca-4eb2-9aff-46570528fdd6" class="cell code"
+data-execution_count="33">
+<div class="sourceCode" id="cb43"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> remove_letter(word: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>    counts <span class="op">=</span> collections.Counter(word)</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>    freq <span class="op">=</span> <span class="bu">list</span>(counts.values())</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>    alphabets <span class="op">=</span> <span class="bu">list</span>(counts.keys())</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>    unique_freq <span class="op">=</span> <span class="bu">set</span>(freq)</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>    minFreq <span class="op">=</span> <span class="bu">min</span>(freq)</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>    maxFreq <span class="op">=</span> <span class="bu">max</span>(freq)</span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">len</span>(alphabets) <span class="op">==</span> <span class="dv">1</span>: <span class="co"># aaaaaaaa</span></span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">len</span>(unique_freq) <span class="op">==</span> <span class="dv">1</span> <span class="kw">and</span> minFreq <span class="op">==</span> <span class="dv">1</span>: <span class="co"># abcdef</span></span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> <span class="bu">len</span>(unique_freq) <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb43-15"><a href="#cb43-15" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> minFreq <span class="op">==</span> <span class="dv">1</span> <span class="kw">and</span> freq.count(minFreq) <span class="op">==</span> <span class="dv">1</span>: <span class="co"># cccd</span></span>
+<span id="cb43-16"><a href="#cb43-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb43-17"><a href="#cb43-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb43-18"><a href="#cb43-18" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> maxFreq <span class="op">-</span> minFreq <span class="op">==</span> <span class="dv">1</span> <span class="kw">and</span> freq.count(maxFreq) <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb43-19"><a href="#cb43-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>: <span class="co"># abbccc (3), aazz (1)</span></span>
+<span id="cb43-20"><a href="#cb43-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb43-21"><a href="#cb43-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-22"><a href="#cb43-22" aria-hidden="true" tabindex="-1"></a><span class="co"># remove_letter(&quot;aaaaaabbbbcccc&quot;)</span></span>
+<span id="cb43-23"><a href="#cb43-23" aria-hidden="true" tabindex="-1"></a>remove_letter(<span class="st">&quot;ddaccb&quot;</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="33">
+<pre><code>False</code></pre>
+</div>
+</div>
+<div id="f77a4d20-a558-4b95-9d77-dcd4d0898002" class="cell markdown">
+<h1 id="26">26.</h1>
+<p>Date: 24th Dec 2023<br> Medium Leetcode:
+find-if-path-exists-in-graph<br> Solution: <a
+href="https://leetcode.com/problems/find-if-path-exists-in-graph/submissions/1127439592/"
+class="uri">https://leetcode.com/problems/find-if-path-exists-in-graph/submissions/1127439592/</a></p>
+</div>
+<div id="ca1fc8c6-3e7d-4c7e-bc07-630d1e08ed9b" class="cell code"
+data-execution_count="34">
+<div class="sourceCode" id="cb45"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> validPath(<span class="va">self</span>, n: <span class="bu">int</span>, edges: List[List[<span class="bu">int</span>]], source: <span class="bu">int</span>, destination: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> source <span class="op">==</span> destination:</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.paths <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> start, end <span class="kw">in</span> edges:</span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>            start_path <span class="op">=</span> <span class="va">self</span>.paths.get(start, [])</span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>            end_path <span class="op">=</span> <span class="va">self</span>.paths.get(end, [])</span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a>            start_path.append(end)</span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>            end_path.append(start)</span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.paths[start] <span class="op">=</span> start_path</span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.paths[end] <span class="op">=</span> end_path</span>
+<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a>        visited <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb45-17"><a href="#cb45-17" aria-hidden="true" tabindex="-1"></a>        to_visit <span class="op">=</span> <span class="bu">set</span>([source])</span>
+<span id="cb45-18"><a href="#cb45-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">while</span> to_visit:</span>
+<span id="cb45-19"><a href="#cb45-19" aria-hidden="true" tabindex="-1"></a>            curr <span class="op">=</span> to_visit.pop()</span>
+<span id="cb45-20"><a href="#cb45-20" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> curr <span class="kw">not</span> <span class="kw">in</span> visited:</span>
+<span id="cb45-21"><a href="#cb45-21" aria-hidden="true" tabindex="-1"></a>                visited.add(curr)</span>
+<span id="cb45-22"><a href="#cb45-22" aria-hidden="true" tabindex="-1"></a>                to_visit <span class="op">=</span> <span class="bu">set</span>([<span class="op">*</span>to_visit, <span class="op">*</span><span class="va">self</span>.paths[curr]])</span>
+<span id="cb45-23"><a href="#cb45-23" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> destination <span class="kw">in</span> to_visit:</span>
+<span id="cb45-24"><a href="#cb45-24" aria-hidden="true" tabindex="-1"></a>                <span class="cf">return</span> <span class="va">True</span></span>
+<span id="cb45-25"><a href="#cb45-25" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="va">False</span></span>
+<span id="cb45-26"><a href="#cb45-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-27"><a href="#cb45-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Testing with samples from the q</span></span>
+<span id="cb45-28"><a href="#cb45-28" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> Solution().validPath(<span class="dv">6</span>, [[<span class="dv">0</span>,<span class="dv">1</span>],[<span class="dv">1</span>,<span class="dv">2</span>],[<span class="dv">2</span>,<span class="dv">0</span>]], <span class="dv">0</span>, <span class="dv">2</span>) <span class="op">==</span> <span class="va">True</span></span>
+<span id="cb45-29"><a href="#cb45-29" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> Solution().validPath(<span class="dv">6</span>, [[<span class="dv">0</span>,<span class="dv">1</span>],[<span class="dv">0</span>,<span class="dv">2</span>],[<span class="dv">3</span>,<span class="dv">5</span>],[<span class="dv">5</span>,<span class="dv">4</span>],[<span class="dv">4</span>,<span class="dv">3</span>]], <span class="dv">0</span>, <span class="dv">5</span>) <span class="op">==</span> <span class="va">False</span></span></code></pre></div>
+</div>
+<div id="9955f336-0371-4f54-aab1-03efd86029c3" class="cell markdown">
+<h1 id="27">27.</h1>
+<p>Date: 24th Dec 2023<br> Medium Leetcode:
+employees-whose-manager-left-the-company<br> Solution:</p>
+</div>
+<div id="4c3b1862-bef3-40fd-b45c-41f41cf22ae3" class="cell code"
+data-execution_count="36">
+<div class="sourceCode" id="cb46"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> read_lc_df(<span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="st">+-------------+-----------+------------+--------+</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="st">| employee_id | name      | manager_id | salary |</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="st">| ----------- | --------- | ---------- | ------ |</span></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="st">| 3           | Mila      | 9          | 60301  |</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a><span class="st">| 12          | Antonella | null       | 31000  |</span></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a><span class="st">| 13          | Emery     | null       | 67084  |</span></span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a><span class="st">| 1           | Kalel     | 11         | 21241  |</span></span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a><span class="st">| 9           | Mikaela   | null       | 50937  |</span></span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a><span class="st">| 11          | Joziah    | 6          | 28485  |</span></span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a><span class="st">+-------------+-----------+------------+--------+</span></span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>)</span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Doing it the Pandas way</span></span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a>temp[<span class="st">&#39;salary&#39;</span>] <span class="op">=</span> temp[<span class="st">&#39;salary&#39;</span>].astype(<span class="bu">float</span>)</span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a>missing_ids <span class="op">=</span> <span class="bu">set</span>(temp[<span class="st">&#39;manager_id&#39;</span>].dropna()) <span class="op">-</span> <span class="bu">set</span>(temp[<span class="st">&#39;employee_id&#39;</span>])</span>
+<span id="cb46-17"><a href="#cb46-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-18"><a href="#cb46-18" aria-hidden="true" tabindex="-1"></a>_ <span class="op">=</span> temp.loc[</span>
+<span id="cb46-19"><a href="#cb46-19" aria-hidden="true" tabindex="-1"></a>    (temp[<span class="st">&#39;salary&#39;</span>] <span class="op">&lt;</span> <span class="dv">30_000</span>) <span class="op">&amp;</span> </span>
+<span id="cb46-20"><a href="#cb46-20" aria-hidden="true" tabindex="-1"></a>    (temp[<span class="st">&#39;manager_id&#39;</span>].isin(missing_ids)),</span>
+<span id="cb46-21"><a href="#cb46-21" aria-hidden="true" tabindex="-1"></a>    [<span class="st">&#39;employee_id&#39;</span>]</span>
+<span id="cb46-22"><a href="#cb46-22" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb46-23"><a href="#cb46-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-24"><a href="#cb46-24" aria-hidden="true" tabindex="-1"></a>display(_.sort_values(<span class="st">&#39;employee_id&#39;</span>))</span>
+<span id="cb46-25"><a href="#cb46-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-26"><a href="#cb46-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Let us do this with SQL</span></span>
+<span id="cb46-27"><a href="#cb46-27" aria-hidden="true" tabindex="-1"></a>temp.to_sql(<span class="st">&quot;temp&quot;</span>, index<span class="op">=</span><span class="va">False</span>, con<span class="op">=</span>conn, if_exists<span class="op">=</span><span class="st">&#39;replace&#39;</span>)</span>
+<span id="cb46-28"><a href="#cb46-28" aria-hidden="true" tabindex="-1"></a>pd.read_sql(<span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb46-29"><a href="#cb46-29" aria-hidden="true" tabindex="-1"></a><span class="st">    select t1.employee_id </span></span>
+<span id="cb46-30"><a href="#cb46-30" aria-hidden="true" tabindex="-1"></a><span class="st">    from temp t1 </span></span>
+<span id="cb46-31"><a href="#cb46-31" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb46-32"><a href="#cb46-32" aria-hidden="true" tabindex="-1"></a><span class="st">    left join temp t2 </span></span>
+<span id="cb46-33"><a href="#cb46-33" aria-hidden="true" tabindex="-1"></a><span class="st">    on t1.manager_id = t2.employee_id </span></span>
+<span id="cb46-34"><a href="#cb46-34" aria-hidden="true" tabindex="-1"></a><span class="st">    </span></span>
+<span id="cb46-35"><a href="#cb46-35" aria-hidden="true" tabindex="-1"></a><span class="st">    where </span></span>
+<span id="cb46-36"><a href="#cb46-36" aria-hidden="true" tabindex="-1"></a><span class="st">        t1.manager_id is not null and </span></span>
+<span id="cb46-37"><a href="#cb46-37" aria-hidden="true" tabindex="-1"></a><span class="st">        t2.employee_id is null and</span></span>
+<span id="cb46-38"><a href="#cb46-38" aria-hidden="true" tabindex="-1"></a><span class="st">        t1.salary &lt; 30000</span></span>
+<span id="cb46-39"><a href="#cb46-39" aria-hidden="true" tabindex="-1"></a><span class="st">        </span></span>
+<span id="cb46-40"><a href="#cb46-40" aria-hidden="true" tabindex="-1"></a><span class="st">    order by t1.employee_id</span></span>
+<span id="cb46-41"><a href="#cb46-41" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span>, con<span class="op">=</span>conn)</span></code></pre></div>
+<div class="output display_data">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>employee_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>6</th>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+<div class="output execute_result" data-execution_count="36">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>employee_id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="e66e0ff4-8a0a-4055-bf6b-601c8ab52804" class="cell markdown">
+<h1 id="28">28.</h1>
+<p>Date: 25th Dec 2023<br> Easy Leetcode: min-cost-climbing-stairs<br>
+Solution: <a
+href="https://leetcode.com/problems/min-cost-climbing-stairs/submissions/1127787644/"
+class="uri">https://leetcode.com/problems/min-cost-climbing-stairs/submissions/1127787644/</a></p>
+</div>
+<div id="2866337c-5fd0-4ee1-a828-bcaec7028651" class="cell code"
+data-execution_count="37">
+<div class="sourceCode" id="cb47"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Solution:</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> calcCost(<span class="va">self</span>, cost: List[<span class="bu">int</span>], index: <span class="bu">int</span>, cache: <span class="bu">dict</span>[<span class="bu">int</span>, <span class="bu">int</span>]) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> index <span class="kw">in</span> cache:</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> cache[index]</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> index <span class="op">&gt;=</span> <span class="bu">len</span>(cost) <span class="op">-</span> <span class="dv">1</span>:</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>                res <span class="op">=</span> <span class="bu">sum</span>(cost[index:])</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a>                res <span class="op">=</span> <span class="bu">min</span>(</span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a>                    cost[index] <span class="op">+</span> <span class="va">self</span>.calcCost(cost, index <span class="op">+</span> <span class="dv">1</span>, cache),</span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>                    cost[index] <span class="op">+</span> <span class="va">self</span>.calcCost(cost, index <span class="op">+</span> <span class="dv">2</span>, cache)</span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a>                )</span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a>            cache[index] <span class="op">=</span> res</span>
+<span id="cb47-19"><a href="#cb47-19" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span> res</span>
+<span id="cb47-20"><a href="#cb47-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-21"><a href="#cb47-21" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> minCostClimbingStairs(<span class="va">self</span>, cost: List[<span class="bu">int</span>]) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb47-22"><a href="#cb47-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-23"><a href="#cb47-23" aria-hidden="true" tabindex="-1"></a>        <span class="co"># DP - setting a cache</span></span>
+<span id="cb47-24"><a href="#cb47-24" aria-hidden="true" tabindex="-1"></a>        cache <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb47-25"><a href="#cb47-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-26"><a href="#cb47-26" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">min</span>(</span>
+<span id="cb47-27"><a href="#cb47-27" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.calcCost(cost, index<span class="op">=</span><span class="dv">0</span>, cache<span class="op">=</span>cache),</span>
+<span id="cb47-28"><a href="#cb47-28" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.calcCost(cost, index<span class="op">=</span><span class="dv">1</span>, cache<span class="op">=</span>cache)</span>
+<span id="cb47-29"><a href="#cb47-29" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb47-30"><a href="#cb47-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-31"><a href="#cb47-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Testing out solution with sample testcases</span></span>
+<span id="cb47-32"><a href="#cb47-32" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> Solution().minCostClimbingStairs([<span class="dv">1</span>,<span class="dv">100</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">100</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">100</span>,<span class="dv">1</span>]) <span class="op">==</span> <span class="dv">6</span></span>
+<span id="cb47-33"><a href="#cb47-33" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> Solution().minCostClimbingStairs([<span class="dv">10</span>,<span class="dv">15</span>,<span class="dv">20</span>]) <span class="op">==</span> <span class="dv">15</span></span></code></pre></div>
+</div>
+<div id="616f8ae9-c500-4558-8e02-259d5d52efe0" class="cell code">
+<div class="sourceCode" id="cb48"><pre
+class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</div>
+<div id="677c9ef7-e581-4655-bad8-25e30b30e5b4" class="cell code">
+<div class="sourceCode" id="cb49"><pre
+class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</div>
+<div id="da86aa82-0a5f-49d1-9767-87a27042107d" class="cell code">
+<div class="sourceCode" id="cb50"><pre
+class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</div>
+<div id="b4661f78-25cf-4f8b-808d-14c348569d39" class="cell code">
+<div class="sourceCode" id="cb51"><pre
+class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</div>
+<div id="d129a355-6af3-485f-8238-fc48eaae5bb7" class="cell code">
+<div class="sourceCode" id="cb52"><pre
+class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</div>
+<div id="09b611a5-96ae-4271-b48a-7ae272d76a63" class="cell code">
+<div class="sourceCode" id="cb53"><pre
+class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</div>
+<div id="7b47b399-92dc-44aa-a1bd-6b29dc330f14" class="cell code">
+<div class="sourceCode" id="cb54"><pre
+class="sourceCode python"><code class="sourceCode python"></code></pre></div>
+</div>
