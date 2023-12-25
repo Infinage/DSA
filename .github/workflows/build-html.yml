@@ -1,0 +1,28 @@
+name: Build Views and Commit
+
+on:
+  push:
+    paths-ignore: 
+      - 'views/**'
+
+permissions:
+  contents: write
+
+jobs:
+  build-views:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build Views
+        run: docker-compose run pandoc-converter
+
+      - name: Push Changes
+        run: |
+          git add views/*.html
+          git config --local user.email "infinage@users.noreply.github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "CI: Auto Build Views"
+          git push
