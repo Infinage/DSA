@@ -18,9 +18,8 @@ jobs:
 
       - name: Clean pre-built views
         run: |
-          pwd
-          ls -al
-          rm ./views/*
+          ls -la
+          rm -f views/*
 
       - name: Build Views
         run: docker-compose run pandoc-converter
