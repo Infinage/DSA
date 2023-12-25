@@ -16,12 +16,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Clean pre-built views
+        run: rm views/*
+
       - name: Build Views
         run: docker-compose run pandoc-converter
 
       - name: Push Changes
         run: |
-          git add views/*.html
+          git add views
           git config --local user.email "infinage@users.noreply.github.com"
           git config --local user.name "GitHub Action"
           git commit -m "CI: Auto Build Views"

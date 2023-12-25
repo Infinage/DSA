@@ -4,6 +4,6 @@ services:
   pandoc-converter:
     image: pandoc/minimal:latest-alpine
     entrypoint: ""
-    command: sh -c 'ls *.ipynb | xargs -I {fn} pandoc /data/{fn} -o ./views/{fn}.html'
+    command: sh -c 'ls *.ipynb | xargs -I {fn} pandoc /data/{fn} -s -t gfm -o ./views/{fn}.md'
     volumes:
       - .:/data
