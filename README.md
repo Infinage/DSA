@@ -1,10 +1,15 @@
-# 100L30D ![27%](https://progress-bar.dev/27?title=progress&width=100)
+# Leetcode Solutions 🚀
+- 🧑‍💻 Leetcode: https://leetcode.com/infinage/
+- 👥 LinkedIn: https://www.linkedin.com/in/naresh-jagadeesan/
+
+This repository serves as a personal progress tracker for the Leetcode questions I solve. Note that to run the notebooks, you may need to install pandas and numpy as necessary, as no requirements.txt or similar files have been provided. The Docker Compose file is available to build the Jupyter notebooks as HTML into the `./views` directory. Jupyter notebooks may not be completely rendered on GitHub and are truncated after a particular length, while the same does not apply for HTML files.
+
+### 1. 100L30D
 
 #### Description:
-- Solving 100 Leetcode problems of varying difficulty in 30 days.<br>
-- Leetcode Profile: https://leetcode.com/infinage/<br>
-- Languange of choice: `Python`, `SQL`<br>
+- 🎯 Challenge Goal: Solving 100 Leetcode problems of varying difficulty in 30 days.
+- 📚 Languange of choice: `Python`, `SQL`
 
 #### Timelines:
-- Start Date: 20th Dec 2023
-- Challenge End Date: 19th Jan 2023
+- 📅 Start Date: 20th Dec 2023
+- 🏁 Challenge End Date: 19th Jan 2023
