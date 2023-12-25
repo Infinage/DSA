@@ -17,7 +17,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Clean pre-built views
-        run: rm views/*
+        run: |
+          pwd
+          ls -al
+          rm ./views/*
 
       - name: Build Views
         run: docker-compose run pandoc-converter
