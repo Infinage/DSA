@@ -9,6 +9,7 @@ This repository serves as a personal progress tracker for the Leetcode questions
 #### Description:
 - 🎯 Challenge Goal: Solving 100 Leetcode problems of varying difficulty in 30 days.
 - 📚 Languange of choice: `Python`, `SQL`
+- Markdown view link: [100L30D.ipynb.md](https://github.com/Infinage/leetcode/blob/main/views/100L30D.ipynb.md)
 
 #### Timelines:
 - 📅 Start Date: 20th Dec 2023
