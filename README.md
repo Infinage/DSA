@@ -14,3 +14,15 @@ This repository serves as a personal progress tracker for the Leetcode questions
 #### Timelines:
 - 📅 Start Date: 20th Dec 2023
 - 🏁 Challenge End Date: 19th Jan 2023
+- 🥳 Completion Date: 8th Jan 2023
+
+### 2. 75ML30D
+
+#### Description:
+- 🎯 Challenge Goal: Solving 75 Medium Leetcode problems in 30 days.
+- 📚 Languange of choice: `Python`, `SQL`
+- Markdown view link: [75ML30D.ipynb.md](https://github.com/Infinage/leetcode/blob/main/views/75ML30D.ipynb.md)
+
+#### Timelines:
+- 📅 Start Date: 9th Jan 2023
+- 🏁 Challenge End Date: 8th Feb 2023
