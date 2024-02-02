@@ -26,3 +26,4 @@ This repository serves as a personal progress tracker for the Leetcode questions
 #### Timelines:
 - 📅 Start Date: 9th Jan 2023
 - 🏁 Challenge End Date: 8th Feb 2023
+- 🥳 Completion Date: 2nd Feb 2023
