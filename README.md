@@ -27,3 +27,14 @@ This repository serves as a personal progress tracker for the Leetcode questions
 - 📅 Start Date: 9th Jan 2023
 - 🏁 Challenge End Date: 8th Feb 2023
 - 🥳 Completion Date: 2nd Feb 2023
+
+### 3. 50HL30D
+
+#### Description:
+- 🎯 Challenge Goal: Solving 50 Hard Leetcode problems in 30 days.
+- 📚 Languange of choice: `Python`, `SQL`
+- Markdown view link: [50HL30D.ipynb.md](https://github.com/Infinage/leetcode/blob/main/views/50HL30D.ipynb.md)
+
+#### Timelines:
+- 📅 Start Date: 8th Feb 2023
+- 🏁 Challenge End Date: 9th Mar 2023
