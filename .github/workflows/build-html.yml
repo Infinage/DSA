@@ -14,12 +14,12 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Clean pre-built views
-        run: |
-          ls -la
-          rm -f views/*
+      - name: List files
+        run: ls -la
 
       - name: Build Views
         run: docker-compose run pandoc-converter
