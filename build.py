@@ -1,49 +1,52 @@
-import glob
 import os
 import subprocess
+import glob
 
-def get_fname(input_path: str) -> str:
+def get_output_path(input_path: str) -> tuple[str, str, str]:
     fp_split = input_path.split(os.path.sep)
-    return fp_split[-1]
-
-def get_output_path(input_path: str) -> list[str]:
-    fp_split = input_path.split(os.path.sep)
-    dir_ = "./views/" + "/".join(fp_split[1:-1])
+    dir_ = "./views/" + "/".join(fp_split[:-1])
     fname = fp_split[-1] + ".md"
     return os.path.join(dir_, fname), dir_, fname
 
 def exec_command(command: str) -> str:
     p = subprocess.Popen(command.split(), stdout=subprocess.PIPE)
-    op = p.stdout.read().decode('utf-8')
+    op = p.stdout.read().decode('utf-8') if p.stdout else ''
     return op
 
 # Only build the changed files
 print(f"Using .git from the volume: {exec_command('git config --global --add safe.directory /data')}")
 
-# Get list of all files
+# Modify only the changed files
+diff_output = exec_command("git diff --name-status origin/main origin/main~1")
+for line in diff_output.split("\n"):
+    if ".ipynb" in line:
+        print (f"\nDiff line: {line}")
+        mode, *file_changes = line.split()
+        mode = mode[0]
+        for inp_path in file_changes:
+            op_path, op_dir, op_fname = get_output_path(inp_path)
+            print (f"\nInput path: {inp_path}\nOutput Directory: {op_dir}\nOutput FP: {op_path}")
+            if os.path.exists(op_path):
+                print (f"Deleting view: {op_path}")
+                os.remove(op_path)
+            if os.path.exists(inp_path):
+                os.makedirs(op_dir, exist_ok=True)
+                print (f"Creating view for: {inp_path}")
+                command = f"pandoc {inp_path} -s -t gfm -o {op_path}"
+                print (f"Command: {command}")
+                output = exec_command(command)
+                print(f"Command Output: {output}")
+
+# Build missing views somehow not in git history
 files = glob.glob("./**/*.ipynb", recursive=True)
-print (f"Total of {len(files)} files detected.")
-
-# List of all IPYNB files modified in the latest commit
-files_modified = filter(lambda x: x[-6:] == ".ipynb", exec_command("git diff --name-only origin/main origin/main~1").split("\n"))
-files_modified = set(map(get_fname, files_modified))
-print (f"Total of {len(files_modified)} IPYNB file changes were detected.\n")
-
 for inp_path in files:
     op_path, op_dir, op_fname = get_output_path(inp_path)
-    print(f"Input Path: {inp_path}")
-    print(f"Output Directory: {op_dir}, Output File Path: {op_path}")
-    os.makedirs(op_dir, exist_ok=True)
-
-    if get_fname(inp_path) in files_modified:
-        print ("File changes detected to this file. View would be rebuilt.")
-        if os.path.exists(op_path):
-            os.remove(op_path)
-            print ("Existing view deleted.")
+    if not os.path.exists(op_path):
+        os.makedirs(op_dir, exist_ok=True)
+        print (f"\nCreating view for missing file: {inp_path}")
         command = f"pandoc {inp_path} -s -t gfm -o {op_path}"
         print (f"Command: {command}")
         output = exec_command(command)
-        print(f"Command Output: {output}\n")
+        print(f"Command Output: {output}")
 
-    else:
-        print ("No file changes detected to this file. View building would be skipped.\n")
+print("\nPruning empty directories, output:", exec_command("find ./views -type d -empty -print -delete"))
