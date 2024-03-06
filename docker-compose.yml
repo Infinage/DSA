@@ -4,6 +4,12 @@ services:
   pandoc-converter:
     image: pandoc/minimal:latest-alpine
     entrypoint: ""
-    command: sh -c 'apk add python3 git && cd /data && python3 build.py'
     volumes:
       - .:/data
+    command: sh -c "
+        apk upgrade 
+        && apk add git python3-dev py-pip gcc linux-headers musl-dev linux-headers
+        && pip install papermill ipykernel numpy pandas tqdm
+        && cd /data 
+        && python3 build.py
+      "
