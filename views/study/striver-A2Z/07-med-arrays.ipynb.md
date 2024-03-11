@@ -18,20 +18,20 @@ jupyter:
   nbformat_minor: 5
   papermill:
     default_parameters: {}
-    duration: 2.113234
-    end_time: "2024-03-10T09:22:51.970446"
+    duration: 2.316907
+    end_time: "2024-03-11T02:37:56.423600"
     environment_variables: {}
     input_path: study/striver-A2Z/07-med-arrays.ipynb
     output_path: study/striver-A2Z/07-med-arrays.ipynb
     parameters: {}
-    start_time: "2024-03-10T09:22:49.857212"
+    start_time: "2024-03-11T02:37:54.106693"
     version: 2.4.0
 ---
 
 <div id="1fbe5a89" class="cell code" execution_count="1"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.017872Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.017317Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.027647Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.026881Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.275268Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.274726Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.284431Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.283781Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.1467e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.029276&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.007809&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.1853e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.286143&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.264290&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -46,7 +46,7 @@ import pdb
 </div>
 
 <div id="21da8de7" class="cell markdown"
-papermill="{&quot;duration&quot;:7.363e-3,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.044329&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.036966&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.179e-3,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.302878&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.294699&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link:
@@ -55,9 +55,9 @@ Video Link:
 </div>
 
 <div id="2f902cd9" class="cell code" execution_count="2"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.060537Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.059934Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.070121Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.069472Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.320680Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.320160Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.330451Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.329827Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.0208e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.071790&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.051582&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.0936e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.332081&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.311145&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -84,9 +84,9 @@ two_sum_brute([2, 6, 5, 8, 11], 14)
 </div>
 
 <div id="f0629198" class="cell code" execution_count="3"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.087889Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.087638Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.095359Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.094535Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.349810Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.349574Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.357100Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.356335Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.7652e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.096966&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.079314&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.8277e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.358770&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.340493&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -114,8 +114,8 @@ two_sum_better([2, 6, 5, 8, 11], 14)
 </div>
 
 <div id="e337b5a1" class="cell code" execution_count="4"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.113511Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.112967Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.120442Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.119674Z&quot;}"
-papermill="{&quot;duration&quot;:1.7504e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.122008&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.104504&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.377167Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.376593Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.383969Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.383196Z&quot;}"
+papermill="{&quot;duration&quot;:1.8289e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.385567&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.367278&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -147,7 +147,7 @@ two_sum_optimal([2, 6, 5, 8, 11], 14)
 </div>
 
 <div id="5b551970" class="cell markdown"
-papermill="{&quot;duration&quot;:7.655e-3,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.137628&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.129973&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.446e-3,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.402614&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.394168&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link:
@@ -156,9 +156,9 @@ Video Link:
 </div>
 
 <div id="6a698467" class="cell code" execution_count="5"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.154764Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.154015Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.162157Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.161500Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.421292Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.420830Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.428592Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.427756Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.844e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.163826&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.145386&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.8938e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.430242&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.411304&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -190,7 +190,7 @@ arr
 </div>
 
 <div id="f50bbaee" class="cell markdown"
-papermill="{&quot;duration&quot;:7.72e-3,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.179365&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.171645&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.559e-3,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.447552&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.438993&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ##### Dutch National Flag Algorithm<br>
@@ -216,8 +216,8 @@ manipulate the pointers
 </div>
 
 <div id="5b07cd07" class="cell code" execution_count="6"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.196440Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.195793Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.204669Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.203938Z&quot;}"
-papermill="{&quot;duration&quot;:1.9223e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.206314&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.187091&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.466189Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.465615Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.474744Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.474131Z&quot;}"
+papermill="{&quot;duration&quot;:2.0178e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.476381&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.456203&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -255,8 +255,8 @@ arr
 </div>
 
 <div id="eee184d6" class="cell code" execution_count="7"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.223855Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.223127Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.229301Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.228626Z&quot;}"
-papermill="{&quot;duration&quot;:1.661e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.230913&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.214303&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.495532Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.494977Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.500653Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.499845Z&quot;}"
+papermill="{&quot;duration&quot;:1.6876e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.502320&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.485444&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -284,7 +284,7 @@ else:
 </div>
 
 <div id="9a783959" class="cell markdown"
-papermill="{&quot;duration&quot;:8.216e-3,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.247121&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.238905&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.954e-3,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.520336&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.511382&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://www.youtube.com/watch?v=vwZj1K0e9U8> This can be
@@ -303,9 +303,9 @@ element
 </div>
 
 <div id="7d9408ac" class="cell code" execution_count="8"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.264889Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.264195Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.271047Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.270250Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.539488Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.538871Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.545615Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.544964Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.7525e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.272737&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.255212&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7952e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.547182&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.529230&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -346,7 +346,7 @@ else:
 </div>
 
 <div id="bd2d6454" class="cell markdown"
-papermill="{&quot;duration&quot;:8.079e-3,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.289058&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.280979&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.0256e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.566557&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.556301&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link:
@@ -355,9 +355,9 @@ Video Link:
 </div>
 
 <div id="39a84ac4" class="cell code" execution_count="9"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.306895Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.306301Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.313594Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.312863Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.585951Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.585430Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.592562Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.591793Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.8004e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.315218&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.297214&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.8682e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.594218&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.575536&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -386,8 +386,8 @@ max_subarray_sum_brute(arr)
 </div>
 
 <div id="67730685" class="cell code" execution_count="10"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.334741Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.334134Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.342293Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.341566Z&quot;}"
-papermill="{&quot;duration&quot;:2.017e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.343891&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.323721&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.615671Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.615167Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.623186Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.622482Z&quot;}"
+papermill="{&quot;duration&quot;:1.9862e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.625046&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.605184&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -426,8 +426,8 @@ max_subarray_sum_better(arr)
 </div>
 
 <div id="26800f05" class="cell code" execution_count="11"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.363357Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.362688Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.366104Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.365377Z&quot;}"
-papermill="{&quot;duration&quot;:1.4255e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.367731&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.353476&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.646321Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.645660Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.649243Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.648644Z&quot;}"
+papermill="{&quot;duration&quot;:1.5261e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.650817&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.635556&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]" title="[markdowm]">
 
 ``` python
@@ -438,8 +438,8 @@ tags="[]" title="[markdowm]">
 </div>
 
 <div id="d0ab96d2" class="cell code" execution_count="12"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.387025Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.386486Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.392783Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.392067Z&quot;}"
-papermill="{&quot;duration&quot;:1.7147e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.394424&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.377277&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.671683Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.671451Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.677787Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.677060Z&quot;}"
+papermill="{&quot;duration&quot;:1.8022e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.679426&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.661404&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -462,8 +462,8 @@ max_
 </div>
 
 <div id="41896d89" class="cell code" execution_count="13"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.414570Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.413973Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.420460Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.419743Z&quot;}"
-papermill="{&quot;duration&quot;:1.7426e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.422072&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.404646&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.701325Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.700872Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.707790Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.707018Z&quot;}"
+papermill="{&quot;duration&quot;:1.8962e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.709526&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.690564&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -490,7 +490,7 @@ max_
 </div>
 
 <div id="3c63de23" class="cell markdown"
-papermill="{&quot;duration&quot;:8.635e-3,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.440919&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.432284&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.405e-3,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.729873&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.720468&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/h4aBagy4Uok?si=kTZx4kZSvEfrdO7o> Rearrange
@@ -499,8 +499,8 @@ elements by sign
 </div>
 
 <div id="31f5ec38" class="cell code" execution_count="14"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.459810Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.459128Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.466876Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.466161Z&quot;}"
-papermill="{&quot;duration&quot;:1.9012e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.468587&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.449575&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.750246Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.749954Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.758106Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.757435Z&quot;}"
+papermill="{&quot;duration&quot;:2.0182e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.759721&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.739539&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -533,9 +533,9 @@ arr
 </div>
 
 <div id="c82df348" class="cell code" execution_count="15"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.490561Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.489958Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.498057Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.497378Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.781765Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.781139Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.789297Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.788668Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.061e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.499747&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.479137&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.0208e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.790899&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.770691&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -567,7 +567,7 @@ arr
 </div>
 
 <div id="319b376d" class="cell markdown"
-papermill="{&quot;duration&quot;:8.91e-3,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.519065&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.510155&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.682e-3,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.812021&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.802339&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link:
@@ -577,9 +577,9 @@ Next Permutation
 </div>
 
 <div id="19358d4f" class="cell code" execution_count="16"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.538308Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.537738Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.546248Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.545502Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.833011Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.832424Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.841065Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.840440Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.9943e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.547907&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.527964&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.0868e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.842674&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.821806&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -612,8 +612,8 @@ arr1[i + 1] if i < len(arr1) - 1 else arr1[0]
 </div>
 
 <div id="97d071df" class="cell code" execution_count="17"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.569172Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.568590Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.578455Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.577737Z&quot;}"
-papermill="{&quot;duration&quot;:2.1457e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.580117&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.558660&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.865435Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.864906Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.875233Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.874452Z&quot;}"
+papermill="{&quot;duration&quot;:2.2605e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.876862&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.854257&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -660,7 +660,7 @@ next_perm(arr)
 </div>
 
 <div id="c61e4105" class="cell markdown"
-papermill="{&quot;duration&quot;:9.17e-3,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.598606&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.589436&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.88e-3,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.898131&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.888251&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/cHrH9CQ8pmY?si=Vl3mYSwTY727JgHV> Leaders
@@ -669,9 +669,9 @@ of an array
 </div>
 
 <div id="0416042b" class="cell code" execution_count="18"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.619494Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.618875Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.625634Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.624997Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.919510Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.918837Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.925462Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.924748Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.834e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.627323&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.608983&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.9029e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.927167&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.908138&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -700,15 +700,15 @@ arr1
 </div>
 
 <div id="c084b1a7" class="cell markdown" lines_to_next_cell="0"
-papermill="{&quot;duration&quot;:9.394e-3,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.647110&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.637716&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.0015e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.948879&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.938864&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 </div>
 
 <div id="0621b858" class="cell code" execution_count="19"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.667009Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.666380Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.669911Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.669266Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.971013Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.970266Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:55.974128Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:55.973521Z&quot;}"
 incorrectly_encoded_metadata="https://www.youtube.com/watch?v=oO5uLE7EUlM&amp;list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&amp;index=29"
-papermill="{&quot;duration&quot;:1.5195e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.671552&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.656357&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6558e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:55.975721&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.959163&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]" title="Video Link:">
 
 ``` python
@@ -718,9 +718,9 @@ tags="[]" title="Video Link:">
 </div>
 
 <div id="49f655a3" class="cell code" execution_count="20"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.692541Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.691986Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.699277Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.698474Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:55.997998Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:55.997758Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:56.005198Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:56.004563Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.8971e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.700834&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.681863&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.9879e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:56.006712&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:55.986833&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -748,7 +748,7 @@ assert Solution().longestConsecutive([1,1,1,1,2,2,2,3,3,3,3]) == 3
 </div>
 
 <div id="de8b0b7b" class="cell markdown"
-papermill="{&quot;duration&quot;:9.278e-3,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.720739&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.711461&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.91e-3,&quot;end_time&quot;:&quot;2024-03-11T02:37:56.027514&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:56.017604&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link:
@@ -758,9 +758,9 @@ Set Matrix 0s
 </div>
 
 <div id="49680d8b" class="cell code" execution_count="21"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.742278Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.741658Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.758432Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.757696Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:56.049107Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:56.048467Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:56.065533Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:56.064902Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8726e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.760090&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.731364&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.9491e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:56.067121&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:56.037630&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -846,7 +846,7 @@ for temp in (
 </div>
 
 <div id="bb05528f" class="cell markdown"
-papermill="{&quot;duration&quot;:9.561e-3,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.780575&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.771014&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.0158e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:56.088819&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:56.078661&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link:
@@ -856,9 +856,9 @@ Rotate image by 90 deg
 </div>
 
 <div id="def229bc" class="cell code" execution_count="22"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.801092Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.800430Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.809588Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.808977Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:56.112183Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:56.111430Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:56.120692Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:56.120065Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.1156e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.811192&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.790036&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.1944e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:56.122337&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:56.100393&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -897,8 +897,9 @@ for temp in (
 </div>
 
 <div id="a6c38a1b" class="cell code" execution_count="23"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-10T09:22:51.832733Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-10T09:22:51.832169Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-10T09:22:51.840703Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-10T09:22:51.839960Z&quot;}"
-papermill="{&quot;duration&quot;:2.0702e-2,&quot;end_time&quot;:&quot;2024-03-10T09:22:51.842418&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-10T09:22:51.821716&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:56.145026Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:56.144560Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:56.153502Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:56.152771Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:2.1524e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:56.155091&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:56.133567&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -930,6 +931,153 @@ for temp in (
 ):
     Solution().rotate(temp[0])
     assert temp[0] == temp[1]
+```
+
+</div>
+
+<div id="2b214952" class="cell markdown"
+papermill="{&quot;duration&quot;:1.0126e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:56.176501&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:56.166375&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Video Link:
+<https://www.youtube.com/watch?v=3Zv-s9UUrFM&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=32>
+Spiral matrix
+
+</div>
+
+<div id="670d322e" class="cell code" execution_count="24"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:56.198454Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:56.197866Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:56.210167Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:56.209441Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:2.5055e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:56.211903&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:56.186848&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+class Solution:
+    def spiralOrder(self, matrix: list[list[int | None]]) -> list[int | None]:
+        M, N = len(matrix), len(matrix[0])
+        i, j = 0, 0
+        result: list[int | None] = []
+        while i < M and j < N and matrix[i][j] != None:
+            # Go right
+            while j < N and matrix[i][j] != None:
+                result.append(matrix[i][j])
+                matrix[i][j] = None
+                j += 1
+
+            # Go down
+            i, j = i + 1, j - 1
+            while i < M and matrix[i][j] != None:
+                result.append(matrix[i][j])
+                matrix[i][j] = None
+                i += 1
+
+            # Go left
+            i, j = i - 1, j - 1
+            while j >= 0 and matrix[i][j] != None:
+                result.append(matrix[i][j])
+                matrix[i][j] = None
+                j -= 1
+
+            # Go up
+            i, j = i - 1, j + 1
+            while i > 0 and matrix[i][j] != None:
+                result.append(matrix[i][j])
+                matrix[i][j] = None
+                i -= 1
+
+            # For next iteration
+            i, j = i + 1, j + 1
+
+        return result
+
+# Testing the solution
+assert Solution().spiralOrder([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) == [1, 2, 3, 6, 9, 8, 7, 4, 5]
+assert Solution().spiralOrder([[1, 2, 3, 4]]) == [1, 2, 3, 4]
+assert Solution().spiralOrder([[1], [2], [3], [4]]) == [1, 2, 3, 4]
+assert Solution().spiralOrder([[1]]) == [1]
+assert Solution().spiralOrder([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]) == [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]
+```
+
+</div>
+
+<div id="fbecbabd" class="cell markdown"
+papermill="{&quot;duration&quot;:1.0251e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:56.234272&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:56.224021&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Video Link:
+<https://www.youtube.com/watch?v=xvNwoz-ufXA&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=33>
+Count subarray sum equals k
+
+</div>
+
+<div id="7586edcb" class="cell code" execution_count="25"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:56.255994Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:56.255477Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:56.262357Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:56.261541Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:1.9431e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:56.263971&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:56.244540&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# Brute force
+class Solution:
+    def subarraySum(self, nums: list[int], K: int) -> int:
+        "Time - O(N ^ 2)"
+        N = len(nums)
+        count_ = 0
+        for i in range(N):
+            sum_ = 0
+            for j in range(i, N):
+               sum_ += nums[j]
+               if sum_ == K:
+                   print(nums[i: j + 1])
+                   count_ += 1
+
+        return count_
+
+# Testing the solution
+assert Solution().subarraySum([1, 2, 3, -3, 1, 1, 1, 4, 2, -3], 3) == 8
+```
+
+<div class="output stream stdout">
+
+    [1, 2]
+    [1, 2, 3, -3]
+    [2, 3, -3, 1]
+    [3]
+    [3, -3, 1, 1, 1]
+    [-3, 1, 1, 1, 4, 2, -3]
+    [1, 1, 1]
+    [4, 2, -3]
+
+</div>
+
+</div>
+
+<div id="75940c41" class="cell code" execution_count="26"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-03-11T02:37:56.288012Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-03-11T02:37:56.287392Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-03-11T02:37:56.293962Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-03-11T02:37:56.293243Z&quot;}"
+papermill="{&quot;duration&quot;:1.9371e-2,&quot;end_time&quot;:&quot;2024-03-11T02:37:56.295553&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-03-11T02:37:56.276182&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# Optimal
+class Solution:
+    def subarraySum(self, nums: list[int], K: int) -> int:
+        """
+        Time - O(N), Space - O(N)
+        Prefix Sum: For curr sum as sum_, how many prefix sum exists sum_ - k?
+        """
+        hashmap: dict[int, int] = {0: 1}
+        count = sum_ = 0
+        for i in range(len(nums)):
+            sum_ += nums[i]
+            if sum_ - K in hashmap:
+                count += hashmap[sum_ - K]
+            hashmap[sum_] = hashmap.get(sum_, 0) + 1
+        return count
+
+# Testing the solution
+assert Solution().subarraySum([1, 2, 3, -3, 1, 1, 1, 4, 2, -3], 3) == 8
+assert Solution().subarraySum([1, 1, 1], 2) == 2
+assert Solution().subarraySum([1, 2, 3], 3) == 2
 ```
 
 </div>
