@@ -18,18 +18,18 @@ jupyter:
   nbformat_minor: 5
   papermill:
     default_parameters: {}
-    duration: 4.474944
-    end_time: "2024-04-15T16:15:45.153879"
+    duration: 4.500982
+    end_time: "2024-04-18T14:41:37.414525"
     environment_variables: {}
     input_path: study/striver-A2Z/10-trees.ipynb
     output_path: study/striver-A2Z/10-trees.ipynb
     parameters: {}
-    start_time: "2024-04-15T16:15:40.678935"
+    start_time: "2024-04-18T14:41:32.913543"
     version: 2.5.0
 ---
 
 <div id="b29f23a5" class="cell markdown"
-papermill="{&quot;duration&quot;:1.7706e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:41.746825&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:41.729119&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.8165e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:33.976270&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:33.958105&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ##### Types of binary trees (<https://youtu.be/_ANrF3FJm7I?si=DZzUQr9F7dexWewB>)
@@ -74,7 +74,7 @@ Left, Right order is preserved for all traversals
 </div>
 
 <div id="3d2598bc" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6513e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:41.780283&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:41.763770&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.663e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.009914&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:33.993284&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 #### Some useful imports
@@ -82,9 +82,9 @@ tags="[]">
 </div>
 
 <div id="b692ea03" class="cell code" execution_count="1"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:41.815197Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:41.814394Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:41.824672Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:41.824043Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:34.045072Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:34.044322Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:34.054696Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:34.053875Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.9624e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:41.826418&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:41.796794&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.0084e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.056615&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.026531&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -98,7 +98,7 @@ import heapq
 </div>
 
 <div id="c70ac08c" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6795e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:41.860669&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:41.843874&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7146e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.091605&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.074459&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 #### Helper for Binary tree problems
@@ -106,9 +106,9 @@ tags="[]">
 </div>
 
 <div id="4c5d251b" class="cell code" execution_count="2"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:41.895757Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:41.895123Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:41.904737Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:41.904072Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:34.127292Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:34.126607Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:34.136439Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:34.135691Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8957e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:41.906452&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:41.877495&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.9638e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.138250&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.108612&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -163,7 +163,7 @@ class BinaryTreeNode:
 </div>
 
 <div id="b18d099c" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6467e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:41.939580&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:41.923113&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.669e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.171828&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.155138&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 #### Helper for Singly Linked lists
@@ -171,9 +171,9 @@ tags="[]">
 </div>
 
 <div id="f4314d5d" class="cell code" execution_count="3"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:41.974131Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:41.973468Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:41.980169Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:41.979509Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:34.207053Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:34.206332Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:34.212881Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:34.212151Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.5797e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:41.981784&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:41.955987&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.5962e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.214475&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.188513&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -211,7 +211,7 @@ class ListNode:
 </div>
 
 <div id="d43fd3d0" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6574e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.015234&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:41.998660&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6813e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.248207&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.231394&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Inorder, Postorder, Preorder
@@ -219,9 +219,9 @@ Inorder, Postorder, Preorder
 </div>
 
 <div id="17b6ec0d" class="cell code" execution_count="4"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:42.049919Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:42.049208Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:42.058432Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:42.057774Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:34.284262Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:34.283567Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:34.292858Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:34.292077Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8334e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.060167&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.031833&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.9193e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.294500&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.265307&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -267,7 +267,7 @@ assert getTreeTraversal(BinaryTreeNode.from_array([1, 3, 4, 5, 2, 7, 6])) == ([1
 </div>
 
 <div id="565ebd42" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6343e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.093346&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.077003&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6464e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.327633&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.311169&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Level Order Traversal
@@ -275,9 +275,9 @@ Level Order Traversal
 </div>
 
 <div id="88639bd0" class="cell code" execution_count="5"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:42.127523Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:42.127285Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:42.134112Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:42.133355Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:34.362556Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:34.361823Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:34.368919Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:34.368302Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.5999e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.135910&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.109911&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.6302e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.370595&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.344293&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -306,7 +306,7 @@ assert levelOrder(BinaryTreeNode.from_array([1])) == [[1]]
 </div>
 
 <div id="d59819aa" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6574e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.169212&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.152638&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.656e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.403871&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.387311&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link:
@@ -316,9 +316,9 @@ Iterative Preorder traversal
 </div>
 
 <div id="6021695b" class="cell code" execution_count="6"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:42.203764Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:42.203075Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:42.209798Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:42.209149Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:34.438660Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:34.437950Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:34.444789Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:34.444157Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.5765e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.211526&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.185761&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.5865e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.446403&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.420538&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -348,7 +348,7 @@ assert preorderIter(BinaryTreeNode.from_array([1, 2, 7, 3, 4, None, None, None, 
 </div>
 
 <div id="3a949dc1" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6473e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.244811&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.228338&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6628e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.480032&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.463404&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link:
@@ -358,9 +358,9 @@ Iterative Inorder traversal
 </div>
 
 <div id="f322e25b" class="cell code" execution_count="7"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:42.279111Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:42.278817Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:42.284925Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:42.284270Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:34.514578Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:34.514288Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:34.520047Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:34.519293Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.5331e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.286700&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.261369&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.5009e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.521714&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.496705&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -374,17 +374,14 @@ def inorderIter(root: BinaryTreeNode) -> list[int]:
     result: list[int] = []
     stack: list[BinaryTreeNode] = []
     curr = root
-    while True:
+    while curr or stack:
         if curr:
             stack.append(curr)
             curr = curr.left
         else:
-            if stack:
-                curr = stack.pop()
-                result.append(curr.val)
-                curr = curr.right
-            else:
-                break
+            curr = stack.pop()
+            result.append(curr.val)
+            curr = curr.right
 
     return result
 
@@ -395,7 +392,7 @@ assert inorderIter(BinaryTreeNode.from_array([1, None, 2, 3])) == [1, 3 ,2]
 </div>
 
 <div id="bc03474b" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6607e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.320074&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.303467&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6466e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.555195&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.538729&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link:
@@ -405,9 +402,9 @@ Iterative post order traversal
 </div>
 
 <div id="a728f1cf" class="cell code" execution_count="8"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:42.354914Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:42.354251Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:42.360854Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:42.360090Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:34.590227Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:34.589529Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:34.596144Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:34.595382Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.591e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.362722&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.336812&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.6171e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.598101&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.571930&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -436,7 +433,7 @@ assert postorderIter(BinaryTreeNode.from_array([1, 2, 3, 4, 5, 6, None, None, No
 </div>
 
 <div id="c2506b05" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6602e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.396121&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.379519&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6576e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.631539&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.614963&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link:
@@ -448,9 +445,9 @@ that you need to remember. Cannot help"
 </div>
 
 <div id="b8f98a3a" class="cell code" execution_count="9"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:42.430356Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:42.430063Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:42.442587Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:42.441735Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:34.666482Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:34.665840Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:34.677871Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:34.677137Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:3.1561e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.444223&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.412662&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.1211e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.679445&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.648234&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -489,7 +486,7 @@ postorderIter_single_stack(BinaryTreeNode.from_array([1, 2, 7, 3, None, 8, None,
 </div>
 
 <div id="cd401b3e" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6702e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.477955&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.461253&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6804e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.713286&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.696482&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/ySp2epYvgTE?si=TItCZRCbbFnyQlyi> Post
@@ -498,9 +495,9 @@ Order, In Order, Pre Order Traversal in one iteration
 </div>
 
 <div id="ac069236" class="cell code" execution_count="10"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:42.512101Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:42.511864Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:42.519678Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:42.519027Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:34.748036Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:34.747418Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:34.755089Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:34.754464Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.6802e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.521382&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.494580&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.6682e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.756752&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.730070&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -536,7 +533,7 @@ assert getTreeTraversal(temp) == getTreeTraversal_single_traversal(temp)
 </div>
 
 <div id="5689f6ec" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6558e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.554570&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.538012&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6831e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.790481&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.773650&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Maximum Depth of a Binary Tree:
@@ -545,9 +542,9 @@ Maximum Depth of a Binary Tree:
 </div>
 
 <div id="77506355" class="cell code" execution_count="11"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:42.589806Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:42.589162Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:42.594992Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:42.594313Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:34.825759Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:34.825070Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:34.831177Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:34.830543Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.5029e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.596607&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.571578&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.5306e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.832788&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.807482&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -575,9 +572,9 @@ assert maxDepthIter(BinaryTreeNode.from_array([3,9,20,None,None,15,7])) == 3
 </div>
 
 <div id="ad1799a0" class="cell code" execution_count="12"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:42.631413Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:42.631122Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:42.636870Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:42.636219Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:34.867785Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:34.867537Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:34.873174Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:34.872405Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.5067e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.638557&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.613490&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.4988e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.874808&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.849820&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -603,9 +600,9 @@ assert maxDepthRecursive(BinaryTreeNode.from_array([3,9,20,None,None,15,7])) == 
 </div>
 
 <div id="593ac16d" class="cell code" execution_count="13"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:42.673575Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:42.672954Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:42.677925Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:42.677260Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:34.910144Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:34.909522Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:34.914465Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:34.913820Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.4222e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.679635&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.655413&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.436e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.916143&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.891783&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -624,7 +621,7 @@ assert maxDepthStriver(BinaryTreeNode.from_array([3,9,20,None,None,15,7])) == 3
 </div>
 
 <div id="83812466" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6705e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.713191&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.696486&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6837e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.950030&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.933193&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Check for balanced Binary Tree:
@@ -633,9 +630,9 @@ Check for balanced Binary Tree:
 </div>
 
 <div id="fc21bd9b" class="cell code" execution_count="14"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:42.748272Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:42.747589Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:42.753971Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:42.753315Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:34.985981Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:34.985294Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:34.992018Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:34.991293Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.5654e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.755698&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.730044&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.6706e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:34.993754&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:34.967048&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -664,7 +661,7 @@ assert isBalanced(BinaryTreeNode.from_array([1,2,2,3,3,None,None,4,4])) == False
 </div>
 
 <div id="77ff8f23" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6682e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.807055&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.790373&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6864e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.047268&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.030404&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Diameter of Binary Tree:
@@ -673,9 +670,9 @@ Diameter of Binary Tree:
 </div>
 
 <div id="ce78d08b" class="cell code" execution_count="15"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:42.842288Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:42.841944Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:42.850040Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:42.849319Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:35.083001Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:35.082258Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:35.091062Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:35.090421Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.7883e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.851724&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.823841&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.8569e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.092745&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.064176&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -708,7 +705,7 @@ diameterOfBinaryTree(BinaryTreeNode.from_array([1,2,3,4,5]))
 </div>
 
 <div id="089181e0" class="cell markdown"
-papermill="{&quot;duration&quot;:1.693e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.885679&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.868749&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6859e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.126658&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.109799&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/WszrfSwMz58?si=daE6TYubT_j5MKuT> Maximum
@@ -718,9 +715,9 @@ Path Sum:
 </div>
 
 <div id="4192b725" class="cell code" execution_count="16"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:42.921007Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:42.920300Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:42.927504Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:42.926739Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:35.161824Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:35.161365Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:35.168581Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:35.167928Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.6553e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.929159&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.902606&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.6719e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.170288&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.143569&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -748,7 +745,7 @@ assert maxPathSum(BinaryTreeNode.from_array([9,6,-3,None,None,-6,2,None,None,2,N
 </div>
 
 <div id="0bdad953" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6857e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:42.963145&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.946288&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6816e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.204347&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.187531&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Check if two trees are identical or not Video Link:
@@ -757,9 +754,9 @@ Check if two trees are identical or not Video Link:
 </div>
 
 <div id="7a2627c8" class="cell code" execution_count="17"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:42.998806Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:42.998203Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:43.004676Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:43.004012Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:35.239980Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:35.239682Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:35.246011Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:35.245331Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.6087e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.006390&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:42.980303&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.5982e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.247678&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.221696&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -780,7 +777,7 @@ assert isSameTree(BinaryTreeNode.from_array([1, 2]), BinaryTreeNode.from_array([
 </div>
 
 <div id="6f64cc1b" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6953e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.040411&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.023458&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7042e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.281861&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.264819&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/3OXWEdlIGl4?si=prGw3PDHdgEpFJgj> Zig Zag /
@@ -789,9 +786,9 @@ Spiral Traversal in a Binary Tree
 </div>
 
 <div id="220a0708" class="cell code" execution_count="18"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:43.076402Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:43.075755Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:43.084101Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:43.083467Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:35.317211Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:35.316760Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:35.324779Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:35.324050Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8247e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.085833&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.057586&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.7635e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.326532&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.298897&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -831,7 +828,7 @@ assert zigzagLevelOrder(BinaryTreeNode.from_array([1,2,3,4,None,None,5])) == [[1
 </div>
 
 <div id="83e73a04" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6951e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.119909&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.102958&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6907e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.360492&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.343585&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/0ca1nvR0be4?si=Er0-Y8gxhnKlWt6-> Boundary
@@ -840,9 +837,9 @@ Traversal in a Binary Tree
 </div>
 
 <div id="3e63f2c1" class="cell code" execution_count="19"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:43.155498Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:43.154801Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:43.165302Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:43.164678Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:35.395523Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:35.395248Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:35.405000Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:35.404349Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:3.0257e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.167161&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.136904&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.9138e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.406624&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.377486&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -886,7 +883,7 @@ assert traverseBoundary(BinaryTreeNode.from_array([100, 50, 150, 25, 75, 140, 20
 </div>
 
 <div id="48a971f2" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6961e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.201212&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.184251&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7027e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.440903&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.423876&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/q_a6lpbKJdw?si=d1p9utIGRbbi7q84> Vertial
@@ -895,9 +892,9 @@ order traversal of Binary Tree
 </div>
 
 <div id="584c0df0" class="cell code" execution_count="20"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:43.236487Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:43.235807Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:43.246039Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:43.245400Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:35.476041Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:35.475783Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:35.486087Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:35.485380Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.9754e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.247804&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.218050&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.9877e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.487795&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.457918&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -942,7 +939,7 @@ assert verticalTraversal(BinaryTreeNode.from_array([1, 2, 3, 4, 6, 5, 7])) == [[
 </div>
 
 <div id="5a99a217" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6853e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.281517&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.264664&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6876e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.521770&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.504894&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/Et9OCDNvJ78?si=JB9v3iN8uhAELNkl> Top view
@@ -951,9 +948,9 @@ of a Binary Tree
 </div>
 
 <div id="fbf1035d" class="cell code" execution_count="21"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:43.316444Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:43.316205Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:43.324051Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:43.323375Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:35.557241Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:35.556619Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:35.564701Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:35.563994Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.7224e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.325748&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.298524&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.7463e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.566308&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.538845&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -986,7 +983,7 @@ assert topViewBinaryTree(BinaryTreeNode.from_array([1, 2, 3, 4, 5, None, 6, None
 </div>
 
 <div id="b62cb1a9" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6728e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.359385&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.342657&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6935e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.600423&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.583488&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/0FtVY6I4pB8?si=pBJ-JgXeSz_WxjCs> Bottom
@@ -995,9 +992,9 @@ view of a Binary tree
 </div>
 
 <div id="f1b0d9dd" class="cell code" execution_count="22"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:43.394249Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:43.393990Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:43.401201Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:43.400441Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:35.636060Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:35.635282Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:35.643031Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:35.642405Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.6577e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.402825&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.376248&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.7374e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.644676&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.617302&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1027,7 +1024,7 @@ assert bottomView(BinaryTreeNode.from_array([1, 2, 3, None, None, 5, 6, 7, 8, No
 </div>
 
 <div id="262c0c19" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6858e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.436701&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.419843&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6987e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.679066&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.662079&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/KV4mRzTjlAk?si=lzQH9S7GrgZKUjMj> Right /
@@ -1036,9 +1033,9 @@ Left view of a Binary Tree
 </div>
 
 <div id="8d6decb1" class="cell code" execution_count="23"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:43.471883Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:43.471236Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:43.478902Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:43.478095Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:35.714434Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:35.713764Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:35.721783Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:35.721145Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.6925e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.480461&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.453536&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.7532e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.723513&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.695981&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1070,9 +1067,9 @@ assert rightSideView(BinaryTreeNode.from_array([1, 2, 3, 4])) == [1, 3, 4]
 </div>
 
 <div id="367ea6a3" class="cell code" execution_count="24"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:43.515743Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:43.515044Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:43.522823Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:43.522135Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:35.759275Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:35.758569Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:35.766433Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:35.765817Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.7115e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.524444&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.497329&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.7481e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.768159&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.740678&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]" title="Left Side View: Time - O(N)">
 
 ``` python
@@ -1103,9 +1100,9 @@ assert leftSideView(BinaryTreeNode.from_array([1, 2, 3, 4])) == [1, 2, 4]
 </div>
 
 <div id="40a6b0a2" class="cell code" execution_count="25"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:43.560303Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:43.559676Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:43.566830Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:43.566059Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:35.804156Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:35.803595Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:35.810495Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:35.809707Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.6753e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.568442&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.541689&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.6535e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.812106&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.785571&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1138,7 +1135,7 @@ assert rightSideViewStriver(BinaryTreeNode.from_array([1, 2, 3, 4])) == [1, 3, 4
 </div>
 
 <div id="3d234569" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6759e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.602212&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.585453&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6908e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.846038&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.829130&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/nKggNAiEpBE?si=abzPcl6pKzyFpJ2i> Problem
@@ -1148,9 +1145,9 @@ Link:
 </div>
 
 <div id="7dae62c7" class="cell code" execution_count="26"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:43.637416Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:43.636846Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:43.646287Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:43.645629Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:35.881583Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:35.880903Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:35.890470Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:35.889732Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8908e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.648072&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.619164&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.9139e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.892167&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.863028&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1198,7 +1195,7 @@ assert isSymmetric(BinaryTreeNode.from_array([1, 2, 2, None, 3, 3, None])) == Tr
 </div>
 
 <div id="3d1fac60" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6862e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.682004&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.665142&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6932e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.926435&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.909503&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/fmflMqVOC7k?si=1AX2ea08UGtxw0mj> Print
@@ -1207,9 +1204,9 @@ Root to Node path in Binary Tree
 </div>
 
 <div id="f0244aad" class="cell code" execution_count="27"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:43.717177Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:43.716543Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:43.725000Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:43.724350Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:35.961714Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:35.961075Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:35.969322Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:35.968562Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.7886e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.726745&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.698859&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.7517e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:35.970888&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.943371&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1244,7 +1241,7 @@ rootToNodePath(BinaryTreeNode.from_array([1, 2, 3, 4, 5, None, None, None, None,
 </div>
 
 <div id="b7a03676" class="cell markdown"
-papermill="{&quot;duration&quot;:1.7167e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.761150&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.743983&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7529e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.005670&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:35.988141&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Lowest common ancestor Video Link:
@@ -1253,9 +1250,9 @@ Lowest common ancestor Video Link:
 </div>
 
 <div id="7a501b5a" class="cell code" execution_count="28"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:43.796388Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:43.796150Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:43.802814Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:43.801924Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:36.042334Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:36.041977Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:36.048858Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:36.048115Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.6125e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.804517&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.778392&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.7028e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.050462&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.023434&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1284,7 +1281,7 @@ assert lowestCommonAncestor(temp, p=temp.left, q=temp.left.right.right).val == 5
 </div>
 
 <div id="8415d919" class="cell markdown"
-papermill="{&quot;duration&quot;:1.7123e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.838817&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.821694&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.704e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.084730&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.067690&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Maximum width of a binary Tree Video Link:
@@ -1293,9 +1290,9 @@ Maximum width of a binary Tree Video Link:
 </div>
 
 <div id="249090c8" class="cell code" execution_count="29"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:43.874648Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:43.873966Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:43.881084Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:43.880331Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:36.120210Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:36.119696Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:36.126926Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:36.126168Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.6766e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.882710&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.855944&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.6847e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.128614&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.101767&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1334,7 +1331,7 @@ assert widthOfBinaryTree(BinaryTreeNode.from_array([1,3,2,5,3,None,9])) == 4
 </div>
 
 <div id="db8bdc78" class="cell markdown"
-papermill="{&quot;duration&quot;:1.7018e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.917060&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.900042&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7208e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.163296&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.146088&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/fnmisPM6cVo?si=gK9Xm0WNZQ6dqBk6> Check
@@ -1343,9 +1340,9 @@ children sum property in Binary Tree
 </div>
 
 <div id="e9c463d9" class="cell code" execution_count="30"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:43.952635Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:43.951955Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:43.958129Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:43.957385Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:36.198805Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:36.198282Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:36.204509Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:36.203862Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.5612e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.959729&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.934117&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.5691e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.206193&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.180502&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1364,7 +1361,7 @@ assert isParentSum(BinaryTreeNode.from_array([7, 3, 4, 3, None, 2, 3, None, None
 </div>
 
 <div id="6315a3c1" class="cell markdown"
-papermill="{&quot;duration&quot;:1.7484e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:43.994382&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:43.976898&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7194e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.240926&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.223732&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Maintain children sum property of a binary Tree
@@ -1372,9 +1369,9 @@ Maintain children sum property of a binary Tree
 </div>
 
 <div id="20d7e7dd" class="cell code" execution_count="31"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.030494Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.029784Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.038056Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.037396Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:36.277037Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:36.276346Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:36.284564Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:36.283901Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8028e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.039742&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.011714&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.8044e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.286241&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.258197&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1407,9 +1404,9 @@ assert isParentSum(restoreChildrenSumProperty(BinaryTreeNode.from_array([7, 3, 4
 </div>
 
 <div id="bf9f3b28" class="cell code" execution_count="32"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.075623Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.075332Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.083504Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.082830Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:36.321994Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:36.321490Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:36.329845Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:36.329046Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8133e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.085135&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.057002&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.7898e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.331423&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.303525&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1441,7 +1438,7 @@ assert isParentSum(restoreChildrenSumProperty_striver(BinaryTreeNode.from_array(
 </div>
 
 <div id="d81de678" class="cell markdown"
-papermill="{&quot;duration&quot;:1.704e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.119259&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.102219&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7135e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.365870&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.348735&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/i9ORlEy6EsI?si=GlIarkkKAHDMEXss> Print all
@@ -1450,9 +1447,9 @@ nodes at K distance from target in Binary Tree
 </div>
 
 <div id="af18ee1c" class="cell code" execution_count="33"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.155146Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.154480Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.165454Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.164664Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:36.403527Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:36.402871Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:36.413818Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:36.413042Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:3.0692e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.167112&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.136420&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.093e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.415539&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.384609&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1504,7 +1501,7 @@ assert sorted(distanceK(BinaryTreeNode.from_array([3,5,1,6,2,0,8,None,None,7,4])
 </div>
 
 <div id="db756dd0" class="cell markdown"
-papermill="{&quot;duration&quot;:1.707e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.201402&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.184332&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7056e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.449984&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.432928&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/2r5wLmQfD6g?si=V-Tirx2isc0Mt7Qp> Time to
@@ -1513,9 +1510,9 @@ burn a Binary Tree
 </div>
 
 <div id="67ee9af0" class="cell code" execution_count="34"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.237221Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.236548Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.246221Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.245463Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:36.485850Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:36.485284Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:36.494950Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:36.494304Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.9513e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.248001&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.218488&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.9408e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.496564&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.467156&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1563,7 +1560,7 @@ assert timeToBurnTree(BinaryTreeNode.from_array([3,5,1,6,2,0,8,None,None,7,4]), 
 </div>
 
 <div id="d4e4fad8" class="cell markdown"
-papermill="{&quot;duration&quot;:1.7013e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.282268&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.265255&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7094e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.531050&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.513956&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/u-yWemKGWO0?si=-xcOq69rKzHwnkSC> Count
@@ -1572,9 +1569,9 @@ total nodes in a complete Binary Tree
 </div>
 
 <div id="dd5cd4ce" class="cell code" execution_count="35"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.317602Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.317082Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.323700Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.323024Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:36.566558Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:36.566262Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:36.573029Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:36.572237Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.6125e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.325405&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.299280&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.6676e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.574845&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.548169&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1621,7 +1618,7 @@ assert countNodes(BinaryTreeNode.from_array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11])
 </div>
 
 <div id="51889e6d" class="cell markdown"
-papermill="{&quot;duration&quot;:1.6973e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.359538&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.342565&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7075e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.609244&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.592169&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Construct binary tree from preorder and inorder traversal Video Link:
@@ -1630,9 +1627,9 @@ Construct binary tree from preorder and inorder traversal Video Link:
 </div>
 
 <div id="62f3bcad" class="cell code" execution_count="36"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.395243Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.394698Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.403399Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.402622Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:36.646665Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:36.646070Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:36.655434Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:36.654714Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8398e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.405127&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.376729&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.0652e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.657140&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.626488&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1664,9 +1661,9 @@ buildTreeFromPreorderBetter(inorder=[40, 20, 50, 10, 60, 30], preorder=[10, 20, 
 </div>
 
 <div id="878e7fa6" class="cell code" execution_count="37"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.440953Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.440657Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.451242Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.450492Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:36.694317Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:36.693590Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:36.704895Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:36.704165Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:3.039e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.452902&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.422512&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.1564e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.706597&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.675033&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1706,7 +1703,7 @@ buildTreeFromPreorderOptimal(inorder=[40, 20, 50, 10, 60, 30], preorder=[10, 20,
 </div>
 
 <div id="c0d37bdc" class="cell markdown"
-papermill="{&quot;duration&quot;:1.7253e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.487439&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.470186&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7429e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.741657&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.724228&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/LgLRTaEMRVc?si=AuIS8bfI3SLknUaS> Binary
@@ -1715,9 +1712,9 @@ Tree from Postorder and Inorder traversal
 </div>
 
 <div id="53e42711" class="cell code" execution_count="38"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.523657Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.522996Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.532072Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.531300Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:36.778142Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:36.777571Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:36.786142Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:36.785362Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.888e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.533758&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.504878&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.8677e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.787851&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.759174&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1748,9 +1745,9 @@ buildTreeFromPostorderBetter(inorder=[3, 2, 4, 1, 5], postorder=[3, 4, 2, 5, 1])
 </div>
 
 <div id="2f83f35a" class="cell code" execution_count="39"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.570654Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.570041Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.580245Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.579476Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:36.824863Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:36.824256Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:36.834389Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:36.833669Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:3.0521e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.581956&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.551435&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.0368e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.836025&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.805657&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1787,7 +1784,7 @@ buildTreeFromPostorderOptimal(inorder=[3, 2, 4, 1, 5], postorder=[3, 4, 2, 5, 1]
 </div>
 
 <div id="4a30f23a" class="cell markdown"
-papermill="{&quot;duration&quot;:1.8381e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.618133&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.599752&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7889e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.872052&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.854163&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/-YbXySKJsX8?si=GF9GnCHLV1gDfcWK> Serialize
@@ -1796,9 +1793,9 @@ and Deserialize Binary Trees
 </div>
 
 <div id="b286bec0" class="cell code" execution_count="40"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.656250Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.655657Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.667362Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.666698Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:36.909352Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:36.908691Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:36.920449Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:36.919798Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:3.1932e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.669015&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.637083&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.2069e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.922063&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.889994&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1854,9 +1851,9 @@ assert out_lst == [1,2,-13,None,None,4,25]
 </div>
 
 <div id="ec2dd2db" class="cell code" execution_count="41"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.705843Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.705183Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.715574Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.714925Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:36.960207Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:36.959758Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:36.970186Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:36.969372Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:3.059e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.717321&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.686731&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.1708e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:36.971845&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.940137&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1906,7 +1903,7 @@ assert out_lst == [1,2,-13,None,None,4,25]
 </div>
 
 <div id="611bda3a" class="cell markdown"
-papermill="{&quot;duration&quot;:1.7667e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.752943&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.735276&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.9383e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:37.011584&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:36.992201&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Morris traversal of Binary Tree Video Link:
@@ -1916,9 +1913,9 @@ while it consumes O(N) time, it only takes up O(1) space
 </div>
 
 <div id="22ad4618" class="cell code" execution_count="42"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.789701Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.789118Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.796030Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.795323Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:37.049397Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:37.048629Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:37.055827Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:37.055080Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.7051e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.797706&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.770655&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.8292e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:37.057725&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:37.029433&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1958,9 +1955,9 @@ assert preorderIter(temp) == morris_preorder(temp)
 </div>
 
 <div id="f115e204" class="cell code" execution_count="43"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.834493Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.834221Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.840957Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.840294Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:37.095284Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:37.094641Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:37.102014Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:37.101365Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.7034e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.842665&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.815631&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.7796e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:37.103610&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:37.075814&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1994,7 +1991,7 @@ assert inorderIter(temp) == morris_inorder(temp)
 </div>
 
 <div id="d5feea81" class="cell markdown"
-papermill="{&quot;duration&quot;:1.7534e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.877894&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.860360&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7615e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:37.139049&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:37.121434&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/sWf7k1x9XR4?si=6Fdn4oo2ryFIdqpg> Flatten a
@@ -2003,9 +2000,9 @@ binary tree into a linked list
 </div>
 
 <div id="023ec163" class="cell code" execution_count="44"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.914551Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.914170Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.923215Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.922570Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:37.176256Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:37.175705Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:37.184544Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:37.183807Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.9085e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.924832&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.895747&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.931e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:37.186248&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:37.156938&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -2042,9 +2039,9 @@ temp.to_list()
 </div>
 
 <div id="49e59c7c" class="cell code" execution_count="45"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:44.962063Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:44.961445Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:44.969426Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:44.968684Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:37.223706Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:37.223054Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:37.231304Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:37.230609Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8355e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:44.971174&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.942819&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.8518e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:37.232946&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:37.204428&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -2080,8 +2077,8 @@ temp.to_list()
 </div>
 
 <div id="e4a662da" class="cell code" execution_count="46"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-15T16:15:45.008974Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-15T16:15:45.008350Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-15T16:15:45.016608Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-15T16:15:45.015927Z&quot;}"
-papermill="{&quot;duration&quot;:2.9177e-2,&quot;end_time&quot;:&quot;2024-04-15T16:15:45.018312&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-15T16:15:44.989135&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-18T14:41:37.270643Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-18T14:41:37.270039Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-18T14:41:37.278236Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-18T14:41:37.277523Z&quot;}"
+papermill="{&quot;duration&quot;:2.8712e-2,&quot;end_time&quot;:&quot;2024-04-18T14:41:37.279891&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-18T14:41:37.251179&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
