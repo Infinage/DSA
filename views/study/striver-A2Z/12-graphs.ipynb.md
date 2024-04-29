@@ -18,18 +18,18 @@ jupyter:
   nbformat_minor: 5
   papermill:
     default_parameters: {}
-    duration: 3.721871
-    end_time: "2024-04-29T03:08:41.810891"
+    duration: 4.457919
+    end_time: "2024-04-29T15:16:05.783476"
     environment_variables: {}
     input_path: study/striver-A2Z/12-graphs.ipynb
     output_path: study/striver-A2Z/12-graphs.ipynb
     parameters: {}
-    start_time: "2024-04-29T03:08:38.089020"
+    start_time: "2024-04-29T15:16:01.325557"
     version: 2.5.0
 ---
 
 <div id="b7c72dfd" class="cell markdown"
-papermill="{&quot;duration&quot;:1.5657e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.149178&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.133521&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7804e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.395327&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.377523&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 #### Introduction to Graphs
@@ -55,7 +55,7 @@ Video link: <https://youtu.be/M3_pLsDdeuU?si=Bi_17bBfZUPqBU6K>
 </div>
 
 <div id="cf960c9a" class="cell markdown" lines_to_next_cell="0"
-papermill="{&quot;duration&quot;:1.4635e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.178748&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.164113&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6561e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.428640&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.412079&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 #### Graph representation <br>
@@ -94,7 +94,7 @@ For eg:
 </div>
 
 <div id="d7ecd5e5" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4452e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.207741&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.193289&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6314e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.461362&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.445048&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 #### Misc about graphs
@@ -118,7 +118,7 @@ tags="[]">
 </div>
 
 <div id="24f84e7c" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4493e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.236782&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.222289&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6926e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.494681&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.477755&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Dijkstra algorithm (Worst case time complexity: O (E log V)):
@@ -143,8 +143,60 @@ Dijkstra algorithm (Worst case time complexity: O (E log V)):
 
 </div>
 
+<div id="d97a2dea" class="cell markdown"
+papermill="{&quot;duration&quot;:1.6416e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.527585&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.511169&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Bellman Ford Algorithm (Worst case time complexity: O (V x E))
+
+1.  Relax all the edges N - 1 times sequentially.
+2.  N - 1 iterations because: In a graph of N nodes, in the worst case,
+    we will take N - 1 edges to reach from the first to the last
+    (consider a singly connected linked list), thereby we iterate for
+    N - 1 iterations. (Best case each node has N - 1 edges and takes 1
+    step to reach every other node, worst case is the linked list
+    example where it takes N - 1 iterations to travel from 0 to N - 1
+    node)
+3.  To detect negative cycle, run another iteration. If the value of any
+    node decreases still, the graph has a negative cycle.
+
+</div>
+
+<div id="037e1b1b" class="cell markdown"
+papermill="{&quot;duration&quot;:1.6267e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.560461&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.544194&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Floyd Warshall Algorithm
+
+1.  Multi source shortest path algorithm
+2.  Helps detect negative cycles as well
+3.  The idea is that for each node i and for each node j that we are
+    trying to reach, check out all paths k and get the minimum:
+    `min(d[i][k] + d[k][j])`
+4.  Instead of storing a 1D distance vector, we store a 2D distance /
+    cost matrix.
+5.  This is a brute force approach that caches results.
+6.  To detect a negative cycle, simply check if node to same node path
+    is \< 0. It must be 0 for a graph without negative cycles.
+7.  Logic:
+
+``` python
+for via in range(V):
+  for i in range(V):
+      for j in range(V):
+          cost[i][j] = min(cost[i][j], cost[i][via] + cost[via][j])
+```
+
+1.  Running dijkstra on all nodes (O(E log V)) would be faster than
+    Floyd Warshall. But dijkstra doesn't work on graphs with negative
+    edges. We woulld need to run Johnson's algorithm to remove negative
+    cycles and then run Dijkstra. It would still be faster than floyd
+    warshall iff E \< V^2.
+
+</div>
+
 <div id="a321425e" class="cell markdown" lines_to_next_cell="0"
-papermill="{&quot;duration&quot;:1.451e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.266371&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.251861&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6971e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.593657&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.576686&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 #### Helper functions and definitions
@@ -152,9 +204,9 @@ tags="[]">
 </div>
 
 <div id="8c79edc4" class="cell code" execution_count="1"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:39.297531Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:39.296928Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:39.306589Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:39.305821Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:02.629023Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:02.628300Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:02.638399Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:02.637620Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.7665e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.308750&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.281085&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.9465e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.640052&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.610587&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -163,12 +215,13 @@ import collections
 import itertools
 import typing
 import heapq
+import functools
 ```
 
 </div>
 
 <div id="fc260e41" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4369e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.337804&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.323435&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6338e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.672998&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.656660&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/-tgVpUgsQ5k?si=8HBt33CLyu9hTP1I> BFS
@@ -177,9 +230,9 @@ Search of a graph
 </div>
 
 <div id="2e42efd0" class="cell code" execution_count="2"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:39.368014Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:39.367379Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:39.373865Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:39.373105Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:02.707107Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:02.706631Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:02.713416Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:02.712634Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.3624e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.375763&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.352139&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.5751e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.715019&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.689268&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -204,7 +257,7 @@ assert bfsOfGraph(5, [[1,2],[],[]]) == [0, 1, 2]
 </div>
 
 <div id="25de613f" class="cell markdown"
-papermill="{&quot;duration&quot;:1.44e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.404746&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.390346&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6077e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.747448&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.731371&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/Qzf1a--rhp8?si=Zb_XCqskGiK11gbB> DFS
@@ -213,9 +266,9 @@ Traversal
 </div>
 
 <div id="4a28e0ae" class="cell code" execution_count="3"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:39.435086Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:39.434466Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:39.443190Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:39.442448Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:02.781944Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:02.781185Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:02.790386Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:02.789623Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.575e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.444943&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.419193&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.8223e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.791973&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.763750&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -256,7 +309,7 @@ assert depthFirstSearch(5, 4, [[0,2], [0,1], [1,2], [3,4]]) == [[0,1,2], [3,4]]
 </div>
 
 <div id="a12cfaca" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4418e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.473887&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.459469&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6059e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.824341&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.808282&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Number of provinces:
@@ -266,9 +319,9 @@ Video Link: <https://youtu.be/ACzkVtewUYA?si=wpzBiKJoOJQnFR18>
 </div>
 
 <div id="672dd010" class="cell code" execution_count="4"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:39.504165Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:39.503677Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:39.510490Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:39.509809Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:02.858411Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:02.857715Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:02.864651Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:02.863895Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.3784e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.512143&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.488359&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.5785e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.866258&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.840473&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -299,7 +352,7 @@ assert findCircleNum([[1,0,0],[0,1,0],[0,0,1]]) == 3
 </div>
 
 <div id="bab63bca" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4416e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.541061&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.526645&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6209e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.898904&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.882695&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video link: <https://youtu.be/muncqlKJrH0?si=xcCfsKjX5tZd4kZJ> Number of
@@ -308,9 +361,9 @@ islands
 </div>
 
 <div id="968de0b8" class="cell code" execution_count="5"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:39.571335Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:39.570711Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:39.578560Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:39.577902Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:02.932991Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:02.932230Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:02.940054Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:02.939310Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.4713e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.580193&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.555480&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.6855e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.941877&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.915022&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -341,7 +394,7 @@ assert numIslands([[0,1],[1,0],[1,1],[1,0]]) == 1
 </div>
 
 <div id="10f09e20" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4251e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.608881&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.594630&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6035e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:02.974300&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.958265&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/C-2_uSRli8o?si=kwATM2glQc_Mpf76> Flood
@@ -350,9 +403,9 @@ fill: <https://leetcode.com/problems/flood-fill/submissions/1237381436>
 </div>
 
 <div id="1e1a36fc" class="cell code" execution_count="6"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:39.638652Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:39.638428Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:39.645579Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:39.644845Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:03.008658Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:03.008005Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:03.015598Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:03.014856Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.4046e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.647226&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.623180&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.6593e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.017189&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:02.990596&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -379,7 +432,7 @@ assert floodFill([[1,1,1],[1,1,0],[1,0,1]], 1, 1, 2) == [[2,2,2],[2,2,0],[2,0,1]
 </div>
 
 <div id="cb576964" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4404e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.676125&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.661721&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6225e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.049729&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.033504&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/yf3oUhkvqA0?si=A664tpMiA00GrxJV> Rotten
@@ -389,9 +442,9 @@ Oranges:
 </div>
 
 <div id="8b72ec9b" class="cell code" execution_count="7"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:39.706204Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:39.705666Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:39.717225Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:39.716586Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:03.084241Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:03.083612Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:03.095400Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:03.094764Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8312e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.718833&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.690521&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.1171e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.097026&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.065855&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -445,7 +498,7 @@ assert orangesRotting([[2,1,1],[1,1,1],[0,1,2]]) == 2
 </div>
 
 <div id="eef4c409" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4317e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.747633&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.733316&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6168e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.129895&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.113727&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Detect cycle with Graph (BFS / DFS) Video Link BFS:
@@ -455,9 +508,9 @@ Detect cycle with Graph (BFS / DFS) Video Link BFS:
 </div>
 
 <div id="342b6f3b" class="cell code" execution_count="8"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:39.778308Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:39.777638Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:39.789189Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:39.788455Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:03.163963Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:03.163177Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:03.175205Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:03.174438Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.875e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.791068&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.762318&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.1056e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.177079&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.146023&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -528,7 +581,7 @@ assert detectCycle(4, 4, [(0, 1), (1, 2), (2, 3), (3, 0)]) == True
 </div>
 
 <div id="86e956f5" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4358e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.819842&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.805484&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6191e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.209986&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.193795&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/edXdVwkYHF8?si=oTave6oul5GbDHrn> 01
@@ -537,9 +590,9 @@ Matrix: <https://leetcode.com/problems/01-matrix/>
 </div>
 
 <div id="14c07211" class="cell code" execution_count="9"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:39.850098Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:39.849426Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:39.860055Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:39.859427Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:03.244332Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:03.243657Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:03.254221Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:03.253448Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.7374e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.861612&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.834238&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.955e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.255822&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.226272&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -575,9 +628,9 @@ assert updateMatrixBrute([[0,0,0],[0,1,0],[1,1,1]]) == [[0,0,0],[0,1,0],[1,2,1]]
 </div>
 
 <div id="251805ef" class="cell code" execution_count="10"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:39.892119Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:39.891460Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:39.904725Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:39.904094Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:03.290358Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:03.289612Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:03.303043Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:03.302295Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:3.0168e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.906348&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.876180&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.2511e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.304793&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.272282&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -632,9 +685,9 @@ assert updateMatrixBetter([[0,0,0],[0,1,0],[1,1,1]]) == [[0,0,0],[0,1,0],[1,2,1]
 </div>
 
 <div id="9469ade5" class="cell code" execution_count="11"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:39.936526Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:39.936270Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:39.946224Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:39.945555Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:03.339044Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:03.338371Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:03.348527Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:03.347765Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.692e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.947782&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.920862&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.9107e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.350257&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.321150&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -671,7 +724,7 @@ assert updateMatrix([[0,0,0],[0,1,0],[1,1,1]]) == [[0,0,0],[0,1,0],[1,2,1]]
 </div>
 
 <div id="0b3a1d29" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4294e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:39.976571&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.962277&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6282e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.383367&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.367085&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/BtdgAys4yMk?si=BLc-UXXR9XvQV8Mf>
@@ -681,9 +734,9 @@ Surrounded Regions:
 </div>
 
 <div id="3610e726" class="cell code" execution_count="12"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:40.007018Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:40.006435Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:40.018684Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:40.017900Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:03.417577Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:03.416795Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:03.429007Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:03.428259Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.9152e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.020244&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:39.991092&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.1349e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.430845&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.399496&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -734,7 +787,7 @@ for inp, op in [
 </div>
 
 <div id="0b264d5d" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4379e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.049122&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.034743&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6108e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.482585&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.466477&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Number of Enclaves Video Link:
@@ -743,9 +796,9 @@ Number of Enclaves Video Link:
 </div>
 
 <div id="5647a7a1" class="cell code" execution_count="13"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:40.080267Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:40.079975Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:40.089316Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:40.088584Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:03.517192Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:03.516463Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:03.525937Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:03.525289Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.7521e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.091047&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.063526&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.8653e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.527539&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.498886&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -782,7 +835,7 @@ assert numEnclaves([[0,1,1,0],[0,0,1,0],[0,0,1,0],[0,0,0,0]]) == 0
 </div>
 
 <div id="83ddc4a6" class="cell markdown"
-papermill="{&quot;duration&quot;:3.1566e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.137183&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.105617&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6089e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.560066&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.543977&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video link: <https://youtu.be/7zmgQSJghpo?si=VR9VnvBwe-esRaau> Distinct
@@ -791,9 +844,9 @@ Islands
 </div>
 
 <div id="77dd14f8" class="cell code" execution_count="14"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:40.167521Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:40.167231Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:40.178301Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:40.177514Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:03.593968Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:03.593379Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:03.604552Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:03.603791Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8262e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.179942&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.151680&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.0197e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.606385&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.576188&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -833,7 +886,7 @@ assert distinctIsland([[1, 1, 0, 1, 1], [1, 0, 0, 0, 0], [0, 0, 0, 0, 1], [1, 1,
 </div>
 
 <div id="f49a3367" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4473e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.208963&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.194490&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6788e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.639758&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.622970&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/-vu34sct1g8?si=H2DEd5HB-B6oAU4p> Bipartite
@@ -843,9 +896,9 @@ Graph (BFS):
 </div>
 
 <div id="8584fbc4" class="cell code" execution_count="15"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:40.239543Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:40.238921Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:40.248541Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:40.247813Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:03.674299Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:03.673603Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:03.683540Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:03.682775Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.6835e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.250366&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.223531&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.9075e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.685273&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.656198&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -893,7 +946,7 @@ assert isBipartite([[1,3],[0,2],[1,3],[0,2]]) == True
 </div>
 
 <div id="b8c8a001" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4498e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.279523&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.265025&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6327e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.718145&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.701818&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Detect cycle in directed graph with DFS:
@@ -902,9 +955,9 @@ Detect cycle in directed graph with DFS:
 </div>
 
 <div id="f1cf48b4" class="cell code" execution_count="16"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:40.309918Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:40.309225Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:40.317730Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:40.317002Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:03.752794Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:03.752197Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:03.760952Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:03.760297Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.5457e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.319500&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.294043&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.8009e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.762660&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.734651&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -944,7 +997,7 @@ assert isCyclicDFS(3, 3, [(1,0), (1,2), (0,2)]) == False
 </div>
 
 <div id="a75c6088" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4555e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.348725&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.334170&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6275e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.795309&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.779034&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Eventual Safe states (DFS):
@@ -953,9 +1006,9 @@ Eventual Safe states (DFS):
 </div>
 
 <div id="e3bfb6f2" class="cell code" execution_count="17"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:40.379213Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:40.378578Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:40.386800Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:40.386066Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:03.829573Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:03.828784Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:03.837312Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:03.836617Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.5228e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.388376&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.363148&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.7494e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.838959&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.811465&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -996,7 +1049,7 @@ assert eventualSafeNodes(4, [[1], [2], [0,3], []]) == [3]
 </div>
 
 <div id="e2a1e13b" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4353e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.417362&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.403009&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6155e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.871642&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.855487&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Topological sorting DFS:
@@ -1005,9 +1058,9 @@ Topological sorting DFS:
 </div>
 
 <div id="806cdb46" class="cell code" execution_count="18"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:40.447782Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:40.447195Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:40.459187Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:40.458471Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:03.906202Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:03.905462Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:03.917963Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:03.917223Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8979e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.460882&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.431903&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.1631e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.919670&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.888039&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1046,9 +1099,9 @@ topologicalSortBetter({0: [2,4], 1: [2], 3: [1]}, 5, 4)
 </div>
 
 <div id="8365f0a8" class="cell code" execution_count="19"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:40.491693Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:40.491207Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:40.500138Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:40.499411Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:03.953910Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:03.953642Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:03.963066Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:03.962261Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.5938e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.501694&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.475756&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.8563e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.964726&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.936163&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1085,7 +1138,7 @@ topologicalSortDFS({0: [], 1: [], 2: [3], 3: [1], 4: [0,1], 5: [0,2]}, 6, 6)
 </div>
 
 <div id="166e867d" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4656e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.531119&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.516463&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6633e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:03.998201&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:03.981568&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Topological Sorting with BFS (Kahn's Algorithm):
@@ -1094,9 +1147,9 @@ Topological Sorting with BFS (Kahn's Algorithm):
 </div>
 
 <div id="9aca2f0e" class="cell code" execution_count="20"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:40.562038Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:40.561387Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:40.571901Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:40.571175Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:04.032551Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:04.032195Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:04.043254Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:04.042481Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.7762e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.573546&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.545784&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.0295e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.044931&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.014636&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1151,7 +1204,7 @@ topologicalSortBFS({0: [], 1: [], 2: [3], 3: [1], 4: [0,1], 5: [0,2]}, 6, 6)
 </div>
 
 <div id="318e0702" class="cell markdown"
-papermill="{&quot;duration&quot;:1.5027e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.603718&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.588691&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6672e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.078518&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.061846&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/WAOfKpxYHR8?si=KdXRvzRuinvS50gx>
@@ -1159,7 +1212,7 @@ Video Link: <https://youtu.be/WAOfKpxYHR8?si=KdXRvzRuinvS50gx>
 </div>
 
 <div id="bd6a415c" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4827e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.633484&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.618657&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6616e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.111915&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.095299&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Course schedule - 1:
@@ -1168,9 +1221,9 @@ Course schedule - 1:
 </div>
 
 <div id="d2aca589" class="cell code" execution_count="21"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:40.664976Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:40.664178Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:40.673277Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:40.672670Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:04.146871Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:04.146145Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:04.155091Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:04.154336Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.6587e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.675025&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.648438&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.8406e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.156851&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.128445&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1221,7 +1274,7 @@ assert canFinish(2, [[1,0],[0,1]]) == False
 </div>
 
 <div id="f8a6e7b3" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4759e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.705005&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.690246&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6537e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.190325&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.173788&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Course schedule - 2:
@@ -1230,9 +1283,9 @@ Course schedule - 2:
 </div>
 
 <div id="04331e57" class="cell code" execution_count="22"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:40.736044Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:40.735473Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:40.746278Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:40.745635Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:04.225570Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:04.225263Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:04.236092Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:04.235302Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8235e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.748018&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.719783&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.0663e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.237802&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.207139&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1286,7 +1339,7 @@ for inp in [
 </div>
 
 <div id="7cc4aaeb" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4797e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.777909&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.763112&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6512e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.271164&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.254652&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video link: <https://youtu.be/2gtg3VsDGyc?si=l4U9ljeQk6vBufj-> Eventual
@@ -1295,9 +1348,9 @@ Safe States with BFS
 </div>
 
 <div id="f5f3c530" class="cell code" execution_count="23"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:40.809004Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:40.808481Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:40.818822Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:40.818193Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:04.306164Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:04.305456Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:04.316245Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:04.315629Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.761e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.820410&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.792800&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.0251e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.317993&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.287742&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1352,7 +1405,7 @@ assert eventualSafeNodesBFS(4, [[1], [2], [0,3], []]) == [3]
 </div>
 
 <div id="08156d76" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4759e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.850162&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.835403&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6812e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.351775&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.334963&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/U3N_je7tWAs?si=ZkvYEfyaDOVehnEa> Alien
@@ -1361,9 +1414,9 @@ Dictionary
 </div>
 
 <div id="42166b86" class="cell code" execution_count="24"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:40.881185Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:40.880552Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:40.893238Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:40.892597Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:04.387492Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:04.386842Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:04.399504Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:04.398750Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.9984e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.894905&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.864921&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.2208e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.401101&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.368893&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1436,7 +1489,7 @@ print(alienDictionaryOrder(["caa","aaa","aab"], 3, 3))
 </div>
 
 <div id="ddb547c5" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4949e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.925053&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.910104&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7167e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.435340&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.418173&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/ZUFQfFaU-8U?si=SRwWuuRJN53CMn_w> Shortest
@@ -1445,9 +1498,9 @@ path in DAG (topological sorting)
 </div>
 
 <div id="29f9d887" class="cell code" execution_count="25"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:40.956991Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:40.956323Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:40.968627Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:40.968006Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:04.470860Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:04.470210Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:04.482389Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:04.481766Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:3.0233e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:40.970339&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.940106&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.1903e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.484044&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.452141&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1501,7 +1554,7 @@ assert shortestPathInDAG(3, [[2,0,4],[0,1,3],[2,1,2]], 0) == [0, 3, -1]
 </div>
 
 <div id="59089a00" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4976e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.000308&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:40.985332&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6659e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.517619&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.500960&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Shortest path in undirected graph with unit weights
@@ -1509,9 +1562,9 @@ Shortest path in undirected graph with unit weights
 </div>
 
 <div id="685cf4ef" class="cell code" execution_count="26"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:41.031645Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:41.031110Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:41.042255Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:41.041503Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:04.553412Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:04.552707Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:04.564454Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:04.563774Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8505e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.043945&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.015440&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.1807e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.566160&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.534353&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1557,7 +1610,7 @@ assert shortestPath([[0,0],[1,1],[1,3],[3,0]], 4, 4, 3) == [1,1,-1,0]
 </div>
 
 <div id="0dee3c9a" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4975e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.074055&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.059080&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6957e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.600766&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.583809&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Word Ladder - 1:
@@ -1567,9 +1620,9 @@ Link: <https://youtu.be/tRPda0rcf8E?si=IvDpS_6OSFIa-iAY>
 </div>
 
 <div id="ef9ed676" class="cell code" execution_count="27"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:41.105408Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:41.104827Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:41.113422Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:41.112777Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:04.636002Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:04.635329Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:04.644712Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:04.644070Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.6071e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.115055&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.088984&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.8791e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.646344&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.617553&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1607,7 +1660,7 @@ assert ladderLength("hit", "cog", ["hot","dot","dog","lot","log"]) == 0
 </div>
 
 <div id="d0da149f" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4977e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.145245&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.130268&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6629e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.679842&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.663213&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video link: <https://youtu.be/DREutrv2XD0?si=SbXR_WrwV0yPkM3t> Word
@@ -1616,9 +1669,9 @@ Ladder - 2: <https://leetcode.com/problems/word-ladder-ii/description/>
 </div>
 
 <div id="8c81ef46" class="cell code" execution_count="28"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:41.176473Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:41.175801Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:41.188063Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:41.187460Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:04.715533Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:04.714886Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:04.727419Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:04.726751Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.951e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.189705&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.160195&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.2299e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.729067&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.696768&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1668,9 +1721,9 @@ assert findLaddersBetter("red", "tax", ["ted","tex","red","tax","tad","den","rex
 </div>
 
 <div id="184290e3" class="cell code" execution_count="29"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:41.221039Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:41.220446Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:41.235472Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:41.234774Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:04.764920Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:04.764304Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:04.779477Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:04.778817Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:3.2467e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.237097&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.204630&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.5074e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.781119&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.746045&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1731,7 +1784,7 @@ assert findLadders("red", "tax", ["ted","tex","red","tax","tad","den","rex","pee
 </div>
 
 <div id="ac91aeb8" class="cell markdown"
-papermill="{&quot;duration&quot;:1.5198e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.267549&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.252351&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6955e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.815321&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.798366&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Dijkstra's Algorithm using Min Heap:
@@ -1740,9 +1793,9 @@ Dijkstra's Algorithm using Min Heap:
 </div>
 
 <div id="f9b1c99b" class="cell code" execution_count="30"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:41.299029Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:41.298532Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:41.306485Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:41.305801Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:04.851201Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:04.850523Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:04.858623Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:04.857926Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.5461e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.308076&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.282615&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.7936e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.860274&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.832338&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1773,7 +1826,7 @@ assert dijkstra(3, [[[1, 1], [2, 6]], [[2, 3], [0, 1]], [[1, 3], [0, 6]]], 2) ==
 </div>
 
 <div id="1ef6f6db" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4885e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.338023&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.323138&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6776e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.894078&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.877302&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video Link: <https://youtu.be/rp1SMw7HSO8?si=7d4Jc-1NTMcKvbh8> Shortest
@@ -1782,9 +1835,9 @@ path in an undirected weighted graph
 </div>
 
 <div id="5fc33946" class="cell code" execution_count="31"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:41.369542Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:41.368850Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:41.380013Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:41.379391Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:04.929743Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:04.928965Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:04.940378Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:04.939747Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8556e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.381632&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.353076&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.1119e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.942071&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.910952&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1829,7 +1882,7 @@ assert shortestPathGFG(5, 6, [[1,2,2], [2,5,5], [2,3,4], [1,4,1],[4,3,3],[3,5,1]
 </div>
 
 <div id="6de11f44" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4945e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.411559&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.396614&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6727e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:04.975814&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.959087&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Shortest path in a binary maze:
@@ -1839,9 +1892,9 @@ Video Link: <https://youtu.be/U5Mw4eyUmw4?si=SM3SONUWEFwd8XLt>
 </div>
 
 <div id="2f855e08" class="cell code" execution_count="32"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:41.443387Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:41.442857Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:41.453004Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:41.452351Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:05.010840Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:05.010159Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:05.020278Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:05.019526Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.7636e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.454643&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.427007&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.9681e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.022129&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:04.992448&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1879,7 +1932,7 @@ assert shortestPathBinaryMatrix([[1]]) == -1
 </div>
 
 <div id="52e6e87d" class="cell markdown"
-papermill="{&quot;duration&quot;:1.5009e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.484890&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.469881&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6716e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.055849&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.039133&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Video link: <https://youtu.be/0ytpZyiZFhA?si=UwEDE7wIpbT_Q87y> Path with
@@ -1889,9 +1942,9 @@ minimum effort:
 </div>
 
 <div id="85a0590c" class="cell code" execution_count="33"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:41.516135Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:41.515598Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:41.527040Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:41.526300Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:05.091358Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:05.090694Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:05.102105Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:05.101358Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.8914e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.528709&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.499795&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.1328e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.103974&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.072646&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1931,8 +1984,8 @@ assert minimumEffortPath([[1,2,1,1,1],[1,2,1,2,1],[1,2,1,2,1],[1,2,1,2,1],[1,1,1
 
 </div>
 
-<div id="635b22b1" class="cell markdown"
-papermill="{&quot;duration&quot;:1.493e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.558700&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.543770&quot;,&quot;status&quot;:&quot;completed&quot;}"
+<div id="ba06d57b" class="cell markdown"
+papermill="{&quot;duration&quot;:1.6664e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.137584&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.120920&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Cheapest flight within K stops:
@@ -1941,10 +1994,10 @@ Video Link: <https://youtu.be/9XybHVqTHcQ?si=jLIB9G9VQ184S2w6>
 
 </div>
 
-<div id="0f58c4e2" class="cell code" execution_count="34"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:41.590186Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:41.589674Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:41.601255Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:41.600610Z&quot;}"
+<div id="53b3f2f6" class="cell code" execution_count="34"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:05.172524Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:05.172007Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:05.183693Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:05.183059Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:2.9045e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.602838&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.573793&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.0964e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.185300&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.154336&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1989,24 +2042,23 @@ assert findCheapestPrice(n=5, flights=[[0,1,5],[1,2,5],[0,3,2],[3,1,2],[1,4,1],[
 
 </div>
 
-<div id="1afdfff7" class="cell markdown"
-papermill="{&quot;duration&quot;:1.4936e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.632843&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.617907&quot;,&quot;status&quot;:&quot;completed&quot;}"
+<div id="f0f3185e" class="cell markdown"
+papermill="{&quot;duration&quot;:1.6781e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.219240&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.202459&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
-Video Link: <https://youtu.be/_BvEJ3VIDWw?si=s5MuN9kdmF2j9G-Z> Minimum
-Multiplications to reach end
+Minimum Operations Video link:
+<https://youtu.be/_BvEJ3VIDWw?si=0Kgpj58X7BYexE2k>
 
 </div>
 
-<div id="7dc68bdb" class="cell code" execution_count="35"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T03:08:41.664169Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T03:08:41.663645Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T03:08:41.677062Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T03:08:41.676332Z&quot;}"
-lines_to_next_cell="3"
-papermill="{&quot;duration&quot;:3.1058e-2,&quot;end_time&quot;:&quot;2024-04-29T03:08:41.678911&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T03:08:41.647853&quot;,&quot;status&quot;:&quot;completed&quot;}"
+<div id="a5556478" class="cell code" execution_count="35"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:05.254362Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:05.253701Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:05.267476Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:05.266737Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:3.3343e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.269237&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.235894&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
-def minimumOperationsBrute(N: int, start: int, end: int, arr: list[int]):
-    """Time: O(N * 1e3), Space: O(N * 1e3)"""
+def minimumOperations(N: int, start: int, end: int, arr: list[int]) -> int:
     distances: dict[int, float] = {n1: math.inf for n1 in range(0, int(1e3) + 1)}
     distances[start] = 0
 
@@ -2022,10 +2074,262 @@ def minimumOperationsBrute(N: int, start: int, end: int, arr: list[int]):
     result = distances[end]
     return int(result) if not math.isinf(result) else -1
 
+assert minimumOperations(2, 1, 12, [3, 2]) == 3
+assert minimumOperations(4, 8, 320, [4, 6, 1, 10]) == 2
+assert minimumOperations(42, 54, 98, [1, 70, 25, 79, 59, 63, 65, 6, 46, 82, 28, 62, 92, 96, 43, 28, 37, 92, 5, 3, 54, 93, 83, 22, 17, 19, 96, 48, 27, 72, 39, 70, 13, 68, 100, 36, 95, 4, 12, 23, 34, 74]) == 3
+```
+
+</div>
+
+<div id="a12fb431" class="cell markdown"
+papermill="{&quot;duration&quot;:1.7057e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.303322&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.286265&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Video Link: <https://youtu.be/_-0mx0SmYxA?si=6GOaqZSP-NDZ_Oq-> Number of
+ways to arrive at a destination
+
+</div>
+
+<div id="6d28c0b9" class="cell code" execution_count="36"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:05.339323Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:05.338659Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:05.355099Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:05.354363Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:3.6446e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.356749&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.320303&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/submissions/1244856247/
+def countPaths(N: int, roads: list[list[int]]) -> int:
+    # Convert edges to adjacency list
+    adj: dict[int, list[tuple[int, float]]] = dict()
+    for n1, n2, w in roads:
+        n1_neighbours, n2_neighbours = adj.get(n1, []), adj.get(n2, [])
+        n1_neighbours.append((n2, w))
+        n2_neighbours.append((n1, w))
+        adj[n1] = n1_neighbours
+        adj[n2] = n2_neighbours
+
+    # Distances to store a set of prev nodes with shortest distance
+    distances: dict[int, tuple[float, set[int]]] = {n1: (math.inf, set()) for n1 in range(N)}
+    distances[0] = (0, set())
+
+    # Apply Dijkstra algorithm to find the shortest paths
+    heap: list[tuple[float, int]] = [(0, 0)]
+    while heap:
+        curr_dist, curr = heapq.heappop(heap)
+        for next_, next_dist in adj.get(curr, []):
+            if next_dist + curr_dist < distances[next_][0]:
+                distances[next_] = (next_dist + curr_dist, {curr})
+                heapq.heappush(heap, (next_dist + curr_dist, next_))
+            elif next_dist + curr_dist == distances[next_][0]:
+                distances[next_][1].add(curr)
+
+    @functools.cache
+    def backtrack(root: int) -> int:
+        if root == 0:
+            return 1
+        else:
+            count = 0
+            for next_ in distances[root][1]:
+                count += backtrack(next_)
+            return count
+
+    return backtrack(N - 1) % (int(1e9) + 7)
+
 # Testing the solution
-assert minimumOperationsBrute(2, 1, 12, [3, 2]) == 3
-assert minimumOperationsBrute(4, 8, 320, [4, 6, 1, 10]) == 2
-assert minimumOperationsBrute(42, 54, 98, [1, 70, 25, 79, 59, 63, 65, 6, 46, 82, 28, 62, 92, 96, 43, 28, 37, 92, 5, 3, 54, 93, 83, 22, 17, 19, 96, 48, 27, 72, 39, 70, 13, 68, 100, 36, 95, 4, 12, 23, 34, 74]) == 3
+countPaths(7, [[0,6,7],[0,1,2],[1,2,3],[1,3,3],[6,3,3],[3,5,1],[6,5,1],[2,5,1],[0,4,5],[4,6,2]]) == 4
+```
+
+<div class="output execute_result" execution_count="36">
+
+    True
+
+</div>
+
+</div>
+
+<div id="ef161cf7" class="cell code" execution_count="37"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:05.392655Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:05.392108Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:05.402720Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:05.402062Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:3.0269e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.404347&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.374078&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/submissions/1244866094
+def countPathsStriver(N: int, roads: list[list[int]]) -> int:
+    # Convert edges to adjacency list
+    adj: dict[int, list[tuple[int, float]]] = dict()
+    for n1, n2, w in roads:
+        n1_neighbours, n2_neighbours = adj.get(n1, []), adj.get(n2, [])
+        n1_neighbours.append((n2, w))
+        n2_neighbours.append((n1, w))
+        adj[n1] = n1_neighbours
+        adj[n2] = n2_neighbours
+
+    # Distances to store a shortest distance for each node along with the count of shortest paths
+    distances: dict[int, tuple[float, int]] = {n1: (math.inf, 0) for n1 in range(N)}
+    distances[0] = (0, 1)
+
+    # Apply dijkstra algorithm
+    heap: list[tuple[float, int]] = [(0., 0)]
+    while heap:
+        curr_dist, curr = heapq.heappop(heap)
+        for next_, next_dist in adj.get(curr, []):
+            if curr_dist + next_dist < distances[next_][0]:
+                distances[next_] = (curr_dist + next_dist, distances[curr][1])
+                heapq.heappush(heap, (curr_dist + next_dist, next_))
+            elif curr_dist + next_dist == distances[next_][0]:
+                distances[next_] = (curr_dist + next_dist, distances[next_][1] + distances[curr][1])
+
+    return int(distances[N - 1][1])
+
+# Testing the solution
+assert countPathsStriver(7, [[0,6,7],[0,1,2],[1,2,3],[1,3,3],[6,3,3],[3,5,1],[6,5,1],[2,5,1],[0,4,5],[4,6,2]]) == 4
+```
+
+</div>
+
+<div id="b3016690" class="cell markdown"
+papermill="{&quot;duration&quot;:1.698e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.438633&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.421653&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Video link:
+<https://www.youtube.com/watch?v=0vVofAhAYjc&list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz&index=166>
+Bellman Ford Algorithm
+
+</div>
+
+<div id="246f039f" class="cell code" execution_count="38"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:05.474933Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:05.474263Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:05.481551Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:05.480865Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:2.7259e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.483202&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.455943&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+def bellman_ford(V: int, edges: list[list[int]], S: int) -> list[float]:
+    # Store the results to distance vector
+    distances: list[float] = [math.inf for n1 in range(V)]
+    distances[S] = 0
+
+    # Relax for V - 1 iterations
+    for i in range(V - 1):
+        for n1, n2, w in edges:
+            distances[n2] = min(distances[n2], distances[n1] + w)
+
+    # Check for cycle by relaxing 1 more time
+    for n1, n2, w in edges:
+        if distances[n1] + w < distances[n2]:
+            return [-1]
+
+    # No cycles, we are good to return
+    return distances
+
+# Testing the solution
+assert bellman_ford(3, [[0,1,5],[1,0,3],[1,2,-1],[2,0,1]], 2) == [1, 6, 0]
+```
+
+</div>
+
+<div id="b07a5eb6" class="cell markdown"
+papermill="{&quot;duration&quot;:1.7151e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.517646&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.500495&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Video Link: <https://youtu.be/YbY8cVwWAvw?si=_Soo7iiwWihY5G8w> Floyd
+Warshall Algorithm
+
+</div>
+
+<div id="53a5b83f" class="cell code" execution_count="39"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:05.553601Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:05.552965Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:05.562930Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:05.562200Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:2.9868e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.564613&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.534745&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+def floyd_warshall(matrix: list[list[int]]) -> list[list[int]]:
+    "Time: O(V ^ 3), Space: O(V ^ 2)"
+    V = len(matrix)
+    cost: list[list[int]] = [[matrix[i][j] for j in range(V)] for i in range(V)]
+
+    # For each node i -> j check if the path i -> k -> j could be a better path
+    for via in range(V):
+        for i in range(V):
+            for j in range(V):
+                if cost[i][via] != -1 and cost[via][j] != -1 and cost[i][j] > cost[i][via] + cost[via][j]:
+                    cost[i][j] = cost[i][via] + cost[via][j]
+
+    return cost
+
+# Testing the solution
+floyd_warshall([[0,1,43],[1,0,6],[-1,-1,0]])
+```
+
+<div class="output execute_result" execution_count="39">
+
+    [[0, 1, 7], [1, 0, 6], [-1, -1, 0]]
+
+</div>
+
+</div>
+
+<div id="e45383b2" class="cell markdown"
+papermill="{&quot;duration&quot;:1.744e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.600055&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.582615&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Video link: <https://youtu.be/PwMVNSJ5SLI?si=AbyQbGEgwGWk6lPZ> City with
+smallest number of neighbours at threshold
+
+</div>
+
+<div id="2407a370" class="cell code" execution_count="40"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-04-29T15:16:05.636336Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-04-29T15:16:05.635724Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-04-29T15:16:05.648028Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-04-29T15:16:05.647258Z&quot;}"
+papermill="{&quot;duration&quot;:3.2371e-2,&quot;end_time&quot;:&quot;2024-04-29T15:16:05.649745&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-04-29T15:16:05.617374&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance/submissions/1244969227/
+def findTheCity(N: int, edges: list[list[int]], distanceThreshold: int) -> int:
+    # We would be running dijkstra on all nodes and storing to this array
+    distances: list[list[float]] = [[math.inf if i != j else 0 for j in range(N)] for i in range(N)]
+
+    # Function to run Dijkstra
+    def dijkstra(src: int):
+        nonlocal distances
+        heap: list[tuple[float, int]] = [(0, src)]
+        while heap:
+            curr_dist, curr = heapq.heappop(heap)
+            for next_, next_dist in adj.get(curr, []):
+                if curr_dist + next_dist < distances[src][next_]:
+                    distances[src][next_] = curr_dist + next_dist
+                    heapq.heappush(heap, (curr_dist + next_dist, next_))
+
+    # Convert edges to adj list
+    adj: dict[int, list[tuple[int, int]]] = dict()
+    for n1, n2, w in edges:
+        n1_neighbours, n2_neighbours = adj.get(n1, []), adj.get(n2, [])
+        n1_neighbours.append((n2, w))
+        n2_neighbours.append((n1, w))
+        adj[n1], adj[n2] = n1_neighbours, n2_neighbours
+
+    # Run Dijkstra algorithm for all nodes
+    for curr in range(N):
+        dijkstra(curr)
+
+    # Starting backwards find the city with smallest neighbouring cities at threshold
+    minCity, minCount = -1, math.inf
+    for curr in range(N - 1, -1, -1):
+        count = 0
+        for dist in distances[curr]:
+            if 0 < dist <= distanceThreshold:
+                count += 1
+        if count < minCount:
+            minCount = count
+            minCity = curr
+
+    return minCity
+
+# Testing the solution
+assert findTheCity(5, [[0,1,2],[0,4,8],[1,2,3],[1,4,2],[2,3,1],[3,4,1]], 2) == 0
+assert findTheCity(4, [[0,1,3],[1,2,1],[1,3,4],[2,3,1]], 4) == 3
 ```
 
 </div>
