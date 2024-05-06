@@ -9,7 +9,9 @@ services:
     command: sh -c "
         apk upgrade 
         && apk add git python3-dev py-pip gcc linux-headers musl-dev linux-headers
-        && pip install papermill ipykernel numpy pandas tqdm
         && cd /data 
+        && python -m venv .venv
+        && source .venv/bin/activate
+        && pip install papermill ipykernel numpy pandas tqdm
         && python3 build.py
       "
