@@ -18,18 +18,18 @@ jupyter:
   nbformat_minor: 5
   papermill:
     default_parameters: {}
-    duration: 3.235833
-    end_time: "2024-05-29T16:38:25.206891"
+    duration: 3.54919
+    end_time: "2024-05-30T16:12:47.949853"
     environment_variables: {}
     input_path: study/striver-A2Z/14-linked-list.ipynb
     output_path: study/striver-A2Z/14-linked-list.ipynb
     parameters: {}
-    start_time: "2024-05-29T16:38:21.971058"
+    start_time: "2024-05-30T16:12:44.400663"
     version: 2.6.0
 ---
 
 <div id="05899396" class="cell markdown"
-papermill="{&quot;duration&quot;:9.77e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.109434&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.099664&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.0385e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:45.540015&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:45.529630&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 #### Linked Lists
@@ -44,7 +44,7 @@ tags="[]">
 </div>
 
 <div id="7bb754d1" class="cell markdown"
-papermill="{&quot;duration&quot;:7.935e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.125383&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.117448&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.671e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:45.557446&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:45.548775&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ### Useful imports
@@ -52,9 +52,9 @@ tags="[]">
 </div>
 
 <div id="9ca3a0e7" class="cell code" execution_count="1"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:23.142037Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:23.141822Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:23.497843Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:23.497290Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:45.576107Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:45.575862Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:45.931479Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:45.930914Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:0.365925,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.499215&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.133290&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:0.366811,&quot;end_time&quot;:&quot;2024-05-30T16:12:45.932826&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:45.566015&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -78,7 +78,7 @@ import heapq
 </div>
 
 <div id="4d54d767" class="cell markdown"
-papermill="{&quot;duration&quot;:7.964e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.515500&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.507536&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.0731e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:45.952833&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:45.942102&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 #### Helper for Singly Linked lists
@@ -86,9 +86,9 @@ tags="[]">
 </div>
 
 <div id="db8c5b93" class="cell code" execution_count="2"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:23.532445Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:23.531941Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:23.538129Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:23.537665Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:45.972958Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:45.972360Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:45.978958Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:45.978457Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.5849e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.539206&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.523357&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.733e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:45.980117&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:45.962787&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -142,7 +142,7 @@ class ListNode:
 </div>
 
 <div id="8f195f7d" class="cell markdown"
-papermill="{&quot;duration&quot;:7.963e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.555164&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.547201&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.593e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:45.997420&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:45.988827&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 #### Helper for Doubly Linked lists
@@ -150,8 +150,8 @@ tags="[]">
 </div>
 
 <div id="7d9ad38e" class="cell code" execution_count="3"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:23.571917Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:23.571758Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:23.577342Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:23.576820Z&quot;}"
-papermill="{&quot;duration&quot;:1.5148e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.578393&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.563245&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.015566Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.015345Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.020977Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.020539Z&quot;}"
+papermill="{&quot;duration&quot;:1.6032e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.022054&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.006022&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -203,7 +203,7 @@ class DLLNode:
 </div>
 
 <div id="3bd55ce0" class="cell markdown"
-papermill="{&quot;duration&quot;:7.837e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.594292&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.586455&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.585e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.039330&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.030745&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Convert an array to Linked list
@@ -211,9 +211,9 @@ Convert an array to Linked list
 </div>
 
 <div id="59dfeb8f" class="cell code" execution_count="4"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:23.611113Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:23.610688Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:23.614641Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:23.614094Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.057634Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.057348Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.060951Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.060435Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.3336e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.615632&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.602296&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.4053e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.062052&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.047999&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -235,7 +235,7 @@ def constructLL(arr: list[int]) -> ListNode|None:
 </div>
 
 <div id="0c090b60" class="cell markdown"
-papermill="{&quot;duration&quot;:8.019e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.631770&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.623751&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.795e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.079733&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.070938&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Length of LL
@@ -243,9 +243,9 @@ Length of LL
 </div>
 
 <div id="d41e087f" class="cell code" execution_count="5"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:23.648630Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:23.648182Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:23.651911Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:23.651355Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.098203Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.097819Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.101445Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.100996Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.3309e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.653010&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.639701&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.3964e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.102462&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.088498&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -265,7 +265,7 @@ assert lengthOfLL(ListNode.to_singly_linked_list([1,2,3,4,5])) == 5
 </div>
 
 <div id="bd9565da" class="cell markdown"
-papermill="{&quot;duration&quot;:7.92e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.668969&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.661049&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.658e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.119888&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.111230&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Search in a linked list
@@ -273,9 +273,9 @@ Search in a linked list
 </div>
 
 <div id="1137b6e9" class="cell code" execution_count="6"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:23.685855Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:23.685534Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:23.688996Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:23.688579Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.138413Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.137940Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.141622Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.141163Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.3168e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.690071&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.676903&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.4013e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.142658&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.128645&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -296,7 +296,7 @@ assert searchInLinkedList(ListNode.to_singly_linked_list([1,2,3,4]), 4) == 1
 </div>
 
 <div id="73478462" class="cell markdown"
-papermill="{&quot;duration&quot;:8.126e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.706486&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.698360&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.662e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.160129&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.151467&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Delete a node from linked list
@@ -305,9 +305,9 @@ Delete a node from linked list
 </div>
 
 <div id="5bd512fc" class="cell code" execution_count="7"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:23.723407Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:23.723007Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:23.728074Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:23.727657Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.178432Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.178019Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.183469Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.182956Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.4604e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.729122&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.714518&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.5744e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.184523&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.168779&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -342,7 +342,7 @@ assert delNodePos(ListNode.to_singly_linked_list([1,2,3]), 10).to_list() == [1,2
 </div>
 
 <div id="6ea5a2c5" class="cell markdown"
-papermill="{&quot;duration&quot;:8.063e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.745422&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.737359&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.671e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.201876&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.193205&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Delete node by value
@@ -350,9 +350,9 @@ Delete node by value
 </div>
 
 <div id="420f38cf" class="cell code" execution_count="8"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:23.762460Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:23.762061Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:23.767259Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:23.766735Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.220482Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.219974Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.225219Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.224786Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.4888e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.768315&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.753427&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.5707e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.226260&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.210553&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -384,7 +384,7 @@ assert delNodeVal(ListNode.to_singly_linked_list([1,2,3]), 3).to_list() == [1,2]
 </div>
 
 <div id="53646359" class="cell markdown"
-papermill="{&quot;duration&quot;:7.937e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.784269&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.776332&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.59e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.243595&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.235005&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Inserting into a linked list
@@ -392,9 +392,9 @@ Inserting into a linked list
 </div>
 
 <div id="9de3ec91" class="cell code" execution_count="9"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:23.801133Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:23.800707Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:23.805363Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:23.804805Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.262328Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.261878Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.266466Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.266033Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.4241e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.806478&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.792237&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.5196e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.267530&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.252334&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -427,7 +427,7 @@ assert insertNode(ListNode.to_singly_linked_list([]), 0, 0, 0).to_list() == [0]
 </div>
 
 <div id="80af1929" class="cell markdown"
-papermill="{&quot;duration&quot;:7.939e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.822469&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.814530&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.606e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.284903&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.276297&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ### Doubly Linked List
@@ -437,9 +437,9 @@ Construct doubly linked list from array
 </div>
 
 <div id="1d2d3de2" class="cell code" execution_count="10"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:23.839491Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:23.839082Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:23.843083Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:23.842634Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.302810Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.302645Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.306194Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.305768Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.3537e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.844125&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.830588&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.3675e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.307220&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.293545&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -465,7 +465,7 @@ assert constructDLL([1,2,3,4,5]).to_list() == [1,2,3,4,5]
 </div>
 
 <div id="57e40a96" class="cell markdown"
-papermill="{&quot;duration&quot;:7.948e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.860206&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.852258&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.704e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.324706&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.316002&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Inserting into a Doubly linked list
@@ -473,9 +473,9 @@ Inserting into a Doubly linked list
 </div>
 
 <div id="eeae0793" class="cell code" execution_count="11"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:23.877001Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:23.876649Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:23.880633Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:23.880193Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.343023Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.342654Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.346695Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.346138Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.3555e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.881709&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.868154&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.4373e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.347764&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.333391&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -504,7 +504,7 @@ assert addDLLNode(DLLNode.to_doubly_linked_list([2,4,5]), 2, 6).to_list() == [2,
 </div>
 
 <div id="4cebaf84" class="cell markdown"
-papermill="{&quot;duration&quot;:7.943e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.897614&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.889671&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.763e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.365320&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.356557&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Deleting from a doubly linked list
@@ -518,9 +518,9 @@ Deleting from a doubly linked list
 </div>
 
 <div id="5e1cf229" class="cell code" execution_count="12"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:23.914488Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:23.914003Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:23.918657Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:23.918105Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.383738Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.383402Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.387796Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.387222Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.418e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.919704&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.905524&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.4864e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.388806&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.373942&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -551,7 +551,7 @@ assert deleteDLLNode(DLLNode.to_doubly_linked_list([1]), 0) is None
 </div>
 
 <div id="dfa8d518" class="cell markdown"
-papermill="{&quot;duration&quot;:7.864e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.935559&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.927695&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.564e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.406059&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.397495&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Reverse a DLL Video Link:
@@ -560,9 +560,9 @@ Reverse a DLL Video Link:
 </div>
 
 <div id="aac2ae31" class="cell code" execution_count="13"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:23.952412Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:23.952094Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:23.956401Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:23.955857Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.424298Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.423879Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.427960Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.427485Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.3958e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.957456&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.943498&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.434e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.429008&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.414668&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -586,7 +586,7 @@ assert reverseDLL(DLLNode.to_doubly_linked_list([])) is None
 </div>
 
 <div id="5c7d5007" class="cell markdown"
-papermill="{&quot;duration&quot;:7.96e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.973480&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.965520&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.673e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.446470&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.437797&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Add two numbers Video Link:
@@ -595,9 +595,9 @@ Add two numbers Video Link:
 </div>
 
 <div id="2a271620" class="cell code" execution_count="14"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:23.990353Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:23.989988Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:23.995146Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:23.994595Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.481203Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.480720Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.485927Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.485414Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.4776e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:23.996202&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:23.981426&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6151e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.487080&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.470929&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -637,7 +637,7 @@ assert addTwoNumbers(ListNode.to_singly_linked_list([3,5]), ListNode.to_singly_l
 </div>
 
 <div id="0d492d94" class="cell markdown"
-papermill="{&quot;duration&quot;:7.89e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.012119&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.004229&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.72e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.504632&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.495912&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Odd Even Linked List:
@@ -647,9 +647,9 @@ Link: <https://youtu.be/qf6qp7GzD5Q?si=f0kxJQ7bJ8JSSZGe>
 </div>
 
 <div id="ed28b236" class="cell code" execution_count="15"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.029029Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.028704Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.033487Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.032912Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.522907Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.522642Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.527313Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.526751Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.435e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.034473&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.020123&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.4968e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.528340&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.513372&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -689,7 +689,7 @@ assert oddEvenList(ListNode.to_singly_linked_list([1])).to_list() == [1]
 </div>
 
 <div id="da1e9ff5" class="cell markdown"
-papermill="{&quot;duration&quot;:8.031e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.065230&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.057199&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.815e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.546005&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.537190&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Sorted linked list of 0s, 1s, 2s
@@ -697,9 +697,9 @@ Sorted linked list of 0s, 1s, 2s
 </div>
 
 <div id="283f2b99" class="cell code" execution_count="16"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.082555Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.082153Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.087261Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.086750Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.564612Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.564287Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.569178Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.568666Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.5028e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.088324&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.073296&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.5412e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.570193&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.554781&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -738,9 +738,9 @@ assert sortList012Idea1(ListNode.to_singly_linked_list([2,1])).to_list() == [1,2
 </div>
 
 <div id="04a13e4d" class="cell code" execution_count="17"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.105528Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.105011Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.109832Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.109302Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.588866Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.588474Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.592767Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.592333Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.4478e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.110852&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.096374&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.4652e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.593798&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.579146&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -775,9 +775,9 @@ assert sortList012Idea2(ListNode.to_singly_linked_list([2,1])).to_list() == [1,2
 </div>
 
 <div id="5b07c320" class="cell code" execution_count="18"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.127965Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.127647Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.133629Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.133168Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.612681Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.612161Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.618037Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.617597Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.5785e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.134732&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.118947&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.6473e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.619115&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.602642&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -829,7 +829,7 @@ assert sortList012Idea3(ListNode.to_singly_linked_list([1,0])).to_list() == [0,1
 </div>
 
 <div id="5f9ff800" class="cell markdown"
-papermill="{&quot;duration&quot;:8.016e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.150937&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.142921&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.728e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.636789&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.628061&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Remove Nth node from the end of the linked list Video Link:
@@ -846,9 +846,9 @@ Remove Nth node from the end of the linked list Video Link:
 </div>
 
 <div id="75b0f078" class="cell code" execution_count="19"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.167922Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.167612Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.172649Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.172123Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.655601Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.655081Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.660092Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.659649Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.4799e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.173780&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.158981&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.5626e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.661130&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.645504&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -885,9 +885,9 @@ assert removeNthFromEndIdea1(ListNode.to_singly_linked_list([1]), 1) is None
 </div>
 
 <div id="7b9ce41b" class="cell code" execution_count="20"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.191251Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.190801Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.195752Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.195311Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.679667Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.679457Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.684497Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.684072Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.4913e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.196800&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.181887&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.5635e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.685542&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.669907&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -918,9 +918,9 @@ assert removeNthFromEndIdea4(ListNode.to_singly_linked_list([1]), 1) is None
 </div>
 
 <div id="ca7f81f2" class="cell code" execution_count="21"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.213691Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.213421Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.218431Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.217897Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.704326Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.704003Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.709239Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.708708Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.4557e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.219443&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.204886&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.5865e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.710309&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.694444&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -977,7 +977,7 @@ assert removeNthFromEndIdea5(ListNode.to_singly_linked_list([1]), 1) is None
 </div>
 
 <div id="b934ca84" class="cell markdown"
-papermill="{&quot;duration&quot;:7.99e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.235574&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.227584&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.798e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.727876&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.719078&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Reverse a linked list Video Link:
@@ -986,9 +986,9 @@ Reverse a linked list Video Link:
 </div>
 
 <div id="8327b0f1" class="cell code" execution_count="22"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.252396Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.252078Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.256316Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.255858Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.746350Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.745976Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.750167Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.749741Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.3787e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.257366&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.243579&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.459e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.751207&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.736617&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1016,9 +1016,9 @@ assert reverseListRecurse(ListNode.to_singly_linked_list([])) is None
 </div>
 
 <div id="edb937c7" class="cell code" execution_count="23"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.274432Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.274119Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.278199Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.277748Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.769697Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.769283Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.773457Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.772948Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.3799e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.279285&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.265486&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.4422e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.774478&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.760056&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1046,7 +1046,7 @@ assert reverseListIter(ListNode.to_singly_linked_list([])) is None
 </div>
 
 <div id="9fa31e87" class="cell markdown"
-papermill="{&quot;duration&quot;:8.042e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.295513&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.287471&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.802e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.792133&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.783331&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Palindrome Linked List
@@ -1054,9 +1054,9 @@ Palindrome Linked List
 </div>
 
 <div id="c1bf8469" class="cell code" execution_count="24"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.312563Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.312078Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.318139Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.317598Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.811508Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.810965Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.817377Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.816836Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.57e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.319233&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.303533&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.7301e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.818468&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.801167&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1109,9 +1109,9 @@ assert isPalindromeIter(ListNode.to_singly_linked_list([1,1])) == True
 </div>
 
 <div id="a979ac07" class="cell code" execution_count="25"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.336388Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.335941Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.341765Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.341289Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.837498Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.837120Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.842019Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.841505Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.549e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.342866&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.327376&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.5644e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.843167&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.827523&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1141,7 +1141,7 @@ assert isPalindromeRecursive(ListNode.to_singly_linked_list([1,1])) == True
 </div>
 
 <div id="d549ddf5" class="cell markdown"
-papermill="{&quot;duration&quot;:7.964e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.358909&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.350945&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.719e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.860870&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.852151&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Add one: <https://youtu.be/aXQWhbvT3w0?si=VxL8WQhPa15JP7Nl>
@@ -1149,9 +1149,9 @@ Add one: <https://youtu.be/aXQWhbvT3w0?si=VxL8WQhPa15JP7Nl>
 </div>
 
 <div id="ec4aa5bd" class="cell code" execution_count="26"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.375714Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.375512Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.379647Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.379214Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.879668Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.879136Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.883459Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.882989Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.3735e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.380665&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.366930&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.4918e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.884538&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.869620&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1175,9 +1175,9 @@ assert addOneRecursive(ListNode.to_singly_linked_list([0])).to_list() == [1]
 </div>
 
 <div id="7d6145a8" class="cell code" execution_count="27"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.397973Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.397495Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.402100Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.401635Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.903716Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.903338Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.908009Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.907560Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.4376e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.403145&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.388769&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.543e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.909098&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.893668&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1213,7 +1213,7 @@ assert addOneIter(ListNode.to_singly_linked_list([0])).to_list() == [1]
 </div>
 
 <div id="f6fa4b2a" class="cell markdown"
-papermill="{&quot;duration&quot;:8.029e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.419223&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.411194&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.778e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.926883&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.918105&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Find intersection point of two linked lists:
@@ -1223,7 +1223,7 @@ Link: <https://youtu.be/0DYoPz2Tpt4?si=Xb8Vkn3dRvw57Se8>
 </div>
 
 <div id="7e7a074f" class="cell markdown"
-papermill="{&quot;duration&quot;:7.973e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.435228&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.427255&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.609e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.944221&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.935612&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Code snippet for generating test cases relevant to this problem
@@ -1231,8 +1231,8 @@ Code snippet for generating test cases relevant to this problem
 </div>
 
 <div id="df06d967" class="cell code" execution_count="28"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.452326Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.451983Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.456506Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.456078Z&quot;}"
-papermill="{&quot;duration&quot;:1.4298e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.457601&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.443303&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.962974Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.962463Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.967259Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.966724Z&quot;}"
+papermill="{&quot;duration&quot;:1.5364e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.968277&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.952913&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1270,9 +1270,9 @@ def generateTestCasesForGetIntersectionNodes() -> tuple[ListNode, ListNode, List
 </div>
 
 <div id="dc25919d" class="cell code" execution_count="29"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.474742Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.474314Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.479173Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.478656Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:46.986497Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:46.986287Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:46.991400Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:46.990917Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.4503e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.480206&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.465703&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.547e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:46.992422&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:46.976952&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1317,9 +1317,9 @@ for i in range(20):
 </div>
 
 <div id="ddbe2569" class="cell code" execution_count="30"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.497032Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.496876Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.501238Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.500737Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.011071Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.010655Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.015112Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.014610Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.4165e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.502394&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.488229&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.4988e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.016228&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.001240&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1358,7 +1358,7 @@ for i in range(20):
 </div>
 
 <div id="cbf674eb" class="cell markdown"
-papermill="{&quot;duration&quot;:8.028e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.518649&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.510621&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.004e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.034298&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.025294&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Middle of a linked list:
@@ -1368,9 +1368,9 @@ Middle of a linked list:
 </div>
 
 <div id="42d42838" class="cell code" execution_count="31"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.535600Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.535244Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.539113Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.538675Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.053078Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.052821Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.056754Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.056300Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.3467e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.540152&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.526685&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.4738e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.057869&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.043131&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1391,7 +1391,7 @@ assert middleNode(ListNode.to_singly_linked_list([1])).val == 1
 </div>
 
 <div id="07ca0d01" class="cell markdown"
-papermill="{&quot;duration&quot;:8.041e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.556322&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.548281&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.155e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.076213&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.067058&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Detect cycle
@@ -1399,7 +1399,7 @@ Detect cycle
 </div>
 
 <div id="a5f83af7" class="cell markdown"
-papermill="{&quot;duration&quot;:8.044e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.572476&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.564432&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.681e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.093664&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.084983&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Function to generate test cases for LL with cycles
@@ -1407,9 +1407,9 @@ Function to generate test cases for LL with cycles
 </div>
 
 <div id="ccde5409" class="cell code" execution_count="32"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.589502Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.589052Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.593312Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.592855Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.112513Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.112191Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.116579Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.116115Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.3962e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.594400&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.580438&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.5171e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.117629&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.102458&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1438,9 +1438,9 @@ def generateTestCasesForHasCycle() -> tuple[ListNode, bool, int]:
 </div>
 
 <div id="6bf15063" class="cell code" execution_count="33"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.611651Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.611212Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.615069Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.614634Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.136948Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.136529Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.140672Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.140156Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.3498e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.616088&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.602590&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.5106e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.141752&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.126646&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1472,7 +1472,7 @@ for i in range(20):
 </div>
 
 <div id="d4704b18" class="cell markdown"
-papermill="{&quot;duration&quot;:8.01e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.632290&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.624280&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.745e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.159279&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.150534&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Find the length of the LL Video Link:
@@ -1483,9 +1483,9 @@ for the length
 </div>
 
 <div id="c473e001" class="cell code" execution_count="34"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.649268Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.648838Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.653333Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.652818Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.178116Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.177485Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.182217Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.181805Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.4026e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.654338&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.640312&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.5301e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.183304&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.168003&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1516,7 +1516,7 @@ for i in range(20):
 </div>
 
 <div id="3d4d86ad" class="cell markdown"
-papermill="{&quot;duration&quot;:7.997e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.670376&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.662379&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.687e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.200835&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.192148&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Delete the middle node of a LL:
@@ -1526,9 +1526,9 @@ Video Link: <https://youtu.be/ePpV-_pfOeI?si=CrCPJnN2MA38JYZh>
 </div>
 
 <div id="ac21940a" class="cell code" execution_count="35"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.687259Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.686927Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.691321Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.690823Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.219279Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.218886Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.223425Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.222860Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.3989e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.692424&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.678435&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.488e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.224447&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.209567&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1557,7 +1557,7 @@ assert deleteMiddle(ListNode.to_singly_linked_list([2,1])).to_list() == [2]
 </div>
 
 <div id="79fcca0d" class="cell markdown"
-papermill="{&quot;duration&quot;:7.985e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.708614&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.700629&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.862e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.242206&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.233344&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Find starting point of a loop / cycle Video Link:
@@ -1566,9 +1566,9 @@ Find starting point of a loop / cycle Video Link:
 </div>
 
 <div id="4ea0855f" class="cell code" execution_count="36"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.725459Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.725301Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.728283Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.727867Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.260552Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.260235Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.263551Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.263020Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.263e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.729346&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.716716&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.3752e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.264661&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.250909&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1587,9 +1587,9 @@ def detectCycleStartBrute(head: ListNode) -> ListNode|None:
 </div>
 
 <div id="ceabaf44" class="cell code" execution_count="37"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.746739Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.746305Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.751170Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.750729Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.283136Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.282682Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.287545Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.287074Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.459e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.752205&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.737615&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.5163e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.288562&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.273399&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1632,7 +1632,7 @@ for i in range(20):
 </div>
 
 <div id="4a5b91af" class="cell markdown"
-papermill="{&quot;duration&quot;:8.004e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.768306&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.760302&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.653e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.306027&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.297374&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Delete all occurances of key from DLL Video Link:
@@ -1641,9 +1641,9 @@ Delete all occurances of key from DLL Video Link:
 </div>
 
 <div id="8afd6d09" class="cell code" execution_count="38"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.785359Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.784922Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.789178Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.788726Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.324433Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.324084Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.328459Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.327983Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.39e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.790281&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.776381&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.475e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.329495&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.314745&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1670,7 +1670,7 @@ assert deleteAllOccurrences(DLLNode.to_doubly_linked_list([1,1,5,1]), 1).to_list
 </div>
 
 <div id="c24d725f" class="cell markdown"
-papermill="{&quot;duration&quot;:7.968e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.806370&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.798402&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.882e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.347296&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.338414&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Find all pairs that sum to pair Video Link:
@@ -1679,9 +1679,9 @@ Find all pairs that sum to pair Video Link:
 </div>
 
 <div id="db9ee204" class="cell code" execution_count="39"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.823295Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.822926Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.827395Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.826864Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.365778Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.365495Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.369921Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.369415Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.4103e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.828479&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.814376&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.5051e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.371044&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.355993&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1713,7 +1713,7 @@ assert findPairsWithGivenSum(7, DLLNode.to_doubly_linked_list([1,2,4,5,6,8,9])) 
 </div>
 
 <div id="03d3836e" class="cell markdown"
-papermill="{&quot;duration&quot;:8.002e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.844624&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.836622&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.868e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.388705&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.379837&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Remove duplicates from sorted DLL Video Link:
@@ -1722,9 +1722,9 @@ Remove duplicates from sorted DLL Video Link:
 </div>
 
 <div id="96d1a14c" class="cell code" execution_count="40"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.861883Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.861534Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.865663Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.865193Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.407139Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.406631Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.410766Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.410330Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.3833e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.866691&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.852858&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.4421e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.411837&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.397416&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1751,7 +1751,7 @@ assert removeDuplicates(DLLNode.to_doubly_linked_list([1,2,2,2,3,3,3,3])).to_lis
 </div>
 
 <div id="0e87575b" class="cell markdown"
-papermill="{&quot;duration&quot;:8.058e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.882860&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.874802&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.913e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.430247&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.421334&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Reverse nodes in K group Video Link:
@@ -1760,9 +1760,9 @@ Reverse nodes in K group Video Link:
 </div>
 
 <div id="a9d91617" class="cell code" execution_count="41"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.900063Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.899579Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.904937Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.904512Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.448751Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.448481Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.453807Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.453298Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.5064e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.906048&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.890984&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.5918e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.454950&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.439032&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1806,7 +1806,7 @@ assert reverseKGroupBrute(ListNode.to_singly_linked_list([1,2,3,4,5]), 3).to_lis
 </div>
 
 <div id="31555836" class="cell markdown"
-papermill="{&quot;duration&quot;:8.001e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.922161&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.914160&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.724e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.472695&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.463971&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Rotate Linked List: <https://leetcode.com/problems/rotate-list/> Video
@@ -1815,9 +1815,9 @@ Link: <https://youtu.be/uT7YI7XbTY8?si=oTcsMXbd4Ukx7peu>
 </div>
 
 <div id="21fcd05a" class="cell code" execution_count="42"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.939312Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.938904Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.943429Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.942904Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.490905Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.490651Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.495036Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.494532Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.4273e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.944521&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.930248&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.4673e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.496069&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.481396&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1853,7 +1853,7 @@ assert rotateRight(ListNode.to_singly_linked_list([1,2,3,4,5]), 3).to_list() == 
 </div>
 
 <div id="b8060f9c" class="cell markdown"
-papermill="{&quot;duration&quot;:8.001e-3,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.960617&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.952616&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.788e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.513680&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.504892&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Merge Two sorted linked lists:
@@ -1863,8 +1863,9 @@ Merge Two sorted linked lists:
 </div>
 
 <div id="9bda15a0" class="cell code" execution_count="43"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-29T16:38:24.977748Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-29T16:38:24.977412Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-29T16:38:24.982102Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-29T16:38:24.981605Z&quot;}"
-papermill="{&quot;duration&quot;:1.4542e-2,&quot;end_time&quot;:&quot;2024-05-29T16:38:24.983249&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-29T16:38:24.968707&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.532141Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.531824Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.536388Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.535873Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:1.4989e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.537510&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.522521&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -1889,6 +1890,262 @@ def mergeTwoLists(head1: ListNode, head2: ListNode) -> ListNode:
 # Testing the solution
 assert mergeTwoLists(ListNode.to_singly_linked_list([1,2,4]), ListNode.to_singly_linked_list([1,3,4])).to_list() == [1,1,2,3,4,4]
 assert mergeTwoLists(ListNode.to_singly_linked_list([1,1]), ListNode.to_singly_linked_list([1,2])).to_list() == [1,1,1,2]
+```
+
+</div>
+
+<div id="635b1ce4" class="cell markdown"
+papermill="{&quot;duration&quot;:8.87e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.555303&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.546433&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Flattening a linked list Video Link:
+<https://youtu.be/ykelywHJWLg?si=xEMHwY-n0wADGYA6>
+
+</div>
+
+<div id="8e34e33f" class="cell code" execution_count="44"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.573830Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.573314Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.577527Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.576988Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:1.4498e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.578547&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.564049&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+class GFGFlattenLLNode:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+        self.bottom = None
+
+    def __repr__(self):
+        return str(self.data)
+
+    def to_list(self) -> list[int]:
+        result: list[int] = []
+        horizontal = self
+        while horizontal:
+            vertical = horizontal
+            while vertical:
+                result.append(vertical.data)
+                vertical = vertical.bottom
+            horizontal = horizontal.next
+        return result
+```
+
+</div>
+
+<div id="6f6d740f" class="cell code" execution_count="45"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.597267Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.596860Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.605009Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.604472Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:1.8691e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.606145&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.587454&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+def generateTestCasesForGFGFlattenLL(N: int, heights: list[int], values: list[int]) -> GFGFlattenLLNode:
+    nested: list[GFGFlattenLLNode] = []
+    i = 0
+    for height in heights:
+        nested.append(GFGFlattenLLNode(-1))
+        curr = nested[-1]
+        while height > 0:
+            curr.bottom = GFGFlattenLLNode(values[i])
+            curr, i, height = curr.bottom, i + 1, height - 1
+        nested[-1] = nested[-1].bottom
+
+    prev = nested[0]
+    for i in range(1, N):
+        curr = nested[i]
+        prev.next = curr
+        prev = curr
+
+    return nested[0]
+
+# Testing the test case generator ;)
+generateTestCasesForGFGFlattenLL(4, [4,2,3,4], [5,7,8,30,10,20,19,22,50,28,35,40,45]).to_list()
+```
+
+<div class="output execute_result" execution_count="45">
+
+    [5, 7, 8, 30, 10, 20, 19, 22, 50, 28, 35, 40, 45]
+
+</div>
+
+</div>
+
+<div id="7db963ef" class="cell code" execution_count="46"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.625509Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.625105Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.630423Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.629993Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:1.6324e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.631543&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.615219&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+def GFGflattenLL(root) -> GFGFlattenLLNode:
+    """
+    Time: O(N) + O(N x N x M) ~ O(N x N x M)
+    Space: O(N)
+    """
+    # Store all the top level nodes
+    curr: GFGFlattenLLNode = root
+    heads: set[GFGFlattenLLNode] = set()
+    while curr:
+        next_ = curr.next
+        heads.add(curr)
+        curr.next = None
+        curr = next_
+
+    # Create a dummy node of ease of ops
+    merged = GFGFlattenLLNode(0)
+    mh = merged
+    while heads:
+        min_ = GFGFlattenLLNode(math.inf)
+        for curr in heads:
+            if curr.data < min_.data:
+                min_ = curr
+
+        heads.remove(min_)
+        mh.bottom = min_
+        mh, min_ = mh.bottom, min_.bottom
+        if min_:
+            heads.add(min_)
+
+    return merged.bottom
+
+# Testing the solution
+assert GFGflattenLL(generateTestCasesForGFGFlattenLL(4, [4,2,3,4], [5,7,8,30,10,20,19,22,50,28,35,40,45])).to_list() == [5,7,8,10,19,20,22,28,30,35,40,45,50]
+assert GFGflattenLL(generateTestCasesForGFGFlattenLL(4, [4,1,3,1], [5,7,8,30,10,19,22,50,28])).to_list() == [5,7,8,10,19,22,28,30,50]
+```
+
+</div>
+
+<div id="0af56f93" class="cell code" execution_count="47"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.650631Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.650253Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.656660Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.656152Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:1.7001e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.657736&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.640735&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+def GFGflattenLLStriver(root) -> GFGFlattenLLNode:
+    """
+    Instead of iterating through all N for every iteration, we can try
+    joining two heads at a time for better runtime.
+
+    Time: O(N) + O(N x 2M) ~ O(NM)
+    Space: O(N)
+    """
+    def mergeGFGNodes(head1: GFGFlattenLLNode, head2: GFGFlattenLLNode) -> GFGFlattenLLNode:
+        merged: GFGFlattenLLNode = GFGFlattenLLNode(-1)
+        mh, curr1, curr2 = merged, head1, head2
+        while curr1 or curr2:
+            if not curr2 or (curr1 and curr1.data < curr2.data):
+                mh.bottom = curr1
+                mh, curr1 = mh.bottom, curr1.bottom
+            else:
+                mh.bottom = curr2
+                mh, curr2 = mh.bottom, curr2.bottom
+
+        return merged.bottom
+
+    # Store all the top level nodes
+    curr: GFGFlattenLLNode = root
+    heads: set[GFGFlattenLLNode] = set()
+    while curr:
+        next_ = curr.next
+        heads.add(curr)
+        curr.next = None
+        curr = next_
+
+    while len(heads) > 1:
+        heads.add(mergeGFGNodes(heads.pop(), heads.pop()))
+
+    return heads.pop()
+
+# Testing the solution
+assert GFGflattenLLStriver(generateTestCasesForGFGFlattenLL(4, [4,2,3,4], [5,7,8,30,10,20,19,22,50,28,35,40,45])).to_list() == [5,7,8,10,19,20,22,28,30,35,40,45,50]
+assert GFGflattenLLStriver(generateTestCasesForGFGFlattenLL(4, [4,1,3,1], [5,7,8,30,10,19,22,50,28])).to_list() == [5,7,8,10,19,22,28,30,50]
+```
+
+</div>
+
+<div id="372da5f1" class="cell markdown"
+papermill="{&quot;duration&quot;:9.099e-3,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.675939&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.666840&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Merge K sorted Lists:
+<https://leetcode.com/problems/merge-k-sorted-lists/> Video Link:
+<https://youtu.be/1zktEppsdig?si=o9ttliAfO99YDin8>
+
+</div>
+
+<div id="0c98d074" class="cell code" execution_count="48"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.694811Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.694463Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.699426Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.698949Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:1.5651e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.700501&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.684850&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/merge-k-sorted-lists/submissions/1272090418
+def mergeKLists(lists: list[ListNode]) -> ListNode:
+    """
+    Time: O(2N + 3N .. KN) ~ O(N x K ** 2) ~ O(N ** 3)
+    Space: O(1)
+    """
+    def merge(head1: ListNode, head2: ListNode) -> ListNode:
+        merged: ListNode = ListNode(-1)
+        mh, curr1, curr2 = merged, head1, head2
+        while curr1 or curr2:
+            if not curr2 or (curr1 and curr1.val < curr2.val):
+                mh.next = curr1
+                mh, curr1 = mh.next, curr1.next
+            else:
+                mh.next = curr2
+                mh, curr2 = mh.next, curr2.next
+        return merged.next
+
+    while len(lists) > 1:
+        lists.append(merge(lists.pop(), lists.pop()))
+
+    return lists.pop() if lists else None
+
+# Testing the solution
+assert mergeKLists([ListNode.to_singly_linked_list([1,4,5]),ListNode.to_singly_linked_list([1,3,4]),ListNode.to_singly_linked_list([2,6])]).to_list() == [1,1,2,3,4,4,5,6]
+```
+
+</div>
+
+<div id="3cb0bb18" class="cell code" execution_count="49"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-05-30T16:12:47.719503Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-05-30T16:12:47.719154Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-05-30T16:12:47.724216Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-05-30T16:12:47.723746Z&quot;}"
+papermill="{&quot;duration&quot;:1.5676e-2,&quot;end_time&quot;:&quot;2024-05-30T16:12:47.725244&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-05-30T16:12:47.709568&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/merge-k-sorted-lists/submissions/1272122618/
+def mergeKListsStriver(lists: list[ListNode]) -> ListNode:
+    """
+    Instead of iterating through pairs of heads, we use a min heap data structure.
+    Initially add all heads to heap. Get the min, add to the merged list and add the next_ back to heap.
+
+    Time: O(N x N x log N) (Total Nodes: N x N)
+    Space: O(N)
+    """
+
+    heads: list[ListNode] = [node for node in lists]
+    heap: list[tuple[int, int]] = [(heads[i].val, i) for i in range(len(heads)) if heads[i]]
+    heapq.heapify(heap)
+
+    merged: ListNode = ListNode(-1)
+    mh = merged
+    while heap:
+        min_idx = heapq.heappop(heap)[1]
+        min_ = heads[min_idx]
+        mh.next = min_
+        mh = mh.next
+        if min_.next:
+            heapq.heappush(heap, (min_.next.val, min_idx))
+            heads[min_idx] = min_.next
+
+    return merged.next
+
+# Testing the solution
+assert mergeKListsStriver([ListNode.to_singly_linked_list([1,4,5]),ListNode.to_singly_linked_list([1,3,4]),ListNode.to_singly_linked_list([2,6])]).to_list() == [1,1,2,3,4,4,5,6]
 ```
 
 </div>
