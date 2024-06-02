@@ -18,18 +18,18 @@ jupyter:
   nbformat_minor: 5
   papermill:
     default_parameters: {}
-    duration: 1.470707
-    end_time: "2024-06-02T13:27:37.572911"
+    duration: 1.504733
+    end_time: "2024-06-02T17:58:18.739105"
     environment_variables: {}
     input_path: study/striver-A2Z/15-math.ipynb
     output_path: study/striver-A2Z/15-math.ipynb
     parameters: {}
-    start_time: "2024-06-02T13:27:36.102204"
+    start_time: "2024-06-02T17:58:17.234372"
     version: 2.6.0
 ---
 
 <div id="3ad0b29c" class="cell markdown"
-papermill="{&quot;duration&quot;:3.587e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.230626&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.227039&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.923e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.365285&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.361362&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 #### Useful imports, functions
@@ -37,9 +37,9 @@ tags="[]">
 </div>
 
 <div id="9961e56c" class="cell code" execution_count="1"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.237382Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.236944Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.242282Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.241747Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.372400Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.372058Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.377485Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.377056Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:9.95e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.243340&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.233390&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.0238e-2,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.378602&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.368364&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -53,9 +53,9 @@ import heapq
 </div>
 
 <div id="386bad8d" class="cell code" execution_count="2"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.249586Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.249152Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.254644Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.254143Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.385677Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.385288Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.390914Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.390393Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:9.78e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.255735&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.245955&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.0243e-2,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.391941&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.381698&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -105,7 +105,7 @@ class ListNode:
 </div>
 
 <div id="96923fbe" class="cell markdown"
-papermill="{&quot;duration&quot;:2.544e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.260896&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.258352&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.001e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.397896&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.394895&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Print all divisors of a number Video Link:
@@ -114,9 +114,9 @@ Print all divisors of a number Video Link:
 </div>
 
 <div id="fec7e081" class="cell code" execution_count="3"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.267093Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.266760Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.270328Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.269824Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.404688Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.404417Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.407980Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.407522Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:7.83e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.271408&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.263578&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.261e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.409114&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.400853&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -135,9 +135,9 @@ assert printAllDivisorsBrute(10) == [1, 2, 5, 10]
 </div>
 
 <div id="8383037d" class="cell code" execution_count="4"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.277579Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.277260Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.281747Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.281331Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.417065Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.416639Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.421260Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.420765Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.769e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.282801&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.274032&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.366e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.422383&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.413017&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -169,7 +169,7 @@ assert printAllDivisorsBetter(25) == [1,5,25]
 </div>
 
 <div id="812f02d7" class="cell markdown"
-papermill="{&quot;duration&quot;:2.557e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.288746&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.286189&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.022e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.428424&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.425402&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Check if number is prime or not Video Link:
@@ -178,9 +178,9 @@ Check if number is prime or not Video Link:
 </div>
 
 <div id="823de68c" class="cell code" execution_count="5"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.295324Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.294990Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.299211Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.298688Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.435411Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.434968Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.439143Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.438712Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.878e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.300266&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.291388&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.86e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.440250&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.431390&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -208,7 +208,7 @@ assert not any([isPrime(1), isPrime(4), isPrime(6)])
 </div>
 
 <div id="4951373b" class="cell markdown"
-papermill="{&quot;duration&quot;:2.591e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.305577&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.302986&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.914e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.446243&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.443329&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Print all prime factors of a number Video Link:
@@ -217,9 +217,9 @@ Print all prime factors of a number Video Link:
 </div>
 
 <div id="0f0aa99e" class="cell code" execution_count="6"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.311806Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.311473Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.316160Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.315581Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.453476Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.453037Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.457954Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.457484Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.962e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.317210&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.308248&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.636e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.459033&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.449397&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -256,9 +256,9 @@ assert printAllPrimeFactorsBrute(20) == [2, 5]
 </div>
 
 <div id="8541747e" class="cell code" execution_count="7"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.323423Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.323107Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.326861Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.326347Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.465939Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.465556Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.469308Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.468793Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.048e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.327940&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.319892&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.348e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.470346&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.461998&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -292,9 +292,9 @@ assert printAllPrimeFactorsBetter(20) == [2, 5]
 </div>
 
 <div id="0e4148f1" class="cell code" execution_count="8"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.334053Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.333676Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.337689Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.337171Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.477474Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.477134Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.480984Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.480572Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.203e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.338753&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.330550&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.63e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.482047&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.473417&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -326,7 +326,7 @@ assert printAllPrimeFactorsOptimal(20) == [2, 5]
 </div>
 
 <div id="edf4e63b" class="cell markdown"
-papermill="{&quot;duration&quot;:2.795e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.344333&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.341538&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.979e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.488053&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.485074&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Pow (x, n): <https://leetcode.com/problems/powx-n/description> Video
@@ -335,9 +335,9 @@ Link: <https://youtu.be/hFWckDXE-K8?si=LH7JBhjzO3jP8NyC>
 </div>
 
 <div id="4c3c0361" class="cell code" execution_count="9"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.350523Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.350206Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.354156Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.353625Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.495064Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.494632Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.498535Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.498098Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.293e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.355267&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.346974&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.601e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.499605&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.491004&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -366,9 +366,9 @@ assert myPowRecursive(2, -3) == 0.125
 </div>
 
 <div id="e9038b75" class="cell code" execution_count="10"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.361632Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.361156Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.364822Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.364388Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.509175Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.508708Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.512771Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.512220Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:7.885e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.365824&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.357939&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.133e-2,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.513944&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.502614&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -395,7 +395,7 @@ assert myPow(2, -3) == pow(2, -3)
 </div>
 
 <div id="11ca53d4" class="cell markdown"
-papermill="{&quot;duration&quot;:2.595e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.371133&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.368538&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.332e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.520482&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.517150&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Print all primes uptil N Video link:
@@ -404,9 +404,9 @@ Print all primes uptil N Video link:
 </div>
 
 <div id="27f1cd7f" class="cell code" execution_count="11"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.377261Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.376932Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.381541Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.381106Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.528122Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.527735Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.532500Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.532005Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.868e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.382589&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.373721&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.879e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.533597&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.523718&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -436,9 +436,9 @@ assert printAllPrimesBrute(20) == [2,3,5,7,11,13,17,19]
 </div>
 
 <div id="a90bd365" class="cell code" execution_count="12"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.388881Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.388397Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.392732Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.392247Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.540742Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.540472Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.545017Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.544404Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.602e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.393818&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.385216&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.271e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.546059&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.536788&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -464,9 +464,9 @@ assert printAllPrimesBetter(20) == [2,3,5,7,11,13,17,19]
 </div>
 
 <div id="ce654373" class="cell code" execution_count="13"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.419258Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.418818Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.424688Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.424157Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.553071Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.552632Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.557494Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.557059Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.0486e-2,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.425877&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.415391&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.452e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.558527&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.549075&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -505,9 +505,9 @@ assert printAllPrimesOptimal(20) == [2,3,5,7,11,13,17,19]
 </div>
 
 <div id="6873f617" class="cell code" execution_count="14"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.432167Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.431860Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.436261Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.435767Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.565963Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.565529Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.569883Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.569427Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.621e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.437263&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.428642&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.347e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.570927&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.561580&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -533,7 +533,7 @@ assert printAllPrimes(20) == [2,3,5,7,11,13,17,19]
 </div>
 
 <div id="55ffb714" class="cell markdown"
-papermill="{&quot;duration&quot;:2.674e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.442658&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.439984&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.041e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.577120&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.574079&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Count number of primes between range Video Link:
@@ -542,8 +542,9 @@ Count number of primes between range Video Link:
 </div>
 
 <div id="b2cac251" class="cell code" execution_count="15"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T13:27:37.449260Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T13:27:37.448918Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T13:27:37.454310Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T13:27:37.453800Z&quot;}"
-papermill="{&quot;duration&quot;:9.86e-3,&quot;end_time&quot;:&quot;2024-06-02T13:27:37.455367&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T13:27:37.445507&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.584019Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.583815Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.589420Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.589001Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:1.0322e-2,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.590424&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.580102&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -583,6 +584,92 @@ def countPrimesInRange(queries: list[tuple[int, int]]) -> list[int]:
 
 # Testing the solution
 assert countPrimesInRange([(1,10),(5,10),(9,50),(30,50),(3,7),(0,10)]) == [4,2,11,5,3,4]
+```
+
+</div>
+
+<div id="73b1d0d4" class="cell markdown"
+papermill="{&quot;duration&quot;:2.993e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.596443&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.593450&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Prime factorisation of a number Video Link:
+<https://youtu.be/glKWkmKFlMw?si=q6r9kMg3FDzfebGo>
+
+</div>
+
+<div id="6cd6e86e" class="cell code" execution_count="16"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.603323Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.602985Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.607141Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.606702Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:8.806e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.608251&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.599445&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+def prime_factorise_better(queries: list[int]) -> list[list[int]]:
+    results: list[list[int]] = []
+    for N in queries:
+        result: list[int] = []
+        i = 2
+        while i * i <= N:
+            while N % i == 0:
+                result.append(i)
+                N //= i
+            i += 1
+
+        if N != 1:
+            result.append(N)
+
+        results.append(result)
+
+    return results
+
+# Testing the solution
+assert prime_factorise_better([36, 45]) == [[2,2,3,3], [3,3,5]]
+```
+
+</div>
+
+<div id="65fb7ed1" class="cell code" execution_count="17"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-02T17:58:18.615178Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-02T17:58:18.614894Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-02T17:58:18.619643Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-02T17:58:18.619180Z&quot;}"
+papermill="{&quot;duration&quot;:9.352e-3,&quot;end_time&quot;:&quot;2024-06-02T17:58:18.620678&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-02T17:58:18.611326&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+def prime_factorise_optimal(queries: list[int]) -> list[list[int]]:
+    """
+    Optimal solution involves using an approach similar to seive of erastosthenes.
+
+    Time: O(N log log N) + O(Q * log N)
+    Space: O(N)
+    """
+    # Compute the SPF (Smallest Prime factor)
+    max_ = max(queries)
+    SPF: list[int] = [i for i in range(max_ + 1)]
+    i = 2
+    while i * i <= max_:
+        if SPF[i] == i:
+            j = i
+            while i * j <= max_:
+                if SPF[i * j] == i * j:
+                    SPF[i * j] = i
+                j += 1
+        i += 1
+
+    # Iterate through the queries and store the results
+    # Using SPF lets us find the smallest factor in O(1) time.
+    # As we continue dividing the number we don't have to iterate through
+    # non divisible numbers
+    results: list[list[int]] = []
+    for N in queries:
+        result: list[int] = []
+        while N > 1:
+            result.append(SPF[N])
+            N //= SPF[N]
+        results.append(result)
+
+    return results
+
+# Testing the solution
+assert prime_factorise_optimal([36, 45, 46]) == [[2,2,3,3], [3,3,5], [2,23]]
 ```
 
 </div>
