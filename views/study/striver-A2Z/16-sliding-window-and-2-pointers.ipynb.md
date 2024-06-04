@@ -18,18 +18,18 @@ jupyter:
   nbformat_minor: 5
   papermill:
     default_parameters: {}
-    duration: 1.322759
-    end_time: "2024-06-04T13:57:02.518653"
+    duration: 1.342778
+    end_time: "2024-06-04T15:59:41.313332"
     environment_variables: {}
     input_path: study/striver-A2Z/16-sliding-window-and-2-pointers.ipynb
     output_path: study/striver-A2Z/16-sliding-window-and-2-pointers.ipynb
     parameters: {}
-    start_time: "2024-06-04T13:57:01.195894"
+    start_time: "2024-06-04T15:59:39.970554"
     version: 2.6.0
 ---
 
 <div id="b6671da9" class="cell markdown"
-papermill="{&quot;duration&quot;:2.331e-3,&quot;end_time&quot;:&quot;2024-06-04T13:57:02.335369&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T13:57:02.333038&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.78e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.093858&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.091078&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ### Useful imports
@@ -37,9 +37,9 @@ tags="[]">
 </div>
 
 <div id="8fe92d24" class="cell code" execution_count="1"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T13:57:02.340395Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T13:57:02.339927Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T13:57:02.345329Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T13:57:02.344807Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.099298Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.098901Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.104166Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.103659Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:9.101e-3,&quot;end_time&quot;:&quot;2024-06-04T13:57:02.346417&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T13:57:02.337316&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.09e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.105235&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.096145&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -53,7 +53,7 @@ import functools
 </div>
 
 <div id="d85c2eae" class="cell markdown"
-papermill="{&quot;duration&quot;:1.683e-3,&quot;end_time&quot;:&quot;2024-06-04T13:57:02.349738&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T13:57:02.348055&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.452e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.109737&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.107285&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ### Sliding window and 2 pointers
@@ -74,9 +74,9 @@ problems:
 </div>
 
 <div id="6ef36636" class="cell code" execution_count="2"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T13:57:02.353887Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T13:57:02.353561Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T13:57:02.357295Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T13:57:02.356793Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.115000Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.114597Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.118290Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.117858Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:6.992e-3,&quot;end_time&quot;:&quot;2024-06-04T13:57:02.358356&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T13:57:02.351364&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:7.497e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.119349&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.111852&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -99,9 +99,9 @@ assert maxSumSubarray([-1,2,3,3,4,5,-1], 4) == 15
 </div>
 
 <div id="814183d5" class="cell code" execution_count="3"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T13:57:02.362659Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T13:57:02.362290Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T13:57:02.367531Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T13:57:02.367071Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.124566Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.124139Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.129585Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.129150Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.578e-3,&quot;end_time&quot;:&quot;2024-06-04T13:57:02.368607&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T13:57:02.360029&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.133e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.130648&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.121515&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -141,9 +141,9 @@ assert longestSubarrayBetter([7,10,0], 0) == 1
 </div>
 
 <div id="171f3929" class="cell code" execution_count="4"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T13:57:02.372997Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T13:57:02.372512Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T13:57:02.377723Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T13:57:02.377323Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.135405Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.134983Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.140086Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.139676Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.53e-3,&quot;end_time&quot;:&quot;2024-06-04T13:57:02.378763&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T13:57:02.370233&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.609e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.141122&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.132513&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -180,7 +180,7 @@ assert longestSubarrayOptimal([7,10,0], 0) == 1
 </div>
 
 <div id="cf69814c" class="cell markdown"
-papermill="{&quot;duration&quot;:1.529e-3,&quot;end_time&quot;:&quot;2024-06-04T13:57:02.381989&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T13:57:02.380460&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.804e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.144896&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.143092&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Maximum points you can obtain from cards Video link:
@@ -189,9 +189,9 @@ Maximum points you can obtain from cards Video link:
 </div>
 
 <div id="d6a9257f" class="cell code" execution_count="5"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T13:57:02.385781Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T13:57:02.385385Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T13:57:02.389502Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T13:57:02.389079Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.149672Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.149203Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.153392Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.152864Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:7.208e-3,&quot;end_time&quot;:&quot;2024-06-04T13:57:02.390596&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T13:57:02.383388&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:7.612e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.154380&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.146768&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -215,7 +215,7 @@ assert maxScore([9,7,7,9,7,7,9], 7) == 55
 </div>
 
 <div id="0d36216d" class="cell markdown"
-papermill="{&quot;duration&quot;:1.423e-3,&quot;end_time&quot;:&quot;2024-06-04T13:57:02.393497&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T13:57:02.392074&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.913e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.158121&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.156208&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Longest substring without repeating characters Video Link:
@@ -224,9 +224,9 @@ Longest substring without repeating characters Video Link:
 </div>
 
 <div id="688e574f" class="cell code" execution_count="6"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T13:57:02.397401Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T13:57:02.397004Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T13:57:02.401056Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T13:57:02.400589Z&quot;}"
-lines_to_next_cell="2"
-papermill="{&quot;duration&quot;:7.199e-3,&quot;end_time&quot;:&quot;2024-06-04T13:57:02.402103&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T13:57:02.394904&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.163597Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.163173Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.167223Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.166794Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:7.491e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.168244&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.160753&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -247,6 +247,110 @@ def lengthOfLongestSubstring(s: str) -> int:
 assert lengthOfLongestSubstring("abcabcbb") == 3
 assert lengthOfLongestSubstring("pwwkew") == 3
 assert lengthOfLongestSubstring("aaqasdcdaq") == 5
+```
+
+</div>
+
+<div id="50bdca9c" class="cell markdown"
+papermill="{&quot;duration&quot;:1.809e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.171945&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.170136&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Max consecutive ones III:
+<https://leetcode.com/problems/max-consecutive-ones-iii/> Video Link:
+<https://youtu.be/3E4JBHSLpYk?si=63rPPAESHHuPbIas>
+
+</div>
+
+<div id="b81ea511" class="cell code" execution_count="7"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.176449Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.176183Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.181223Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.180817Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:8.492e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.182308&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.173816&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/max-consecutive-ones-iii/submissions/1277492942/
+def longestOnes(nums: list[int], K: int) -> int:
+    """
+    Expand if zero_count <= k
+    Else slide
+
+    We can optimize this code a little more if we kept track of the first 0 within our window.
+    Once zero_count > K, we can directly slide first_zero - i steps.
+    """
+    N, zero_count = len(nums), 1 if nums[0] == 0 else 0
+    max_: int = 0
+    i = j = 0
+    while j < N:
+
+        # Expand
+        if zero_count <= K:
+            max_ = max(max_, j - i + 1)
+            j += 1
+            if j < N and nums[j] == 0:
+                zero_count += 1
+
+        # Slide
+        else:
+            if nums[i] == 0:
+                zero_count -= 1
+            if j + 1 < N and nums[j + 1] == 0:
+                zero_count += 1
+            i, j = i + 1, j + 1
+
+    return max_
+
+# Testing the solution
+assert longestOnes([1,1,1,0,0,0,1,1,1,1,0], 2) == 6
+assert longestOnes([0,0,1,1,0,0,1,1,1,0,1,1,0,0,0,1,1,1,1], 3) == 10
+assert longestOnes([0,0,0,0], 3) == 3
+```
+
+</div>
+
+<div id="ee79e853" class="cell markdown"
+papermill="{&quot;duration&quot;:1.845e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.186081&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.184236&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Fruit into baskets: <https://leetcode.com/problems/fruit-into-baskets>
+Video Link: <https://youtu.be/e3bs0uA1NhQ?si=6ii_zUURKMi_Wu4i> Striver
+uses a different approach of counting by freq, they are of the same time
+complexity
+
+</div>
+
+<div id="6d7b7c24" class="cell code" execution_count="8"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.190679Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.190293Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.194997Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.194576Z&quot;}"
+papermill="{&quot;duration&quot;:8.105e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.196023&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.187918&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/fruit-into-baskets/submissions/1277567029
+def sumSubarrayMins(fruits: list[int]):
+    # Time: O(N), Space: O(1)
+    N = len(fruits)
+    indices: dict[int, int] = dict()
+    max_length = i = 0
+    for j in range(N):
+        indices[fruits[j]] = j
+        if len(indices) < 3:
+            max_length = max(max_length, j - i + 1)
+        else:
+            min_pair = (-1, N)
+
+            # At most 3 items
+            for k, v in indices.items():
+                if v < min_pair[1]:
+                    min_pair = (k, v)
+
+            indices.pop(min_pair[0])
+            i = min_pair[1] + 1
+
+    return max_length
+
+# Testing the solution
+assert sumSubarrayMins([2,1,2]) == 3
+assert sumSubarrayMins([0,1,2,2,2,2]) == 5
+assert sumSubarrayMins([1,3,1,2,2,3,2]) == 4
 ```
 
 </div>
