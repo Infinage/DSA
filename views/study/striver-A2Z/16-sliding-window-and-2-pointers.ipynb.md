@@ -18,18 +18,18 @@ jupyter:
   nbformat_minor: 5
   papermill:
     default_parameters: {}
-    duration: 1.342778
-    end_time: "2024-06-04T15:59:41.313332"
+    duration: 1.443706
+    end_time: "2024-06-05T17:23:03.476713"
     environment_variables: {}
     input_path: study/striver-A2Z/16-sliding-window-and-2-pointers.ipynb
     output_path: study/striver-A2Z/16-sliding-window-and-2-pointers.ipynb
     parameters: {}
-    start_time: "2024-06-04T15:59:39.970554"
+    start_time: "2024-06-05T17:23:02.033007"
     version: 2.6.0
 ---
 
 <div id="b6671da9" class="cell markdown"
-papermill="{&quot;duration&quot;:2.78e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.093858&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.091078&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.394e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.166525&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.163131&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ### Useful imports
@@ -37,9 +37,9 @@ tags="[]">
 </div>
 
 <div id="8fe92d24" class="cell code" execution_count="1"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.099298Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.098901Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.104166Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.103659Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-05T17:23:03.173331Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-05T17:23:03.172903Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-05T17:23:03.178289Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-05T17:23:03.177843Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:9.09e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.105235&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.096145&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.0043e-2,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.179390&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.169347&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -53,7 +53,7 @@ import functools
 </div>
 
 <div id="d85c2eae" class="cell markdown"
-papermill="{&quot;duration&quot;:2.452e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.109737&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.107285&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.529e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.184575&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.182046&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ### Sliding window and 2 pointers
@@ -74,9 +74,9 @@ problems:
 </div>
 
 <div id="6ef36636" class="cell code" execution_count="2"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.115000Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.114597Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.118290Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.117858Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-05T17:23:03.190553Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-05T17:23:03.190359Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-05T17:23:03.194181Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-05T17:23:03.193764Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:7.497e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.119349&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.111852&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.079e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.195201&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.187122&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -99,9 +99,9 @@ assert maxSumSubarray([-1,2,3,3,4,5,-1], 4) == 15
 </div>
 
 <div id="814183d5" class="cell code" execution_count="3"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.124566Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.124139Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.129585Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.129150Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-05T17:23:03.201470Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-05T17:23:03.200967Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-05T17:23:03.206443Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-05T17:23:03.205915Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:9.133e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.130648&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.121515&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.616e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.207468&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.197852&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -141,9 +141,9 @@ assert longestSubarrayBetter([7,10,0], 0) == 1
 </div>
 
 <div id="171f3929" class="cell code" execution_count="4"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.135405Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.134983Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.140086Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.139676Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-05T17:23:03.213562Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-05T17:23:03.213149Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-05T17:23:03.218222Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-05T17:23:03.217707Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.609e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.141122&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.132513&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.186e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.219221&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.210035&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -180,7 +180,7 @@ assert longestSubarrayOptimal([7,10,0], 0) == 1
 </div>
 
 <div id="cf69814c" class="cell markdown"
-papermill="{&quot;duration&quot;:1.804e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.144896&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.143092&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.54e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.225144&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.222604&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Maximum points you can obtain from cards Video link:
@@ -189,9 +189,9 @@ Maximum points you can obtain from cards Video link:
 </div>
 
 <div id="d6a9257f" class="cell code" execution_count="5"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.149672Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.149203Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.153392Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.152864Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-05T17:23:03.231347Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-05T17:23:03.230925Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-05T17:23:03.235146Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-05T17:23:03.234711Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:7.612e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.154380&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.146768&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.544e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.236269&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.227725&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -215,7 +215,7 @@ assert maxScore([9,7,7,9,7,7,9], 7) == 55
 </div>
 
 <div id="0d36216d" class="cell markdown"
-papermill="{&quot;duration&quot;:1.913e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.158121&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.156208&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.557e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.241473&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.238916&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Longest substring without repeating characters Video Link:
@@ -224,9 +224,9 @@ Longest substring without repeating characters Video Link:
 </div>
 
 <div id="688e574f" class="cell code" execution_count="6"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.163597Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.163173Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.167223Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.166794Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-05T17:23:03.247769Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-05T17:23:03.247300Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-05T17:23:03.251406Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-05T17:23:03.250958Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:7.491e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.168244&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.160753&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.32e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.252404&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.244084&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -252,7 +252,7 @@ assert lengthOfLongestSubstring("aaqasdcdaq") == 5
 </div>
 
 <div id="50bdca9c" class="cell markdown"
-papermill="{&quot;duration&quot;:1.809e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.171945&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.170136&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.655e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.257723&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.255068&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Max consecutive ones III:
@@ -262,9 +262,9 @@ Max consecutive ones III:
 </div>
 
 <div id="b81ea511" class="cell code" execution_count="7"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.176449Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.176183Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.181223Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.180817Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-05T17:23:03.263911Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-05T17:23:03.263524Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-05T17:23:03.268819Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-05T17:23:03.268284Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.492e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.182308&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.173816&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.463e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.269822&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.260359&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -308,7 +308,7 @@ assert longestOnes([0,0,0,0], 3) == 3
 </div>
 
 <div id="ee79e853" class="cell markdown"
-papermill="{&quot;duration&quot;:1.845e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.186081&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.184236&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:2.597e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.275207&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.272610&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Fruit into baskets: <https://leetcode.com/problems/fruit-into-baskets>
@@ -319,13 +319,14 @@ complexity
 </div>
 
 <div id="6d7b7c24" class="cell code" execution_count="8"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-04T15:59:41.190679Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-04T15:59:41.190293Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-04T15:59:41.194997Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-04T15:59:41.194576Z&quot;}"
-papermill="{&quot;duration&quot;:8.105e-3,&quot;end_time&quot;:&quot;2024-06-04T15:59:41.196023&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-04T15:59:41.187918&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-05T17:23:03.281150Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-05T17:23:03.280894Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-05T17:23:03.285664Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-05T17:23:03.285216Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:8.916e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.286702&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.277786&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
 # https://leetcode.com/problems/fruit-into-baskets/submissions/1277567029
-def sumSubarrayMins(fruits: list[int]):
+def maxFruits(fruits: list[int]):
     # Time: O(N), Space: O(1)
     N = len(fruits)
     indices: dict[int, int] = dict()
@@ -348,9 +349,241 @@ def sumSubarrayMins(fruits: list[int]):
     return max_length
 
 # Testing the solution
-assert sumSubarrayMins([2,1,2]) == 3
-assert sumSubarrayMins([0,1,2,2,2,2]) == 5
-assert sumSubarrayMins([1,3,1,2,2,3,2]) == 4
+assert maxFruits([2,1,2]) == 3
+assert maxFruits([0,1,2,2,2,2]) == 5
+assert maxFruits([1,3,1,2,2,3,2]) == 4
+```
+
+</div>
+
+<div id="ea13d95c" class="cell markdown"
+papermill="{&quot;duration&quot;:2.61e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.291939&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.289329&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Longest substring with k distinct characters:
+<https://www.naukri.com/code360/problems/distinct-characters_2221410>
+Video Link: <https://youtu.be/teM9ZsVRQyc?si=FMHKeYm3rvkCu0GG>
+
+</div>
+
+<div id="5116cf4c" class="cell code" execution_count="9"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-05T17:23:03.298054Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-05T17:23:03.297719Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-05T17:23:03.302126Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-05T17:23:03.301621Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:8.468e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.303116&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.294648&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+def kDistinctChars(S: str, K: int):
+    """
+    Although it is possible to use the same code as above, finding the min index to shift right might take O(24) time.
+    Better to use striver's implementation of the same problem.
+    """
+
+    N = len(S)
+    max_ = i = 0
+    freq: dict[str, int] = dict()
+    for j in range(N):
+        freq[S[j]] = freq.get(S[j], 0) + 1
+
+        # Expand
+        if len(freq) <= K:
+            max_ = max(max_, j - i + 1)
+
+        # Slide
+        else:
+            freq[S[i]] -= 1
+            if freq[S[i]] == 0:
+                freq.pop(S[i])
+            i += 1
+
+    return max_
+
+# Testing the solution
+assert kDistinctChars("abbbbbbc", 2) == 7
+assert kDistinctChars("abcddefg", 3) == 4
+```
+
+</div>
+
+<div id="34efbc74" class="cell markdown"
+papermill="{&quot;duration&quot;:2.552e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.308266&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.305714&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Number of substrings containing all 3 characters Video link:
+<https://youtu.be/xtqN4qlgr8s?si=T_1Xp0aNnlf_pQzn>
+
+</div>
+
+<div id="23e9154b" class="cell code" execution_count="10"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-05T17:23:03.314295Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-05T17:23:03.313892Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-05T17:23:03.318353Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-05T17:23:03.317848Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:8.574e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.319375&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.310801&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/submissions/1277998565
+def numberOfSubstrings(S: str) -> int:
+    """
+    Increase J until we find a valid sequence, everything to the right is also valid
+    Try shrinking left (increasing i) to see if it is valid, if it is everything to the right is also valid
+
+    Time: O(2N), Space: O(3)
+    """
+    N = len(S)
+    freq: dict[str, int] = {S[0]: 1}
+    count = i = j = 0
+    while j < N:
+        if len(freq) == 3:
+            count += N - j
+            freq[S[i]] -= 1
+            if freq[S[i]] == 0:
+                freq.pop(S[i])
+            i += 1
+        else:
+            j += 1
+            if j < N:
+                freq[S[j]] = freq.get(S[j], 0) + 1
+
+    return count
+
+# Testing the solution
+assert numberOfSubstrings("abcabc") == 10
+assert numberOfSubstrings("aaacb") == 3
+assert numberOfSubstrings("abc") == 1
+```
+
+</div>
+
+<div id="f3d190d8" class="cell code" execution_count="11"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-05T17:23:03.325672Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-05T17:23:03.325245Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-05T17:23:03.329116Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-05T17:23:03.328668Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:8.064e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.330149&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.322085&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/submissions/1278006815
+def numberOfSubstringsStriver(S: str) -> int:
+    """
+    At every index we keep track of the last seen index for each character a, b, c -> last_seen
+    Find the minimial window uptil which the window was valid - min(last_seen.values()) -> i
+    Every substring to the left of our minimal window would have still been valid: count += i + 1
+
+    Time: O(N), Space: O(3)
+    """
+    N, count = len(S), 0
+    last_seen: dict[str, int] = {"a": -1, "b": -1, "c": -1}
+    for i in range(N):
+        last_seen[S[i]] = i
+        count += min(last_seen.values()) + 1
+
+    return count
+
+# Testing the solution
+assert numberOfSubstringsStriver("abcabc") == 10
+assert numberOfSubstringsStriver("aaacb") == 3
+assert numberOfSubstringsStriver("abc") == 1
+```
+
+</div>
+
+<div id="52f58033" class="cell markdown"
+papermill="{&quot;duration&quot;:2.615e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.335473&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.332858&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Longest repeating character replacement Video Link:
+<https://youtu.be/_eNhaDCr6P0?si=bsYcEmV-N7yOOh1z>
+
+</div>
+
+<div id="91b23fa8" class="cell code" execution_count="12"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-05T17:23:03.341740Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-05T17:23:03.341320Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-05T17:23:03.345911Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-05T17:23:03.345417Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:8.755e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.346888&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.338133&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/longest-repeating-character-replacement/submissions/1278607910
+def characterReplacement(S: str, K: int) -> int:
+    """
+    Logic: Given a string 'AAABBC', minimum conversions required would be length - maxfreq
+    """
+    N, max_length = len(S), 0
+    freq: list[int] = [0 for i in range(26)]
+
+    i = j = 0
+    while j < N:
+
+        # Expand
+        if (j - i + 1) - max(freq) <= K:
+            max_length = max(max_length, j - i + 1)
+
+        # Slide
+        else:
+            freq[ord(S[i]) - ord('A')] -= 1
+            i += 1
+
+        j += 1
+        if j < N:
+            freq[ord(S[j]) - ord('A')] += 1
+
+    return max_length
+
+# Testing the solution
+assert characterReplacement("ABAB", 2) == 4
+assert characterReplacement("AABABBA", 1) == 4
+```
+
+</div>
+
+<div id="35170d83" class="cell code" execution_count="13"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-05T17:23:03.353018Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-05T17:23:03.352856Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-05T17:23:03.357589Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-05T17:23:03.357165Z&quot;}"
+papermill="{&quot;duration&quot;:8.96e-3,&quot;end_time&quot;:&quot;2024-06-05T17:23:03.358646&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-05T17:23:03.349686&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/longest-repeating-character-replacement/submissions/1278630543
+def characterReplacementStriver(S: str, K: int) -> int:
+    """
+    Max freq variable keeps track of the maximum frequency.
+
+    We increase it each time we increment j.
+    We can rescan during the times we decrement i, however since we are trying to find
+    a length that is larger than the current largest, we can skip rescanning during the decrement portion.
+
+    5 (length) - 3 (max_freq) <= 2 (K) => VALID
+
+    We are trying to find length - 6, 7, 8, ..
+    max_freq if decreased would tend to make the window invalid
+
+    6 (length) - 2 (max_freq) > 4 (K) => INVALID
+    """
+    N, max_length = len(S), 0
+    freq: list[int] = [0 for i in range(26)]
+    freq[ord(S[0]) - ord('A')] += 1
+    max_freq = 1
+
+    i = j = 0
+    while j < N:
+
+        # Expand
+        if (j - i + 1) - max_freq <= K:
+            max_length = max(max_length, j - i + 1)
+
+        # Slide
+        else:
+            freq[ord(S[i]) - ord('A')] -= 1
+            i += 1
+
+        j += 1
+        if j < N:
+            freq[ord(S[j]) - ord('A')] += 1
+            max_freq = max(max_freq, freq[ord(S[j]) - ord('A')])
+
+    return max_length
+
+# Testing the solution
+assert characterReplacementStriver("ABAB", 2) == 4
+assert characterReplacementStriver("AABABBA", 1) == 4
 ```
 
 </div>
