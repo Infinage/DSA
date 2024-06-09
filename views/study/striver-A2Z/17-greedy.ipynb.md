@@ -18,18 +18,18 @@ jupyter:
   nbformat_minor: 5
   papermill:
     default_parameters: {}
-    duration: 1.42637
-    end_time: "2024-06-08T18:11:47.609742"
+    duration: 1.533128
+    end_time: "2024-06-09T03:36:12.931759"
     environment_variables: {}
     input_path: study/striver-A2Z/17-greedy.ipynb
     output_path: study/striver-A2Z/17-greedy.ipynb
     parameters: {}
-    start_time: "2024-06-08T18:11:46.183372"
+    start_time: "2024-06-09T03:36:11.398631"
     version: 2.6.0
 ---
 
 <div id="76cb4635" class="cell markdown"
-papermill="{&quot;duration&quot;:3.099e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.319455&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.316356&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.873e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.530455&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.526582&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Useful imports
@@ -37,9 +37,9 @@ Useful imports
 </div>
 
 <div id="d45ec848" class="cell code" execution_count="1"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-08T18:11:47.325938Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-08T18:11:47.325468Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-08T18:11:47.330928Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-08T18:11:47.330490Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.538205Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.537822Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.543254Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.542742Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:9.968e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.332051&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.322083&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.0531e-2,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.544284&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.533753&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -54,7 +54,7 @@ import math
 </div>
 
 <div id="a2f52f24" class="cell markdown"
-papermill="{&quot;duration&quot;:2.466e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.336964&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.334498&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.017e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.550498&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.547481&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Assign cookies: <https://leetcode.com/problems/assign-cookies/> Video
@@ -63,9 +63,9 @@ Link: <https://youtu.be/DIX2p7vb9co?si=-lYoEBkNX6G40Tpo>
 </div>
 
 <div id="8016e3c9" class="cell code" execution_count="2"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-08T18:11:47.343050Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-08T18:11:47.342662Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-08T18:11:47.347785Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-08T18:11:47.347335Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.557733Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.557385Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.562340Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.561890Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:9.52e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.348860&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.339340&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.797e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.563391&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.553594&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -102,7 +102,7 @@ assert findContentChildren([1,2,3], [1,2]) == 2
 </div>
 
 <div id="f911a310" class="cell markdown"
-papermill="{&quot;duration&quot;:2.528e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.353861&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.351333&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.082e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.569509&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.566427&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Shortest job first CPU scheduling Video Link:
@@ -111,9 +111,9 @@ Shortest job first CPU scheduling Video Link:
 </div>
 
 <div id="1e00764f" class="cell code" execution_count="3"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-08T18:11:47.359690Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-08T18:11:47.359215Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-08T18:11:47.363359Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-08T18:11:47.362812Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.577435Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.577060Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.581068Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.580621Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.239e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.364417&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.356178&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.756e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.582143&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.573387&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -141,7 +141,7 @@ assert SJF([1,2,3,4]) == 2
 </div>
 
 <div id="e8d91515" class="cell markdown"
-papermill="{&quot;duration&quot;:2.307e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.369828&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.367521&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.098e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.588554&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.585456&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Lemonade change:
@@ -151,9 +151,9 @@ Lemonade change:
 </div>
 
 <div id="726bd349" class="cell code" execution_count="4"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-08T18:11:47.375516Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-08T18:11:47.375187Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-08T18:11:47.379800Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-08T18:11:47.379389Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.595734Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.595308Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.600115Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.599695Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.69e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.380849&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.372159&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.49e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.601133&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.591643&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -191,7 +191,7 @@ assert lemonadeChange([5,5,5,20]) == True
 </div>
 
 <div id="bf923f2c" class="cell markdown"
-papermill="{&quot;duration&quot;:2.376e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.385634&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.383258&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.097e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.607424&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.604327&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Jump game: <https://leetcode.com/problems/jump-game/> Video Link:
@@ -200,9 +200,9 @@ Jump game: <https://leetcode.com/problems/jump-game/> Video Link:
 </div>
 
 <div id="d487decb" class="cell code" execution_count="5"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-08T18:11:47.391335Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-08T18:11:47.390928Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-08T18:11:47.395031Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-08T18:11:47.394621Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.614980Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.614573Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.618927Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.618446Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.112e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.396107&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.387995&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.404e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.619962&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.610558&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -226,9 +226,9 @@ assert canJumpBrute([2,0,2,0,0]) == True
 </div>
 
 <div id="4b59da66" class="cell code" execution_count="6"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-08T18:11:47.401970Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-08T18:11:47.401551Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-08T18:11:47.406020Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-08T18:11:47.405484Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.627294Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.626846Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.631003Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.630512Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.566e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.407109&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.398543&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.908e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.632021&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.623113&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -259,9 +259,9 @@ assert canJump([2,0,2,0,0]) == True
 </div>
 
 <div id="da43a335" class="cell code" execution_count="7"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-08T18:11:47.412953Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-08T18:11:47.412609Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-08T18:11:47.416928Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-08T18:11:47.416397Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.639541Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.639098Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.643591Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.643104Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.373e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.417948&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.409575&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.33e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.644583&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.635253&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -291,7 +291,7 @@ assert canJumpStriver([2,0,2,0,0]) == True
 </div>
 
 <div id="7d2a5ae9" class="cell markdown"
-papermill="{&quot;duration&quot;:2.351e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.422858&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.420507&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.048e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.650769&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.647721&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Jump Game - II: <https://leetcode.com/problems/jump-game-ii/> Video
@@ -300,9 +300,9 @@ Link: <https://youtu.be/7SBVnw7GSTk?si=UDZojaM70TuG0XgY>
 </div>
 
 <div id="bcdd786f" class="cell code" execution_count="8"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-08T18:11:47.429167Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-08T18:11:47.428743Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-08T18:11:47.433320Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-08T18:11:47.432794Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.657894Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.657556Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.661845Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.661324Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.999e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.434443&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.425444&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.133e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.662953&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.653820&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -328,9 +328,9 @@ assert jump2Recursive([2,3,0,1,4]) == 2
 </div>
 
 <div id="7b38a2b6" class="cell code" execution_count="9"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-08T18:11:47.440417Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-08T18:11:47.439947Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-08T18:11:47.444716Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-08T18:11:47.444214Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.670083Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.669793Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.674160Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.673648Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.925e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.445807&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.436882&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.19e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.675263&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.666073&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -353,9 +353,9 @@ assert jump2Tab([2,3,0,1,4]) == 2
 </div>
 
 <div id="7336f2b2" class="cell code" execution_count="10"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-08T18:11:47.451533Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-08T18:11:47.451258Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-08T18:11:47.455407Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-08T18:11:47.454969Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.682478Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.682145Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.686396Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.685930Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.138e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.456424&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.448286&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.121e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.687471&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.678350&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -389,7 +389,7 @@ assert jump2Striver([2,3,0,1,4]) == 2
 </div>
 
 <div id="52b5429b" class="cell markdown"
-papermill="{&quot;duration&quot;:2.418e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.461291&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.458873&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.081e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.693682&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.690601&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Job sequencing Problem:
@@ -399,9 +399,9 @@ Video Link: <https://youtu.be/QbwltemZbRg?si=R93V-44Jyr37Il4L>
 </div>
 
 <div id="c804e410" class="cell code" execution_count="11"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-08T18:11:47.467264Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-08T18:11:47.466846Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-08T18:11:47.472866Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-08T18:11:47.472324Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.700925Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.700584Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.706502Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.705986Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.0208e-2,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.473909&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.463701&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.0826e-2,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.707637&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.696811&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -437,7 +437,7 @@ assert jobScheduling([(1,4,60),(2,1,50)], 2) == (2, 110)
 </div>
 
 <div id="2835d225" class="cell markdown"
-papermill="{&quot;duration&quot;:2.436e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.478959&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.476523&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.083e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.713878&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.710795&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 N meetings in one room:
@@ -447,8 +447,9 @@ Video Link: <https://youtu.be/mKfhTotEguk?si=gTVT-RsSg0PR9RPP>
 </div>
 
 <div id="7fe0aed4" class="cell code" execution_count="12"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-08T18:11:47.485338Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-08T18:11:47.484858Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-08T18:11:47.490019Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-08T18:11:47.489569Z&quot;}"
-papermill="{&quot;duration&quot;:9.655e-3,&quot;end_time&quot;:&quot;2024-06-08T18:11:47.491096&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-08T18:11:47.481441&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.721161Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.720744Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.725971Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.725529Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:1.003e-2,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.727031&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.717001&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -456,6 +457,9 @@ def maximumMeetings(N: int, start: list[int], end: list[int]) -> int:
     """
     Sort based on end time, we need to find meetings that finish sooner.
     Simply iterate through the sorted meeting in order and check if it is possible to host the meeting
+
+    - It works because the earliest-ending meeting can't possibly cause more conflicts than any other choice
+    - It leaves the largest amount of un-interrupted time remaining for other intervals to be chosen from
 
     Time: O(N log N)
     Space: O(N)
@@ -480,6 +484,209 @@ def maximumMeetings(N: int, start: list[int], end: list[int]) -> int:
 # Testing the solution
 assert maximumMeetings(6, [1,3,0,5,8,5], [2,4,6,7,9,9]) == 4
 assert maximumMeetings(3, [1,4,6], [5,6,10]) == 2
+```
+
+</div>
+
+<div id="68f75f03" class="cell markdown"
+papermill="{&quot;duration&quot;:3.177e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.733353&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.730176&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Non overlapping intervals:
+<https://leetcode.com/problems/non-overlapping-intervals/> Video Link:
+<https://youtu.be/HDHQ8lAWakY?si=s1_2CwOoEBx5LSOQ>
+
+</div>
+
+<div id="7842ff87" class="cell code" execution_count="13"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.740732Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.740348Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.745905Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.745460Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:1.04e-2,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.746972&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.736572&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/non-overlapping-intervals/submissions/1282204448
+def eraseOverlapIntervals(intervals: list[list[int]]) -> int:
+    # Sort intervals based on start time
+    intervals.sort(key=lambda x: (x[1], x[0]))
+
+    print(intervals)
+
+    curr_time, skip = intervals[0][0], 0
+    for stime, etime in intervals:
+        if curr_time <= stime:
+            curr_time = etime
+        else:
+            skip += 1
+
+    return skip
+
+# Testing the solution
+assert eraseOverlapIntervals([[1,2],[2,3],[3,4],[1,3]]) == 1
+assert eraseOverlapIntervals([[1,2],[1,2],[1,2]]) == 2
+assert eraseOverlapIntervals([[1,2],[2,3]]) == 0
+assert eraseOverlapIntervals([[-10,20],[8,12],[3,4],[5,6],[10,12],[15,20]]) == 2
+```
+
+<div class="output stream stdout">
+
+    [[1, 2], [1, 3], [2, 3], [3, 4]]
+    [[1, 2], [1, 2], [1, 2]]
+    [[1, 2], [2, 3]]
+    [[3, 4], [5, 6], [8, 12], [10, 12], [-10, 20], [15, 20]]
+
+</div>
+
+</div>
+
+<div id="f4ede58d" class="cell markdown"
+papermill="{&quot;duration&quot;:3.171e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.753388&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.750217&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Insert intervals:
+<https://leetcode.com/problems/insert-interval/description/> Video Link:
+<https://youtu.be/xxRE-46OCC8?si=kKQ10RKueMFdlR-e>
+
+</div>
+
+<div id="c09c42a9" class="cell code" execution_count="14"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.760766Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.760438Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.767065Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.766602Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:1.1472e-2,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.768076&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.756604&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/insert-interval/submissions/1282223708/
+def insertIntervals(intervals: list[list[int]], newInterval: list[int]) -> list[list[int]]:
+    # Time: O(N), Space: O(N)
+    N = len(intervals)
+
+    # Insert intervals here post merge
+    merged: list[list[int]] = []
+
+    # Travel until we are at a pos to insert newInterval
+    i = 0
+    while i < N and intervals[i][0] < newInterval[0]:
+        merged.append(intervals[i])
+        i += 1
+
+    # Insert the new interval or merge it with prev interval
+    if merged and merged[-1][1] >= newInterval[0]:
+        merged[-1] = [merged[-1][0], max(merged[-1][1], newInterval[1])]
+    else:
+        merged.append(newInterval)
+
+    # Continue merging and then inserting until all intervals are done
+    while i < N:
+        if merged[-1][1] >= intervals[i][0]:
+            merged[-1] = [merged[-1][0], max(merged[-1][1], intervals[i][1])]
+        else:
+            merged.append(intervals[i])
+        i += 1
+
+    return merged
+
+# Testing the solution
+assert insertIntervals([[1,3],[6,9]], [2,5]) == [[1,5],[6,9]]
+assert insertIntervals([[1,2],[3,5],[6,7],[8,10],[12,16]], [3,8]) == [[1,2],[3,10],[12,16]]
+assert insertIntervals([[1,2],[3,5],[6,7],[8,10],[12,16]], [11,11]) == [[1,2],[3,5],[6,7],[8,10],[11,11],[12,16]]
+```
+
+</div>
+
+<div id="c948b4ef" class="cell markdown"
+papermill="{&quot;duration&quot;:3.166e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.774491&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.771325&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Minimum number of platforms required in a railway station:
+<https://www.geeksforgeeks.org/problems/minimum-platforms-1587115620/1>
+Video link: <https://youtu.be/AsGzwR_FWok?si=Nt5CMUPctV39JtSd>
+
+</div>
+
+<div id="35d5bae3" class="cell code" execution_count="15"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.781909Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.781593Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.786369Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.785936Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:9.664e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.787412&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.777748&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+def minimumPlatformBrute1(N: int, arr: list[int], dep: list[int]) -> int:
+    # Time: O(N x 2400) + O(2400), Space: O(2400)
+    platform: list[int] = [0 for i in range(2400)]
+    for stime, etime in zip(arr, dep):
+        for i in range(stime, etime + 1):
+            platform[i] += 1
+
+    return max(platform)
+
+# Testing the soltution
+assert minimumPlatformBrute1(3, [900, 1100, 1235], [1000, 1200, 1240]) == 1
+assert minimumPlatformBrute1(3, [900, 930, 1015], [1000, 1030, 1100]) == 2
+assert minimumPlatformBrute1(3, [900, 930, 1000], [1000, 1030, 1100]) == 3
+```
+
+</div>
+
+<div id="d0510feb" class="cell code" execution_count="16"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.794712Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.794512Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.799207Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.798760Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:9.584e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.800231&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.790647&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+def minimumPlatformBrute2(N: int, arr: list[int], dep: list[int]) -> int:
+    max_overlap = 0
+    for i in range(N):
+        overlap, istart, iend = 0, arr[i], dep[i]
+        for j in range(i + 1, N):
+            jstart, jend = arr[j], dep[j]
+            if jstart <= iend:
+                overlap += 1
+        max_overlap = max(max_overlap, overlap)
+
+    return max_overlap + 1
+
+# Testing the soltution
+assert minimumPlatformBrute2(3, [900, 1100, 1235], [1000, 1200, 1240]) == 1
+assert minimumPlatformBrute2(3, [900, 930, 1015], [1000, 1030, 1100]) == 2
+assert minimumPlatformBrute2(3, [900, 930, 1000], [1000, 1030, 1100]) == 3
+```
+
+</div>
+
+<div id="8f9a4262" class="cell code" execution_count="17"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-09T03:36:12.807767Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-09T03:36:12.807433Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-09T03:36:12.812180Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-09T03:36:12.811753Z&quot;}"
+papermill="{&quot;duration&quot;:9.656e-3,&quot;end_time&quot;:&quot;2024-06-09T03:36:12.813186&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-09T03:36:12.803530&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+def minimumPlatform(N: int, arr: list[int], dep: list[int]) -> int:
+    """
+    Brilliant logic from Striver:
+        Stand and observe the station as the time passes by
+
+    Time: O(N log N), Space: O(1)
+    """
+    # Sort the events based on time, imagine an observer standing by and watching the events unfolding
+    arr.sort()
+    dep.sort()
+
+    # Count the overlaps
+    max_overlap = overlap = arr_idx = dep_idx = 0
+    while arr_idx < N or dep_idx < N:
+        if dep_idx >= N or (arr_idx < N and arr[arr_idx] <= dep[dep_idx]):
+            overlap, arr_idx = overlap + 1, arr_idx + 1
+        else:
+            overlap, dep_idx = overlap - 1, dep_idx + 1
+        max_overlap = max(max_overlap, overlap)
+
+    return max_overlap
+
+# Testing the soltution
+assert minimumPlatform(3, [900, 1100, 1235], [1000, 1200, 1240]) == 1
+assert minimumPlatform(3, [900, 930, 1015], [1000, 1030, 1100]) == 2
+assert minimumPlatform(3, [900, 930, 1000], [1000, 1030, 1100]) == 3
 ```
 
 </div>
