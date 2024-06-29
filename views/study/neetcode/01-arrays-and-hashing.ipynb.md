@@ -18,18 +18,18 @@ jupyter:
   nbformat_minor: 5
   papermill:
     default_parameters: {}
-    duration: 1.451176
-    end_time: "2024-06-27T13:37:34.451532"
+    duration: 1.548759
+    end_time: "2024-06-29T11:06:16.104338"
     environment_variables: {}
     input_path: study/neetcode/01-arrays-and-hashing.ipynb
     output_path: study/neetcode/01-arrays-and-hashing.ipynb
     parameters: {}
-    start_time: "2024-06-27T13:37:33.000356"
+    start_time: "2024-06-29T11:06:14.555579"
     version: 2.6.0
 ---
 
 <div id="3fdf69c6" class="cell markdown"
-papermill="{&quot;duration&quot;:3.062e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.152785&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.149723&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:4.191e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.686199&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.682008&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ### Neccessary file imports
@@ -37,9 +37,9 @@ tags="[]">
 </div>
 
 <div id="21971dda" class="cell code" execution_count="1"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-27T13:37:34.158874Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-27T13:37:34.158534Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-27T13:37:34.163886Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-27T13:37:34.163469Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.694419Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.693960Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.699480Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.698974Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:9.793e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.165022&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.155229&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.1117e-2,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.700812&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.689695&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -54,7 +54,7 @@ import random
 </div>
 
 <div id="de28faf4" class="cell markdown"
-papermill="{&quot;duration&quot;:2.303e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.169660&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.167357&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.2e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.707391&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.704191&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Contains duplicate
@@ -62,9 +62,9 @@ Contains duplicate
 </div>
 
 <div id="b1626aac" class="cell code" execution_count="2"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-27T13:37:34.175263Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-27T13:37:34.174899Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-27T13:37:34.178581Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-27T13:37:34.178168Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.715773Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.715319Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.719333Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.718832Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:7.636e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.179614&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.171978&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.902e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.720502&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.710600&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -85,7 +85,7 @@ assert containsDuplicate([1,2,3,4,10]) == False
 </div>
 
 <div id="83540d6f" class="cell markdown"
-papermill="{&quot;duration&quot;:2.304e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.185038&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.182734&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.197e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.727021&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.723824&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Valid Anagram
@@ -93,9 +93,9 @@ Valid Anagram
 </div>
 
 <div id="4877cbdf" class="cell code" execution_count="3"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-27T13:37:34.190642Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-27T13:37:34.190233Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-27T13:37:34.194498Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-27T13:37:34.194077Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.734396Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.734123Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.738391Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.737966Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.215e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.195558&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.187343&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.125e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.739410&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.730285&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -120,7 +120,7 @@ assert isAnagram("rat", "car") == False
 </div>
 
 <div id="df42a1f5" class="cell markdown"
-papermill="{&quot;duration&quot;:2.306e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.200285&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.197979&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.196e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.745869&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.742673&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Concatenation of array
@@ -128,9 +128,9 @@ Concatenation of array
 </div>
 
 <div id="efbdfbb7" class="cell code" execution_count="4"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-27T13:37:34.205920Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-27T13:37:34.205558Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-27T13:37:34.209131Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-27T13:37:34.208706Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.753341Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.752907Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.756598Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.756080Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:7.558e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.210191&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.202633&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.581e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.757664&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.749083&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -151,7 +151,7 @@ assert getConcatenation([1,2,3]) == [1,2,3,1,2,3]
 </div>
 
 <div id="2c5e7cdb" class="cell markdown"
-papermill="{&quot;duration&quot;:2.359e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.215034&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.212675&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.216e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.764188&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.760972&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Replace elements with greater on the right side
@@ -159,9 +159,9 @@ Replace elements with greater on the right side
 </div>
 
 <div id="c0f31c72" class="cell code" execution_count="5"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-27T13:37:34.220804Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-27T13:37:34.220384Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-27T13:37:34.224127Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-27T13:37:34.223685Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.771909Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.771433Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.775185Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.774745Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:7.755e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.225195&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.217440&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.764e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.776204&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.767440&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -180,7 +180,7 @@ assert replaceElements([400]) == [-1]
 </div>
 
 <div id="35f4ea99" class="cell markdown"
-papermill="{&quot;duration&quot;:2.377e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.230009&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.227632&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.192e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.782650&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.779458&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Is Subsequence
@@ -188,9 +188,9 @@ Is Subsequence
 </div>
 
 <div id="c9569b8a" class="cell code" execution_count="6"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-27T13:37:34.235849Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-27T13:37:34.235466Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-27T13:37:34.239231Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-27T13:37:34.238722Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.789993Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.789794Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.793627Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.793179Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:7.963e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.240329&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.232366&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.787e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.794645&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.785858&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -213,7 +213,7 @@ assert isSubsequence("axc", "ahbgdc") == False
 </div>
 
 <div id="0d9faf13" class="cell markdown"
-papermill="{&quot;duration&quot;:2.364e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.245172&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.242808&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.256e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.801248&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.797992&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Length of Last word
@@ -221,9 +221,9 @@ Length of Last word
 </div>
 
 <div id="e0d87324" class="cell code" execution_count="7"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-27T13:37:34.250886Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-27T13:37:34.250483Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-27T13:37:34.253864Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-27T13:37:34.253470Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.808749Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.808286Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.811975Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.811516Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:7.303e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.254852&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.247549&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.608e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.813019&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.804411&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -248,7 +248,7 @@ assert lengthOfLastWord("abc   abcd ") == 4
 </div>
 
 <div id="5ff5abc6" class="cell markdown"
-papermill="{&quot;duration&quot;:2.499e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.259894&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.257395&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.206e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.819453&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.816247&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Two sum
@@ -256,9 +256,9 @@ Two sum
 </div>
 
 <div id="8d35c690" class="cell code" execution_count="8"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-27T13:37:34.265830Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-27T13:37:34.265350Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-27T13:37:34.269882Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-27T13:37:34.269475Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.826845Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.826508Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.831178Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.830647Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.528e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.270896&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.262368&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:9.621e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.832308&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.822687&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -289,9 +289,9 @@ assert twoSumBetter([2,7,11,15], 13) == (0,2)
 </div>
 
 <div id="b1788ccd" class="cell code" execution_count="9"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-27T13:37:34.276760Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-27T13:37:34.276397Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-27T13:37:34.280527Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-27T13:37:34.280107Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.839752Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.839356Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.843515Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.843078Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:8.184e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.281559&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.273375&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.973e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.844559&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.835586&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -314,7 +314,7 @@ assert twoSum([2,7,11,15], 13) == (0,2)
 </div>
 
 <div id="863712d9" class="cell markdown"
-papermill="{&quot;duration&quot;:2.534e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.286559&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.284025&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.275e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.851061&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.847786&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Longest common prefix
@@ -322,9 +322,9 @@ Longest common prefix
 </div>
 
 <div id="39f57a0b" class="cell code" execution_count="10"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-27T13:37:34.292391Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-27T13:37:34.292031Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-27T13:37:34.295892Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-27T13:37:34.295477Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.858451Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.858071Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.861871Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.861359Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:7.91e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.296957&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.289047&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.603e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.862887&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.854284&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -348,7 +348,7 @@ assert longestCommonPrefix(["dog"]) == "dog"
 </div>
 
 <div id="2f683cba" class="cell markdown"
-papermill="{&quot;duration&quot;:2.499e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.301954&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.299455&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.469e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.869609&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.866140&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Group Anagrams
@@ -356,9 +356,9 @@ Group Anagrams
 </div>
 
 <div id="fca19f3c" class="cell code" execution_count="11"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-27T13:37:34.308670Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-27T13:37:34.308130Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-27T13:37:34.315509Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-27T13:37:34.315007Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.877023Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.876628Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.883776Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.883283Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:1.2128e-2,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.316611&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.304483&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.2137e-2,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.884942&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.872805&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -389,7 +389,7 @@ groupAnagrams(["eat","tea","tan","ate","nat","bat", ""])
 </div>
 
 <div id="08810553" class="cell markdown"
-papermill="{&quot;duration&quot;:2.656e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.321987&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.319331&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:3.381e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.891671&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.888290&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Pascals Triangle
@@ -397,8 +397,9 @@ Pascals Triangle
 </div>
 
 <div id="8f42682b" class="cell code" execution_count="12"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-27T13:37:34.328308Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-27T13:37:34.327993Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-27T13:37:34.332297Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-27T13:37:34.331867Z&quot;}"
-papermill="{&quot;duration&quot;:8.659e-3,&quot;end_time&quot;:&quot;2024-06-27T13:37:34.333330&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-27T13:37:34.324671&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.899199Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.898829Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.902991Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.902487Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:9.027e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.904015&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.894988&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -415,6 +416,165 @@ def generatePascalsTriangle(N: int) -> list[list[int]]:
 
 # Testing the solution
 assert generatePascalsTriangle(5) == [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+```
+
+</div>
+
+<div id="44029b82" class="cell markdown"
+papermill="{&quot;duration&quot;:4.123e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.911787&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.907664&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Remove element
+
+</div>
+
+<div id="8fb28845" class="cell code" execution_count="13"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.920061Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.919883Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.924436Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.923974Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:9.886e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.925503&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.915617&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/remove-element/submissions/1303667206/
+def removeElement(nums: list[int], val: int) -> int:
+    N, i, j = len(nums), 0, 0
+    while j < N:
+        if nums[j] != val:
+            nums[i] = nums[j]
+            i += 1
+        j += 1
+
+    print(nums[:i])
+    return i
+
+# Testing the solution
+assert removeElement([3,2,2,3], 3) == 2
+assert removeElement([0,1,2,2,3,0,4,2], 2) == 5
+```
+
+<div class="output stream stdout">
+
+    [2, 2]
+    [0, 1, 3, 0, 4]
+
+</div>
+
+</div>
+
+<div id="ac4870d5" class="cell markdown"
+papermill="{&quot;duration&quot;:3.394e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.932276&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.928882&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Unique Email Addresses
+
+</div>
+
+<div id="d0a3c36e" class="cell code" execution_count="14"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.939932Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.939559Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.944629Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.944179Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:1.0057e-2,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.945682&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.935625&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/unique-email-addresses/submissions/1303683218/
+def numUniqueEmails(emails: list[str]) -> int:
+    email_set: set[str] = set()
+    for email in emails:
+        email_rep: list[str] = []
+        domain, i = False, 0
+        while i < len(email):
+            if email[i] not in ('+', '.', '@'):
+                email_rep.append(email[i])
+            elif email[i] == '.':
+                if domain:
+                    email_rep.append(email[i])
+            elif email[i] == '+':
+                if domain:
+                    email_rep.append(email[i])
+                else:
+                    while email[i + 1] != '@':
+                        i += 1
+            else:
+                email_rep.append(email[i])
+                domain = True
+            i += 1
+        email_set.add(''.join(email_rep))
+
+    return len(email_set)
+
+# Testing the solution
+assert numUniqueEmails(["test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"]) == 2
+assert numUniqueEmails(["a@leetcode.com","b@leetcode.com","c@leetcode.com"]) == 3
+```
+
+</div>
+
+<div id="2102af06" class="cell markdown"
+papermill="{&quot;duration&quot;:3.397e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.952498&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.949101&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Isomorphic Strings
+
+</div>
+
+<div id="75db0d24" class="cell code" execution_count="15"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.960344Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.959909Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.964823Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.964307Z&quot;}"
+lines_to_next_cell="1"
+papermill="{&quot;duration&quot;:9.953e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.965927&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.955974&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+def isIsomorphic(s1: str, s2: str) -> bool:
+    mapping: dict[str, str] = dict()
+    rev_mapping: dict[str, str] = dict()
+    for i in range(len(s1)):
+        if s1[i] not in mapping and s2[i] not in rev_mapping:
+            mapping[s1[i]] = s2[i]
+            rev_mapping[s2[i]] = s1[i]
+        elif s1[i] in mapping and s2[i] in rev_mapping:
+            if not mapping[s1[i]] == s2[i] or not rev_mapping[s2[i]] == s1[i]:
+                return False
+        else:
+            return False
+
+    return True
+
+# Testing the solution
+assert isIsomorphic("egg", "add") == True
+assert isIsomorphic("abc", "baa") == False
+assert isIsomorphic("aabb", "baba") == False
+assert isIsomorphic("paper", "title") == True
+```
+
+</div>
+
+<div id="4b0b1937" class="cell markdown"
+papermill="{&quot;duration&quot;:3.508e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.972959&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.969451&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+Can place flowers
+
+</div>
+
+<div id="124d8f5e" class="cell code" execution_count="16"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-06-29T11:06:15.980956Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-06-29T11:06:15.980436Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-06-29T11:06:15.984530Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-06-29T11:06:15.984106Z&quot;}"
+papermill="{&quot;duration&quot;:9.218e-3,&quot;end_time&quot;:&quot;2024-06-29T11:06:15.985601&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-06-29T11:06:15.976383&quot;,&quot;status&quot;:&quot;completed&quot;}"
+tags="[]">
+
+``` python
+# https://leetcode.com/problems/can-place-flowers/submissions/1303795340
+def canPlaceFlowers(flowerbed: list[int], n_flowers: int) -> bool:
+    N = len(flowerbed)
+    for i in range(N):
+        left, mid, right = flowerbed[i - 1] if i - 1 >= 0 else 0, flowerbed[i], flowerbed[i + 1] if i + 1 < N else 0
+        if left == mid == right:
+            flowerbed[i], n_flowers = 1, n_flowers - 1
+
+    return n_flowers <= 0
+
+# Testing the solution
+assert canPlaceFlowers([1,0,0,0,1], 1) == True
+assert canPlaceFlowers([1,0,0,0,1], 2) == False
 ```
 
 </div>
