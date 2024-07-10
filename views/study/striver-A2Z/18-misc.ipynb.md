@@ -18,18 +18,18 @@ jupyter:
   nbformat_minor: 5
   papermill:
     default_parameters: {}
-    duration: 1.285275
-    end_time: "2024-07-10T02:40:16.881821"
+    duration: 1.261252
+    end_time: "2024-07-10T15:49:31.412680"
     environment_variables: {}
     input_path: study/striver-A2Z/18-misc.ipynb
     output_path: study/striver-A2Z/18-misc.ipynb
     parameters: {}
-    start_time: "2024-07-10T02:40:15.596546"
+    start_time: "2024-07-10T15:49:30.151428"
     version: 2.6.0
 ---
 
 <div id="7dfdcaf8" class="cell markdown"
-papermill="{&quot;duration&quot;:1.486e-3,&quot;end_time&quot;:&quot;2024-07-10T02:40:16.746321&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-07-10T02:40:16.744835&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:1.542e-3,&quot;end_time&quot;:&quot;2024-07-10T15:49:31.276017&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-07-10T15:49:31.274475&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 #### Useful imports
@@ -37,9 +37,9 @@ tags="[]">
 </div>
 
 <div id="c52ade4f" class="cell code" execution_count="1"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-07-10T02:40:16.749096Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-07-10T02:40:16.748735Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-07-10T02:40:16.753922Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-07-10T02:40:16.753423Z&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-07-10T15:49:31.279468Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-07-10T15:49:31.279048Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-07-10T15:49:31.284702Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-07-10T15:49:31.284274Z&quot;}"
 lines_to_next_cell="1"
-papermill="{&quot;duration&quot;:7.698e-3,&quot;end_time&quot;:&quot;2024-07-10T02:40:16.754960&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-07-10T02:40:16.747262&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.709e-3,&quot;end_time&quot;:&quot;2024-07-10T15:49:31.285807&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-07-10T15:49:31.277098&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
@@ -55,7 +55,7 @@ import collections
 </div>
 
 <div id="6271cefc" class="cell markdown"
-papermill="{&quot;duration&quot;:7.49e-4,&quot;end_time&quot;:&quot;2024-07-10T02:40:16.756523&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-07-10T02:40:16.755774&quot;,&quot;status&quot;:&quot;completed&quot;}"
+papermill="{&quot;duration&quot;:8.81e-4,&quot;end_time&quot;:&quot;2024-07-10T15:49:31.287561&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-07-10T15:49:31.286680&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 Segmented Seive of Erastosthenes Video Link:
@@ -64,8 +64,8 @@ Segmented Seive of Erastosthenes Video Link:
 </div>
 
 <div id="14c65855" class="cell code" execution_count="2"
-execution="{&quot;iopub.execute_input&quot;:&quot;2024-07-10T02:40:16.759177Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-07-10T02:40:16.758764Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-07-10T02:40:16.764824Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-07-10T02:40:16.764321Z&quot;}"
-papermill="{&quot;duration&quot;:8.532e-3,&quot;end_time&quot;:&quot;2024-07-10T02:40:16.765834&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-07-10T02:40:16.757302&quot;,&quot;status&quot;:&quot;completed&quot;}"
+execution="{&quot;iopub.execute_input&quot;:&quot;2024-07-10T15:49:31.290202Z&quot;,&quot;iopub.status.busy&quot;:&quot;2024-07-10T15:49:31.289887Z&quot;,&quot;iopub.status.idle&quot;:&quot;2024-07-10T15:49:31.296010Z&quot;,&quot;shell.execute_reply&quot;:&quot;2024-07-10T15:49:31.295575Z&quot;}"
+papermill="{&quot;duration&quot;:8.648e-3,&quot;end_time&quot;:&quot;2024-07-10T15:49:31.297083&quot;,&quot;exception&quot;:false,&quot;start_time&quot;:&quot;2024-07-10T15:49:31.288435&quot;,&quot;status&quot;:&quot;completed&quot;}"
 tags="[]">
 
 ``` python
