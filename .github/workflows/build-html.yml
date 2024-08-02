@@ -22,7 +22,7 @@ jobs:
         run: ls -la
 
       - name: Build Views
-        run: docker-compose run pandoc-converter
+        run: docker compose run pandoc-converter
 
       - name: Push Changes
         run: |
