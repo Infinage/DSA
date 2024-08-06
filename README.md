@@ -1,5 +1,6 @@
 # DSA (Data Structures and Algorithms) 📊
 - 🚀 [Leetcode](https://leetcode.com/infinage/)
+- 🏋️  [Codeforces](https://codeforces.com/profile/infinage)
 - 💼 [LinkedIn](https://www.linkedin.com/in/naresh-jagadeesan/)
 
 This repository serves as a personal progress tracker for the DSA questions I solve. Note that to run these notebooks, you may need to install pandas, numpy or other libraries as necessary, as no requirements.txt or similar files have been provided. The Docker Compose file is available to build the Jupyter notebooks into _Markdown_. These markdown views are auto built after each commit and are already available in the `views` directory.
