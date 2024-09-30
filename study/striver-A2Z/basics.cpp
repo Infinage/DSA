@@ -11,6 +11,7 @@
 #include <map>
 #include <unordered_map>
 #include <algorithm>
+#include <tuple>
 
 using namespace std;
 
@@ -23,6 +24,56 @@ using namespace std;
  * 4. Algorithms
  *
  */
+
+struct pair_hash {
+    /*
+     * Struct for using Pairs inside unordered_set, unordered_maps
+     * Use this as a template argument when declaring the unordered_*
+     *
+     * unordered_set<pair<int, int>, pair_hash> hm;
+     */
+    inline std::size_t operator()(const std::pair<int,int> & v) const {
+        return (v.first * 31) + v.second;
+    }
+};
+
+struct hash_tuple {
+    /*
+     * Can be used during initialization like this:
+     * unordered_set<tuple<int, int>, hash_tuple> hm;
+     */
+    inline std::size_t operator()(const std::tuple<int,int>& v) const {
+        return (std::get<0>(v) * 31) + std::get<1>(v);
+    }
+};
+
+std::vector<std::vector<int>> parse2DList() {
+    /*
+     * Parse 2D list from std input, leetcode style
+     */
+
+    std::string buffer, acc;
+    std::getline(std::cin, buffer);
+    std::vector<std::vector<int>> result;
+    int status = 0;
+    for (char ch: buffer) {
+        if (ch == '[' && status == 0) {
+            result.push_back(std::vector<int>());
+            acc = "";
+            status = 1;
+        } else if (isdigit(ch)) {
+            acc += ch;
+        } else if (ch == ',' && status == 1) {
+            result.back().push_back(std::stoi(acc));
+            acc = "";
+        } else if (ch == ']' && status == 1) {
+            result.back().push_back(std::stoi(acc));
+            acc = "";
+            status = 0;
+        }
+    }
+    return result;
+}
 
 void doSomething(int &a) {
     a += 1;
