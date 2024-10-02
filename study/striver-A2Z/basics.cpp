@@ -25,6 +25,36 @@ using namespace std;
  *
  */
 
+struct ListNode {
+    int val;
+    ListNode* next;
+    ListNode(int val, ListNode* next = nullptr): val(val), next(next) {}
+
+    static ListNode* from(const std::vector<int>& nums) {
+        if (nums.size() == 0)
+            return nullptr;
+
+        else {
+            ListNode* head = new ListNode(nums[0]);
+            ListNode* curr = head;
+            for (int i = 1; i < nums.size(); i++) {
+                ListNode* next = new ListNode(nums[i]);
+                curr->next = next;
+                curr = next;
+            }
+            return head;
+        }
+    }
+
+    static void destroy(ListNode* head) {
+        while (head != nullptr) {
+            ListNode* next = head->next;
+            delete head;
+            head = next;
+        }
+    }
+};
+
 struct pair_hash {
     /*
      * Struct for using Pairs inside unordered_set, unordered_maps
@@ -47,9 +77,31 @@ struct hash_tuple {
     }
 };
 
+std::vector<int> parseList() {
+    /*
+     * Parse 1D list from std input, leetcode style
+     * For eg: [1,2,3,10,20,1002]
+     */
+    std::string buffer;
+    getline(std::cin, buffer);
+    std::vector<int> nums;
+    std::string acc = "";
+    for (char ch: buffer) {
+        if (isdigit(ch))
+            acc += ch;
+        else if (ch == ',' || ch == ']') {
+            nums.push_back(std::stoi(acc));
+            acc = "";
+        }
+
+    }
+    return nums;
+}
+
 std::vector<std::vector<int>> parse2DList() {
     /*
      * Parse 2D list from std input, leetcode style
+     * For eg: [[1,2,3],[1,2,301,1]]
      */
 
     std::string buffer, acc;
