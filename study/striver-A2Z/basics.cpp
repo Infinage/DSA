@@ -12,6 +12,7 @@
 #include <unordered_map>
 #include <algorithm>
 #include <tuple>
+#include <format>
 
 using namespace std;
 
@@ -25,6 +26,9 @@ using namespace std;
  *
  */
 
+/*****************************************************************************/
+/******************** Competitive Programming helpers ************************/
+
 struct ListNode {
     int val;
     ListNode* next;
@@ -37,7 +41,7 @@ struct ListNode {
         else {
             ListNode* head = new ListNode(nums[0]);
             ListNode* curr = head;
-            for (int i = 1; i < nums.size(); i++) {
+            for (std::size_t i = 1; i < nums.size(); i++) {
                 ListNode* next = new ListNode(nums[i]);
                 curr->next = next;
                 curr = next;
@@ -52,6 +56,16 @@ struct ListNode {
             delete head;
             head = next;
         }
+    }
+
+    static void print(ListNode* head) {
+        ListNode *curr = head;
+        std::cout << "[";
+        while (curr != nullptr) {
+            std::cout << curr->val << ",";
+            curr = curr->next;
+        }
+        std::cout << (head == nullptr? "]\n": "\b]\n");
     }
 };
 
@@ -103,39 +117,35 @@ std::vector<std::vector<int>> parse2DList() {
      * Parse 2D list from std input, leetcode style
      * For eg: [[1,2,3],[1,2,301,1]]
      */
-
-    std::string buffer, acc;
-    std::getline(std::cin, buffer);
     std::vector<std::vector<int>> result;
-    int status = 0;
+    std::string buffer, acc = "";
+    getline(std::cin, buffer);
+    buffer = buffer.substr(1, buffer.size() - 2);
     for (char ch: buffer) {
-        if (ch == '[' && status == 0) {
+        if (ch == '[') {
             result.push_back(std::vector<int>());
             acc = "";
-            status = 1;
         } else if (isdigit(ch)) {
             acc += ch;
-        } else if (ch == ',' && status == 1) {
+        } else if ((ch == ',' || ch == ']') && acc.size() >= 1) {
             result.back().push_back(std::stoi(acc));
             acc = "";
-        } else if (ch == ']' && status == 1) {
-            result.back().push_back(std::stoi(acc));
-            acc = "";
-            status = 0;
         }
     }
     return result;
 }
 
-void doSomething(int &a) {
-    a += 1;
+void print2DList(std::vector<std::vector<int>>& nums, int numWidth = 5) {
+    for(std::vector<int>& row: nums) {
+        std::cout << "[";
+        for (int n: row)
+            std::cout << std::format("{:>{}}", n, numWidth) << " ";
+        std::cout << "\b]\n";
+    }
 }
 
-void printVector(vector<int> v) {
-    for (auto i: v)
-        cout << i << " ";
-    cout << endl;
-}
+/*****************************************************************************/
+
 
 int main() {
 
@@ -178,7 +188,9 @@ int main() {
     v.insert(v.begin(), 3, 50); // 50 50 50 100 101 102 1 2 3
     v.erase(v.begin()); // delete single element from start
     v.erase(v.begin(), v.begin() + 2); // Delete multiple: 1, 2, 3
-    printVector(v);
+    for(int n: v)
+        std::cout << n << ", ";
+    std::cout << "\n";
 
     /************************* List *************************/
     // Implemented with the help of a linked list, does not support subscript operator
