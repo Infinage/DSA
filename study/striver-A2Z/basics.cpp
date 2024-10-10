@@ -69,6 +69,68 @@ struct ListNode {
     }
 };
 
+struct BinaryTreeNode {
+    int val;
+    BinaryTreeNode* left;
+    BinaryTreeNode* right;
+
+    BinaryTreeNode(int val, BinaryTreeNode* left = nullptr, BinaryTreeNode* right = nullptr):
+        val(val), left(left), right(right) {};
+
+    static BinaryTreeNode* from(std::vector<std::string>& nums) {
+        int idx = -1;
+        bool isLeft = false;
+        std::vector<BinaryTreeNode*> nodes;
+        for (std::string n: nums) {
+            BinaryTreeNode* node = n != "*"? new BinaryTreeNode(std::stoi(n)): nullptr;
+            if (idx >= 0) {
+                if (isLeft)
+                    nodes[(std::size_t) idx]->left = node;
+                else
+                    nodes[(std::size_t) idx]->right = node;
+            }
+            nodes.push_back(node);
+            idx += isLeft? 0: 1;
+            isLeft = !isLeft;
+        }
+
+        return nums.size() > 0? nodes[0]: nullptr;
+    }
+
+    static void print(BinaryTreeNode* root) {
+        std::queue<BinaryTreeNode*> queue({root});
+        std::cout << "[";
+        while (!queue.empty()) {
+            BinaryTreeNode* curr = queue.front();
+            queue.pop();
+            if (curr == nullptr)
+                std::cout << -1 << ",";
+            else {
+                std::cout << curr->val << ",";
+                queue.push(curr->left);
+                queue.push(curr->right);
+            }
+        }
+        std::cout << (root == nullptr? "]\n": "\b]\n");
+    }
+
+    static void destroy(BinaryTreeNode* root) {
+        std::queue<BinaryTreeNode*> queue;
+        if (root != nullptr)
+            queue.push(root);
+
+        while (!queue.empty()) {
+            BinaryTreeNode* curr = queue.front();
+            queue.pop();
+            if (curr->left != nullptr)
+                queue.push(curr->left);
+            if (curr->right != nullptr)
+                queue.push(curr->right);
+            delete curr;
+        }
+    }
+};
+
 struct pair_hash {
     /*
      * Struct for using Pairs inside unordered_set, unordered_maps
@@ -91,7 +153,7 @@ struct hash_tuple {
     }
 };
 
-std::vector<int> parseList() {
+std::vector<int> parseListInt() {
     /*
      * Parse 1D list from std input, leetcode style
      * For eg: [1,2,3,10,20,1002]
@@ -110,6 +172,35 @@ std::vector<int> parseList() {
 
     }
     return nums;
+}
+
+std::vector<std::string> parseListString() {
+    /*
+     * Parse 1D list from std input, leetcode style
+     * For eg: ["we", "say", ":", "yes"]
+     * WARNING: We assume that the input string does not contain double quotes in them ('"')
+     */
+    std::string buffer;
+    std::getline(std::cin, buffer);
+    buffer = buffer.substr(1, buffer.size() - 2);
+
+    std::vector<std::string> result;
+    std::string acc {""};
+    bool flag = false;
+    for (char ch: buffer) {
+        if (ch == '"') {
+            if (!flag)
+                flag = true;
+            else {
+                result.push_back(acc);
+                acc = "";
+                flag = false;
+            }
+        } else if (flag) {
+            acc += ch;
+        }
+    }
+    return result;
 }
 
 std::vector<std::vector<int>> parse2DList() {
