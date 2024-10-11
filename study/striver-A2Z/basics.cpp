@@ -136,7 +136,7 @@ struct pair_hash {
      * Struct for using Pairs inside unordered_set, unordered_maps
      * Use this as a template argument when declaring the unordered_*
      *
-     * unordered_set<pair<int, int>, pair_hash> hm;
+     * unordered_set<pair<int, int>, pair_hash> hs;
      */
     inline std::size_t operator()(const std::pair<int,int> & v) const {
         return (v.first * 31) + v.second;
@@ -146,10 +146,27 @@ struct pair_hash {
 struct hash_tuple {
     /*
      * Can be used during initialization like this:
-     * unordered_set<tuple<int, int>, hash_tuple> hm;
+     * unordered_set<tuple<int, int>, hash_tuple> hs;
      */
     inline std::size_t operator()(const std::tuple<int,int>& v) const {
         return (std::get<0>(v) * 31) + std::get<1>(v);
+    }
+};
+
+struct hash_vector {
+    /*
+     * Can be used during initialization like this:
+     * unordered_set<vector<int>, hash_tuple> hs;
+     */
+    std::size_t operator() (const std::vector<int>& vec) const {
+        std::size_t seed = vec.size();
+        for (int n: vec) {
+            n ^= ((n >> 16) ^ n) * 0x45d9f3b;
+            n ^= ((n >> 16) ^ n) * 0x45d9f3b;
+            n ^= ((n >> 16) ^ n);
+            seed ^= n + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+        }
+        return seed;
     }
 };
 
