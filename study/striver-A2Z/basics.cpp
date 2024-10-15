@@ -82,7 +82,7 @@ struct BinaryTreeNode {
         bool isLeft = false;
         std::vector<BinaryTreeNode*> nodes;
         for (std::string n: nums) {
-            BinaryTreeNode* node = n != "*"? new BinaryTreeNode(std::stoi(n)): nullptr;
+            BinaryTreeNode* node = std::ranges::all_of(n, [](char x) { return std::isdigit(x); })? new BinaryTreeNode(std::stoi(n)): nullptr;
             if (idx >= 0) {
                 if (isLeft)
                     nodes[(std::size_t) idx]->left = node;
