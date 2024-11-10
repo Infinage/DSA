@@ -1,5 +1,6 @@
 #include <functional>
 #include <iostream>
+#include <ranges>
 #include <string>
 #include <vector>
 #include <list>
@@ -81,8 +82,18 @@ struct BinaryTreeNode {
         int idx = -1;
         bool isLeft = false;
         std::vector<BinaryTreeNode*> nodes;
-        for (std::string n: nums) {
-            BinaryTreeNode* node = std::ranges::all_of(n, [](char x) { return std::isdigit(x); })? new BinaryTreeNode(std::stoi(n)): nullptr;
+        for (std::string num: nums) {
+            // Trim any whitespace
+            num.erase(num.begin(), std::ranges::find_if_not(num, [](char ch) { return std::isspace(ch); }));
+            num.erase(std::ranges::find_if_not(num | std::views::reverse, [](char ch) { return std::isspace(ch); }).base(), num.end());
+
+            // Check only nums and +/- signs
+            bool isNum = (
+                num.size() > 0 && (num[0] == '-' || num[0] == '+' || std::isdigit(num[0]))
+                && std::ranges::all_of(num | std::ranges::views::drop(1), [](char ch) { return std::isdigit(ch);} )
+            );
+
+            BinaryTreeNode* node = isNum? new BinaryTreeNode(std::stoi(num)): nullptr;
             if (idx >= 0) {
                 if (isLeft)
                     nodes[(std::size_t) idx]->left = node;
@@ -251,6 +262,116 @@ void print2DList(std::vector<std::vector<int>>& nums, int numWidth = 5) {
         std::cout << "\b]\n";
     }
 }
+
+class Trie{
+public:
+    int wordCount, prefixCount;
+    std::array<Trie*, 26> next;
+
+    Trie() {
+        std::ranges::fill(next, nullptr);
+        wordCount = 0;
+        prefixCount = 0;
+    }
+
+    static std::size_t ord(char ch) {
+        return (std::size_t) ch - 'a';
+    }
+
+    void insert(std::string &word){
+        prefixCount++;
+        Trie *curr = this;
+        for (char ch: word) {
+            if (curr->next[ord(ch)] == nullptr)
+                curr->next[ord(ch)] = new Trie();
+            curr = curr->next[ord(ch)];
+            curr->prefixCount++;
+        }
+        curr->wordCount++;
+    }
+
+    void erase(std::string &word){
+        Trie *curr = this;
+        std::stack<std::pair<char, Trie*>> stk({{'*', curr}});
+        for (char ch: word) {
+            if (curr == nullptr)
+                return;
+            curr = curr->next[ord(ch)];
+            stk.push({ch, curr});
+        }
+
+        if (curr != nullptr && !stk.empty() && curr->wordCount > 0) {
+            stk.top().second->wordCount--;
+            while (!stk.empty()) {
+                auto &[ch, curr] = stk.top();
+                stk.pop();
+                curr->prefixCount--;
+                if (curr->prefixCount == 0 && std::ranges::all_of(curr->next, [](Trie *t) { return t == nullptr; }) && ch != '*') {
+                    stk.top().second->next[ord(ch)] = nullptr;
+                    delete curr;
+                }
+            }
+        }
+    }
+
+    static Trie *iterate(std::string &word, Trie *start) {
+        Trie *curr = start;
+        for (char ch: word) {
+            if (curr->next[ord(ch)] == nullptr)
+                return nullptr;
+            curr = curr->next[ord(ch)];
+        }
+        return curr;
+    }
+
+    int countWordsEqualTo(std::string &word){
+        Trie *endNode = iterate(word, this);
+        return endNode == nullptr? 0: endNode->wordCount;
+    }
+
+    int countWordsStartingWith(std::string &word){
+        Trie *endNode = iterate(word, this);
+        return endNode == nullptr? 0: endNode->prefixCount;
+    }
+
+    static void destroy(Trie *root) {
+        std::stack<Trie*> stk({root});
+        while (!stk.empty()) {
+            Trie *curr = stk.top();
+            stk.pop();
+            for (Trie *nxt: curr->next)
+                if (nxt != nullptr)
+                    stk.push(nxt);
+            delete curr;
+        }
+    }
+};
+
+class BitFrequency {
+    private:
+        using FREQ_T = std::array<int, 64>;
+        FREQ_T freq;
+
+    public:
+        BitFrequency() { freq.fill(0); }
+
+        void operator+=(const int n) {
+            for (std::size_t i {0}; i < 64; i++)
+                freq[i] += (n >> i) & 1;
+        }
+
+        void operator-=(const int n) {
+            for (std::size_t i {0}; i < 64; i++)
+                freq[i] -= (n >> i) & 1;
+        }
+        
+        int getValue() {
+            int result{0};
+            for (std::size_t i{0}; i < 64; i++)
+                result |= ((freq[i] > 0? 1: 0) << i); 
+            return result;
+        }
+};
 
 /*****************************************************************************/
 
