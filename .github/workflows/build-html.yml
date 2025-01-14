@@ -4,6 +4,7 @@ on:
   push:
     paths-ignore: 
       - 'views/**'
+      - 'challenges/leetcode/POTD/**'
 
 permissions:
   contents: write
