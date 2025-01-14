@@ -1,3 +1,5 @@
+// https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/?envType=daily-question&envId=2025-01-14
+
 #include <iostream>
 #include <unordered_set>
 #include <vector>
