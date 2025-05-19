@@ -30,6 +30,21 @@ using namespace std;
 /*****************************************************************************/
 /******************** Competitive Programming helpers ************************/
 
+namespace rng = std::ranges;
+
+inline constexpr auto trimFront = rng::views::drop_while(::isspace);
+inline constexpr auto trimBack = 
+    rng::views::reverse 
+    | rng::views::drop_while(::isspace) 
+    | rng::views::reverse;
+inline constexpr auto trim = trimFront | trimBack;
+
+int main() {
+    std::string text {"\n\n\r\t Hello world    \t\t\t\n"};
+    rng::copy(text | trim, std::ostream_iterator<char>(std::cout, ""));
+    std::cout << '\n';
+}
+
 struct ListNode {
     int val;
     ListNode* next;
