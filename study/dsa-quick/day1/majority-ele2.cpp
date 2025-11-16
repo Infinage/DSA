@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/majority-element-ii
-#include <cmath>
 #include <vector>
 
 class Solution {
@@ -7,28 +6,27 @@ public:
     // Same as majority element - I, only intution required is that 
     // there can only be a max of 2 elements that satisfy the criteria
     std::vector<int> majorityElement(std::vector<int>& nums) {
-        // Apply algo as majority ele 1
-        int maxi1 {}, maxi2 {}, maxc1 {}, maxc2 {};
+        // Bayer Moore's voting algorithm extended for 2 elements
+        int ele1 {nums[0]}, ele2 {nums[1]}; 
+        std::size_t cnt1 {}, cnt2 {};
         for (int n: nums) {
-            if (maxc1 == 0 && maxi2 != n) { maxi1 = n; maxc1 = 1; }
-            else if (maxc2 == 0 && maxi1 != n) { maxi2 = n; maxc2 = 1; }
-            else if (maxi1 == n) ++maxc1;
-            else if (maxi2 == n) ++maxc2;
-            else { --maxc1; --maxc2; }
+            if (n == ele1) ++cnt1;
+            else if (n == ele2) ++cnt2;
+            else if (cnt1 == 0) ele1 = n, cnt1 = 1;
+            else if (cnt2 == 0) ele2 = n, cnt2 = 1;
+            else --cnt1, --cnt2;
         }
 
-        // Check if counts > floor(N / 3)
-        maxc1 = 0; maxc2 = 0;
+        // Check if indeed these two are majority elements
+        cnt1 = cnt2 = 0;
         for (int n: nums) {
-            if (n == maxi1) ++maxc1;
-            if (n == maxi2) ++maxc2;
+            if (n == ele1) ++cnt1;
+            else if (n == ele2) ++cnt2;
         }
 
-        // Only return if counts are okay
         std::vector<int> res;
-        auto expected {std::floor(nums.size() / 3)};
-        if (maxc1 > expected) res.push_back(maxi1);
-        if (maxc2 > expected) res.push_back(maxi2);
+        if (cnt1 > nums.size() / 3) res.push_back(static_cast<int>(ele1));
+        if (cnt2 > nums.size() / 3) res.push_back(static_cast<int>(ele2));
         return res;
     }
 };

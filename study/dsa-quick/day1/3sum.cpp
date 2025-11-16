@@ -5,10 +5,11 @@
 class Solution {
 public:
     std::vector<std::vector<int>> threeSum(std::vector<int> &&nums) {
-        std::ranges::sort(nums);
-        auto N {nums.size()};
         std::vector<std::vector<int>> res;
-        for (auto i {0ul}; i < N - 2; ++i) {
+        std::size_t N {nums.size()};
+        if (N < 3) return {};
+        std::ranges::sort(nums);
+        for (std::size_t i {}; i < N - 2; ++i) {
             if (i > 0 && nums[i] == nums[i - 1]) continue;
             auto j {i + 1}, k {N - 1};
             while (j < k) {
@@ -22,7 +23,6 @@ public:
                 }
             }
         }
-
         return res;
     }
 };
